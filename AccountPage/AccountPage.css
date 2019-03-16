@@ -23,6 +23,7 @@ html
     
     background-color:rgb(99, 98, 98, 0.2);
     height:100%;
+    
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
     text-align:center;
@@ -36,6 +37,8 @@ html
     color:white;
     font-family:"Comic Sans MS";
 }
+
+
 
 .box .btn
 {
@@ -52,6 +55,26 @@ html
     font-family:"Arial";
     padding-top:7px;
     
+}
+
+.box .buttons
+{
+   
+    display:flex;
+    justify-content: space-between;
+
+}
+
+.box .buttons .small-btn
+{
+    background-image:url("background.jpg");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    color:white;
+    font-family:"Arial";
+    border:none;
+    border-radius:20%;
+    padding:10px;
 }
 
 
