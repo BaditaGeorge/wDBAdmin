@@ -1,0 +1,55 @@
+body{
+    text-align: center;
+}
+
+.allImage{
+    background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+    height: 400px;
+    width: 400px;
+    left: 130px;
+}
+.allImage:hover{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+
+.allImage:hover .rightTop, 
+.allImage:hover #profile,
+.allImage:hover #arrow {
+    display: block;
+}
+
+
+.rightTop{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+}
+
+.rightTop #heart,#Collect{
+    height: 30px;
+    width: auto;
+}
+#profile {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: none;
+}
+
+#arrow {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 100px;
+    width: auto;
+    display: none;
+}
+
+

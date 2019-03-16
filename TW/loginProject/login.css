@@ -1,0 +1,139 @@
+body{
+    background: #9ac74e;
+}
+
+.leftSide{
+  
+  /* set-Up leftSide */
+  top: 90px;
+  left: 150px;
+  right: 20px;
+  height: 500px;
+  width: 417px;
+  position: fixed;
+  
+  /* Center background */
+  background-image: url(img_leftSide.jpg);
+  /* set border inside */
+  box-sizing: border-box;
+  border: 15px solid white;
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.centerLeftSide{
+    text-align: center;
+    padding-top: 50%;
+
+}
+.leftSide h3,p{
+    color: white;
+}
+
+.leftSide img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+}
+
+.leftSide #logo_leftSide{
+    position: absolute;
+    top: 90px;
+    height: auto;
+    width: 200px;
+    left: 90px;
+
+}
+.rightSide{
+    background:white;
+    top: 90px;
+    right: 150px;
+    height: 75%;
+    width: 650px;
+    position: fixed;
+
+}
+.centerRightSide{
+    text-align: center;
+    padding-top: 13%;
+}
+.placeHolder{
+    display: block;
+    position: relative;
+    left: 25%;
+}
+
+input[type=text]{
+    -webkit-border-radius: 20px 0 20px 0;
+    box-sizing: border-box;
+    width: 50%;
+    height: 50px;
+    outline: 0;
+}
+
+.centerRightSide h1{
+    color: #19191b;
+    display: block;
+    position: relative;
+    top: -35px;
+
+}
+
+.centerRightSide #username{
+   display: block;
+}
+
+.centerRightSide #password{
+    display: block;
+
+    position: relative;
+    top: 20px;
+}
+
+.centerRightSide #buttonLOGIN{
+    display: block;
+    /* form Button */
+    -webkit-border-radius: 20px 0 20px 0;
+    height: 50px;
+    /* text Button*/
+    background: #19191b;
+    color: white;
+    outline: 0;
+
+    position: relative;
+    top: 40px;
+
+    box-sizing: content-box;
+    width: 309px;
+}
+
+.forgotPassword{
+    display: block;
+
+    position: relative;
+    top: 45px;
+}
+
+.forgotPassword #forgotP{
+    position: absolute;
+    left: 163.5px;
+    text-decoration: none;
+    color:#19191b;
+    top: 10px;
+}
+
+.forgotPassword #notMember{
+    position: absolute;
+    right: 163.5px;
+    text-decoration: none;
+    color: #19191b;
+    top: 10px;
+}
+
+.bothSide{
+    
+}

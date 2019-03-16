@@ -1,0 +1,12 @@
+.all{
+    border: 5px dashed red;
+    height: 400px;
+    width: auto;
+}
+
+.form{
+    border: 1px;
+    height: 200px;
+    width: auto;
+    background-color: grey;
+}
