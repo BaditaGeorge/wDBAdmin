@@ -27,6 +27,10 @@ h3{
     margin-top: 40%;
     color: white;
     margin-bottom:25%;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
 }
 .signIn #username,
 .signIn #loginPass{
@@ -43,7 +47,30 @@ h3{
 ::placeholder{
     color: white;
     padding-left: 5%;
+
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
 }
+/* Style for placeholder */
+input {
+    color:white;
+}
+
+input:focus, textarea:focus{
+    color:white;
+    padding-left: 5%;
+}
+
+::placeholder-shown{
+    color: white;
+}
+
+[placeholder]:focus::-webkit-input-placeholder{
+    transition: opacity 0.4s 0.4s ease; 
+    opacity: 0;
+}
+
 #username{
     display: block;
     margin-bottom: 20px;
@@ -71,6 +98,13 @@ h3{
     box-sizing: content-box;
 }
 
-.register{
-    
+.register a{
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+    color: white;
+    text-decoration: none;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
 }
