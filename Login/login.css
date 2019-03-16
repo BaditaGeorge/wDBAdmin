@@ -1,0 +1,76 @@
+body,
+html{
+    text-align: center;
+
+    background-size:100% 100%;
+    background-image: url(2.jpg);
+    background-repeat:no-repeat;
+
+    height: 100%;
+}
+
+.allForm{
+    display: inline-block;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    background-image: url(1.jpg);
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+
+    position: relative;
+    width: 80%;
+    text-align: center;
+    margin-top: 10%;
+}
+h3{  
+    margin-top: 40%;
+    color: white;
+    margin-bottom:25%;
+}
+.signIn #username,
+.signIn #loginPass{
+    border-radius: 10px 0 10px 0;
+   
+    width: 80%;
+    margin-left: 10%;
+    height: 30px;
+    outline: 0; 
+    border: 1px solid white;
+    background-color: transparent;
+
+}
+::placeholder{
+    color: white;
+    padding-left: 5%;
+}
+#username{
+    display: block;
+    margin-bottom: 20px;
+}
+
+#loginPass{
+    display: block;
+    margin-bottom: 20px;
+}
+
+#buttonLogin{
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    background-image: url(submit.png);
+    background-color: transparent;
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+
+    height: 40px; 
+    width: 40px; 
+    margin-bottom:55%;
+    margin-top:15%; 
+    box-sizing: content-box;
+}
+
+.register{
+    
+}
