@@ -1,0 +1,128 @@
+body,
+html{
+    text-align: center;
+
+    background-size:100% 100%;
+    background-image: url(2.jpg);
+    background-repeat:no-repeat;
+
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+h2{
+    color:white;
+    position: absolute;
+    top: 8%;
+    padding-left: 27%;
+
+    
+    font-weight: bold;
+}
+
+.allVars{
+    position: absolute;
+    top: 15%;
+    left: 18%;
+
+    border: 1px solid white;
+    width: 60%;
+    height: 60%;
+
+    padding-top: 5%;
+    
+}
+
+.name{
+    background: transparent;
+    border: 1px solid white;
+    height: 30px;
+    margin-bottom: 5%;
+
+    width: 80%;
+}
+
+::placeholder{
+    color:white;
+    padding-left: 2%;
+}
+
+.labelType{
+    display: block;
+    color: white;
+
+    position: relative;
+    right: 0%;
+    margin-bottom: 5%;
+}
+
+.labelType #options{
+    width: 65.5%;
+
+}
+
+.size{
+   display: block;
+   color: white;
+   
+   position: relative;
+   text-align: left;
+   padding-left: 10%;
+
+   margin-bottom: 5%;
+}
+
+.size #size{
+    width: 17.5%;
+
+    position: relative;
+    left: 1.5%;
+}
+.null{
+    display: block;
+    color: white;
+
+    margin-bottom: 25%;
+    text-align: left;
+    padding-left: 10%;
+}
+
+button{
+    height: 8%;
+
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: ;
+    background: transparent;
+
+    color: white;
+}
+
+p {
+    position:relative;
+    text-align: center;
+    color:white;
+    
+}
+
+img{
+    width: 60%;
+    height: auto;
+
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+}
+
+input{
+    color: white;
+}
+
+input:focus, textarea:focus{
+    color: white;
+    padding-left: 5%;
+}
+
+input:focus ,textarea:focus{
+    color: black !important;
+}
