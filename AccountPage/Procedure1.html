@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="AccountPage.css">
+</head>
+
+<body>
+
+    <div class="box">
+        <p> Procedure 1</p>
+
+        <form action="Procedure1" method="POST">
+
+            <textarea id="queryText">CREATE OR REPLACE PROCEDURE afiseaza AS
+                my_name varchar2(20):='Gigel';
+             BEGIN
+                DBMS_OUTPUT.PUT_LINE('Ma cheama ' || my_name);
+             END afiseaza;</textarea>
+
+            <button class="small-btn" id="Generate"> Generate Code</button>
+            <div class="buttons">
+                    <button class="small-btn" id="Add"> Run</a>
+                      
+                    <button class="small-btn" id="Edit"> Save</button>
+                   
+        
+            </div>
+
+
+
+        </form>
+        
+
+
+    </div>
+</body>
+
+</html>
