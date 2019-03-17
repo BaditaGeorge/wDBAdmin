@@ -146,13 +146,25 @@ input:focus, textarea:focus{
 .register a{
     position: absolute;
     bottom: 0;
-    transform: translateX(-50%);
+    font-size: 80%;
     color: rgb(0, 0, 0);
     text-decoration: none;
+    left: 25%;
 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style: normal;
+    font-style: normal; 
+}
+
+.register #fpas{
+   left: 10%;
+   bottom: -6%;
+}
+.register #reg{
+left: 60%;
+bottom: -6%;
 }
 
 
-}
+
+
+
