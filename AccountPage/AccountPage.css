@@ -1,9 +1,17 @@
-html
+body
 {
-    padding:10%;
     height:100%;
     margin:0;
+    
+    
 }
+html
+{
+    height:85%;
+    margin:0;
+   
+}
+
 
 
 .box img
@@ -15,6 +23,7 @@ html
     border-radius:50%;
     margin-top:20%;
     
+    
 }
 
 
@@ -22,13 +31,16 @@ html
 {   
     
     background-color:rgb(99, 98, 98, 0.2);
-    height:100%;
+    height:80%;
     
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
     text-align:center;
-    padding:20%;
+    padding:15%;
     border-radius:2%;
+    margin:10%;
+
+    position: relative;
 }
 
 .box p
@@ -62,6 +74,11 @@ html
    
     display:flex;
     justify-content: space-between;
+    position:absolute;
+    bottom:2%;
+    width:65%;
+    
+    
 
 }
 
@@ -77,6 +94,18 @@ html
     padding:10px;
 }
 
+.box a.small-btn
+{
+    text-decoration:none;
+    display:block;
+    
+    
+}
+
+.box .buttons .small-btn#Edit
+{
+    /* margin-left:100%; */
+}
 
 
 
