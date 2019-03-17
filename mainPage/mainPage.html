@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="mainPage.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <header class="menu">
+        <div>
+            <button type="button" id="menuBtn">Menu</button>
+            <button type="button">Fork</button>
+            <button type="button">Collaborate</button>
+            <a href="" class="logoMic"><img id="lluno" src="user.png" alt="none"></a>
+        </div>
+    </header>
+    <div class="mnuCnt">
+        <button type="button" class="sv"><img id="lluno2" src="save-button.png" alt="none"></button>
+        <button type="button" class="upd"><img id="lluno2" src="upload-button.png" alt="none"></button>
+    </div>
+    <form class="mainForm">
+        <div class="conti">
+            <textarea>Some text</textarea>
+        </div>
+        <div class="conti" id="conti1">
+            <textarea>Some text</textarea>
+        </div>
+    </form>
+    <script>
+            let menuBtn = document.getElementById('menuBtn');
+            let menu = document.querySelector('.mnuCnt');
+    
+            menuBtn.addEventListener('click', () => {
+                menu.classList.add('is--open');
+            });
+    
+            document.addEventListener('keyup', (e) => {
+                if(e.key === 'Escape' || e.keyCode ===27) {
+                    menu.classList.remove('is--open');
+                }
+            })
+    </script>
+</body>
+</html>
