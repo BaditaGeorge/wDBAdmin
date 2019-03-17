@@ -25,6 +25,12 @@ html{
     text-align: center;
     margin-top: 10%;
 }
+#logo {
+    position: relative;
+    width: 80%;
+    top: 25px;
+    height: auto;
+}
 h3{  
     margin-top: 40%;
     color: white;
