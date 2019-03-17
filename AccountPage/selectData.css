@@ -1,0 +1,64 @@
+body
+{
+    height:100%;
+    margin:0;
+    
+    
+}
+html
+{
+    height:85%;
+    margin:0;
+}
+.box 
+{   
+    background-color:rgb(99, 98, 98, 0.2);
+    min-height:100%;
+    height:auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius:2%;
+    margin:5%;
+    text-align:center;
+}
+header{
+    padding-top:15px;
+    margin-left:5%;
+}
+table,tr,th{
+    margin-left:6%;
+    margin-right:6%;
+    font-size:25px;
+    padding-right:15px;
+}
+th input{
+    height:30px;
+}
+.wheresBtn{
+    padding-top:10%;
+    padding-bottom:10%;
+}
+.clb{
+    color:white;
+    width:80px;
+    height:50px;
+    border:2 px solid blue;
+    color:black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.wheresTbl{
+    margin-top:5%;
+    padding-top:5%;
+    padding-bottom:5%;
+    margin-bottom:25%;
+    text-align:center;
+    display:none;
+    border:1px solid black;
+}
+.wheresTbl.is--open tr{
+}
+.wheresTbl.is--open{
+    display:inline-block;
+    text-align:center;
+}
+.letbl{
+}
