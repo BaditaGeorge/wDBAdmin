@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body scroll="no" style="overflow: hidden">
     <header>
         <input type="image" src="avatarIcon.png" id="buttonImg" alt="buttonImg">
         <div class="buttonHead">
@@ -23,12 +23,25 @@
                 <span id="saveSpan">Save</span>
             </button>
 
-            <button class="run">
+            <button class="run" id="generateButton">
                 <img src="generatePhoto.png" alt="runImage" id="generate">
                 <span id="generateSpan">Generate</span>
             </button>
         </div>
     </header>
+
+    <aside class="leftMenu">
+        <img src="collaborateText.png" alt="collImg" id="collaborateImg">
+
+        <img src="finish.png" alt="logo" id="logoAside">
+
+        <button class="collaborate">
+            <img src="collaborate.png" alt="collaborateImage" id="collaborate">
+            <span id="collaborateSpan">Collaborate</span>
+        </button>
+
+    </aside>
+
     <div class="dropMenuGenerate">
         <a href="">
             <img src="java.png" alt="javaPhoto" id="java">
@@ -37,6 +50,7 @@
             <img src="php.png" alt="javaPhoto" id="php">
         </a>
     </div>
+
     <div class="dropMenu">
         <div class="interior">
             <div class="stanga">
@@ -57,6 +71,8 @@
     <footer></footer>
     <script src="main.js"></script>
     <script src="dropMenu.js"></script>
+
+
 </body>
 
 </html>
