@@ -1,27 +1,40 @@
 body
 {
     height:100%;
+    min-height:100%;
+    width:100%;
     margin:0;
-    
-    
+    background-size:100% 100%;
+    background-image: url(background.jpg);
+    background-repeat:no-repeat;
+    background-color:#44174E;
+   
 }
 html
 {
-    height:85%;
+    height:100%;
+    min-height:100%;
+    width:100%;
     margin:0;
+     background-size:100% 100%;
+    background-image: url(background.jpg);
+    background-repeat:no-repeat;
+    background-color:#44174E;
+   
 }
 .box 
 {   
-    font-family:'Comic Sans MS';
-    color:white;
-    background-color:rgb(99, 98, 98, 0.2);
-    min-height:100%;
-    height:auto;
+    background-size:100% 100%;
+    background-image: url(../loginBeta_v2/1.jpg);
+    background-repeat:no-repeat;
+    min-height:75%;
+
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius:2%;
-    margin:5%;
     text-align:center;
-    padding-bottom:5px;
+    padding:10%;
+    margin:10%;
+
+    position: relative;
 }
 header{
     padding-top:5%;
@@ -35,33 +48,43 @@ header{
 }
 .box a
 {
-    margin-left:25%;
+    
     display:block;
-    background-image:url("background.jpg");
-    background-size:100% 100%;
-    background-repeat: no-repeat;
+    background-color:transparent;
+    border:1px solid white;
     color:white;
     text-decoration:none;
-    width:50%;
+    width:100%;
     margin-bottom:10%;
-    border-radius:20%;
+    border-radius:10px;
     height:30px;
     font-family:"Arial";
     padding-top:7px;
+    outline:none;
     
 }
+
+.box p
+{
+    font-size:180%;
+    color:white;
+    font-family:"Comic Sans MS";
+}
 .clb{
-    background-image:url("background.jpg");
-    background-size:100% 100%;
-    background-repeat: no-repeat;
     color:white;
     font-family:"Arial";
-    border:none;
-    border-radius:20%;
-    font-size:15px;
-    text-align:center;
-    width:30px;
-    height:30px;
+
+    background-color:transparent;
+    border:2px white solid;
+    border-radius:10px;
+    padding:3%;
+    outline:0;
+    margin-left:3%;
+    margin-right:3%;
+    width:15%;
+    font-weight:bold;
+
+    
 }
 .tlt{
     height:20px;
@@ -81,4 +104,38 @@ header{
     background-image:none;
     background-color:transparent;
     opacity:0.5;
+}
+
+#nmn
+{
+    display:inline-block;
+    width:50%;
+}
+
+select
+{
+    transform:translateX(-50%);
+    width:50%;
+    color:grey;
+}
+
+input{
+    display:block;
+    margin-bottom:5%;
+  
+}
+
+.bottom
+{
+    transform:translateX(5%); 
+    position:relative;
+}
+
+span
+{
+    color:white;
+    position:absolute;
+    left:10%;
+    bottom:-5%;
+   
 }

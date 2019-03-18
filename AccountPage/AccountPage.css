@@ -5,15 +5,10 @@ body
     width:100%;
     max-height:1020px;
     margin:0;
-
     background-size:100% 100%;
     background-image: url(background.jpg);
     background-color:#44174E;
     background-repeat:no-repeat;
-    /* border:1px solid white;  */
-    
-    /* position:fixed; */
-
 
 }
 html
@@ -27,8 +22,7 @@ html
     background-image: url(background.jpg);
     background-color:#44174E;
     background-repeat:no-repeat;
-   
-    /* position:fixed; */
+
 }
 
 .box
@@ -38,22 +32,16 @@ html
     background-image: url(../loginBeta_v2/1.jpg);
     background-repeat:no-repeat;
     min-height:75%;
-
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
     text-align:center;
     padding:15%;
-   
-    
     margin:10%;
-
-    /* overflow-y: scroll; */
-
     position: relative;
 }
 
+
 #idBox
-{   
+{
     min-height:55%;
     padding-bottom:45%;
 }
@@ -84,11 +72,8 @@ html
 .box .btn
 {
     display:block;
-    /* background-image:url("background.jpg"); */
     background-color:transparent;
     border:1px solid white;
-    /* background-size:100% 100%; */
-    /* background-repeat: no-repeat; */
     color:white;
     text-decoration:none;
     width:100%;
@@ -98,14 +83,14 @@ html
     font-family:"Arial";
     padding-top:7px;
     outline:none;
-    
+
 
 }
 
 .box .btn:focus
 {
     transform: scale(1.2);
-    
+
 }
 
 .box .buttons
@@ -255,7 +240,7 @@ html
     margin-bottom:10%;
 }
 
-.box #textArea
+.box .textArea
 {
     width:100%;
     margin-bottom:10%;
@@ -265,5 +250,5 @@ html
 .box .small-btn:focus
 {
     transform: scale(1.2);
-    
+
 }
