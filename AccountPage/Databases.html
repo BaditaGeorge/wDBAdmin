@@ -14,8 +14,8 @@
     <div class="box" id="idBox">
 
         <p> My databases</p>
-        <a class="btn" href="Database1.html"> Database 1 </a>
-        <a class="btn" href="Database1.html"> Database 2 </a>
+        <a class="btn" onmousedown="mouseDown()" href="Database1.html"> Database 1 </a>
+        <a class="btn" onmousedown="mouseDown()" href="Database1.html"> Database 2 </a>
 
         
       
@@ -59,6 +59,11 @@
             function AddCol(){
                 var tag=document.createElement("a");
                 tag.className="btn";
+                if(document.getElementById("nmn").value=='')
+                {
+                    alert("Database must have a name!");
+                    return false;
+                }
                 var t=document.createTextNode(document.getElementById("nmn").value);
                 tag.appendChild(t);
                 document.getElementById("idBox").appendChild(tag);
