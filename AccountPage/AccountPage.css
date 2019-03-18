@@ -45,9 +45,7 @@ html
     padding:15%;
    
     
-    margin-top:10%;
-    margin-left:10%;
-    margin-right:10%;
+    margin:10%;
 
     /* overflow-y: scroll; */
 
@@ -229,7 +227,7 @@ html
    bottom:12%;
    left:50%;
    text-align:center;
-   transform:translateX(-300%);
+   transform:translateX(-1000%);
    transition-duration: 0ms;
 
 }
