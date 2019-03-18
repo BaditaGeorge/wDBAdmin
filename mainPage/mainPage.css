@@ -31,7 +31,7 @@ header div{
 .mnuCnt{
     border-radius:5%;
     background-color:gray;
-    height:30%;
+    height:auto;
     position:absolute;
     top:8.8%;
     left:0;
@@ -69,12 +69,19 @@ header div{
     width:60%;
     height:60%;
 }
+.logoMic{
+    position:absolute;
+    left:80%;
+    width:50%;
+    height:8%;
+}
 .mnuCnt .sv{
     width:80%;
     height:20%;
-    margin-top:25%;
+    margin-top:30%;
     background-color:transparent;
     border:none;
+    margin-top:10%;
 }
 #lluno{
     width:10%;
@@ -83,6 +90,14 @@ header div{
 .mnuCnt .upd{
     width:80%;
     height:20%;
+    margin-top:10%;
+    background-color:transparent;
+    border:none;
+}
+.mnuCnt .gen{
+    width:80%;
+    height:20%;
+    margin-bottom:30%;
     background-color:transparent;
     border:none;
 }

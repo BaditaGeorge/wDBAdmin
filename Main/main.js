@@ -23,3 +23,17 @@ document.addEventListener('keyup', (e) => {
         menuGenerate.classList.remove('isOpen');
     }
 })
+
+let btnInvite = document.getElementById('collaborateSpan');
+let menuInvite = document.querySelector('.Invitation');
+
+btnInvite.addEventListener('click', () => {
+    menuInvite.classList.add('is-Open');
+});
+
+document.addEventListener('keyup', (e) => {
+    if (e.key === 'Escape' || e.keyCode === 27) {
+        menuInvite.classList.remove('is-Open');
+    }
+})
+

@@ -72,6 +72,10 @@ header #buttonImg{
     outline: 0;
 }
 
+.Invitation.is-Open{
+    display:block;
+}
+
 .collaborate #collaborate{
     position: absolute;
     height: 500%;
@@ -294,3 +298,53 @@ h2{
     top: 13%;
     padding-top: 3%;
 }
+
+.Invitation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    background-image: url(background.jpg);
+    background-size: 50% 100%;
+    border: 1px solid black;
+    display: none;
+}
+
+.Invitation #inviteMail{
+    display: block;
+}
+
+.Invitation #buttonInvite{
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    outline: 0;
+
+    color: white;
+    text-align: center;
+    
+    position: relative;
+    left: 20%;
+    cursor: pointer;
+}
+
+textarea{
+    position: absolute;
+    left: 40%;
+    height: 100%;
+    width: 40%;
+
+    overflow: auto;
+    white-space: pre;
+}
+
+#leftArea{
+    left: 12.5%;
+    width: 44.12%;
+
+}
+
+#rightArea{
+    width: 43%;    
+    left: 56.53%;
+}  
