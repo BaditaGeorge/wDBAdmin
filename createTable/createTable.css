@@ -87,15 +87,16 @@ h2{
     padding-left: 10%;
 }
 
+a,
 button{
     height: 8%;
 
     text-decoration: none;
     border: 1px solid white;
-    border-radius: ;
     background: transparent;
 
     color: white;
+    padding:2%;
 }
 
 p {
@@ -126,3 +127,4 @@ input:focus, textarea:focus{
 input:focus ,textarea:focus{
     color: black !important;
 }
+

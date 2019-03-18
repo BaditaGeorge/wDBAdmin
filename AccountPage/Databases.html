@@ -11,13 +11,25 @@
 
 <body>
 
-    <div class="box">
+    <div class="box" id="idBox">
 
         <p> My databases</p>
         <a class="btn" href="Database1.html"> Database 1 </a>
         <a class="btn" href="Database1.html"> Database 2 </a>
 
+        
+      
+            <form class="hidden" >
+            <input type="text" placeholder="Name of new database" id="nmn" required>
+            <button onclick="AddCol(); return false;" class="small-btn"> Create</button>
+             </form>
+            
+      
+        
         <div class="buttons">
+
+            
+
             <button class="small-btn" id="Add">
                Add
             </button>
@@ -28,6 +40,31 @@
         </div>
 
     </div>
+
+
+    <script>
+            let addBtn = document.getElementById('Add');
+            let menu = document.querySelector('.hidden');
+    
+            addBtn.addEventListener('click', () => {
+                menu.classList.add('is--open');
+            });
+    
+            document.addEventListener('keyup', (e) => {
+                if(e.key === 'Escape' || e.keyCode ===27) {
+                    menu.classList.remove('is--open');
+                }
+            })
+
+            function AddCol(){
+                var tag=document.createElement("a");
+                tag.className="btn";
+                var t=document.createTextNode(document.getElementById("nmn").value);
+                tag.appendChild(t);
+                document.getElementById("idBox").appendChild(tag);
+                document.getElementById("nmn").value='';
+            }
+    </script>
 
 </body>
 

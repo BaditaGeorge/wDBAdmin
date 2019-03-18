@@ -1,11 +1,16 @@
-body,
-html{
+body
+{
     text-align: center;
-
     background-size:100% 100%;
     background-image: url(2.jpg);
     background-repeat:no-repeat;
-
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+html
+{
+    text-align: center;
     height: 100%;
     position: fixed;
     width: 100%;
