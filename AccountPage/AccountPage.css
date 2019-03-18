@@ -9,7 +9,7 @@ body
     background-image: url(background.jpg);
     background-color:#44174E;
     background-repeat:no-repeat;
-   
+
 }
 html
 {
@@ -22,7 +22,7 @@ html
     background-image: url(background.jpg);
     background-color:#44174E;
     background-repeat:no-repeat;
-   
+
 }
 
 .box
@@ -41,7 +41,7 @@ html
 
 
 #idBox
-{   
+{
     min-height:55%;
     padding-bottom:45%;
 }
@@ -82,14 +82,14 @@ html
     font-family:"Arial";
     padding-top:7px;
     outline:none;
-    
+
 
 }
 
 .box .btn:focus
 {
     transform: scale(1.2);
-    
+
 }
 
 .box .buttons
@@ -239,7 +239,7 @@ html
     margin-bottom:10%;
 }
 
-.box #textArea
+.box .textArea
 {
     width:100%;
     margin-bottom:10%;
@@ -249,5 +249,5 @@ html
 .box .small-btn:focus
 {
     transform: scale(1.2);
-    
+
 }

@@ -4,6 +4,7 @@ html
     min-height:120%;
     width:100%;
     margin:0;
+    background-color:#44174E;
      background-size:100% 100%;
     background-image: url(background.jpg);
     background-repeat:no-repeat;
@@ -16,7 +17,7 @@ body
     min-height:100%;
     width:100%;
     margin:0;
-
+   
     background-size:100% 100%;
     background-image: url(background.jpg);
     background-repeat:no-repeat;
@@ -30,16 +31,14 @@ body
     background-image: url(../loginBeta_v2/1.jpg);
     background-repeat:no-repeat;
     min-height:75%;
-
+    
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     text-align:center;
     padding:5%;
     color:white;
     
-    margin-top:10%;
-    margin-left:10%;
-    margin-right:10%;
+    margin:10%;
 
     /* overflow-y: scroll; */
 

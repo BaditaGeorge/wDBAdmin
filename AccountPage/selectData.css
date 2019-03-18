@@ -4,7 +4,7 @@ body
     min-height:100%;
     width:100%;
     margin:0;
-
+    background-color:#44174E;
     background-size:100% 100%;
     background-image: url(background.jpg);
     background-repeat:no-repeat;
@@ -15,19 +15,30 @@ html
     min-height:100%;
     width:100%;
     margin:0;
+    background-color:#44174E;
      background-size:100% 100%;
     background-image: url(background.jpg);
     background-repeat:no-repeat;
 }
 .box 
 {   
-    background-color:rgb(99, 98, 98, 0.2);
-    min-height:80%;
-    height:auto;
+    background-size:100% 100%;
+    background-image: url(../loginBeta_v2/1.jpg);
+    background-repeat:no-repeat;
+    min-height:75%;
+    
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius:2%;
-    margin:10%;
+
     text-align:center;
+    padding:5%;
+    color:white;
+    
+    margin:10%;
+
+    /* overflow-y: scroll; */
+
+    position: relative;
+    
 }
 header{
     padding-top:15px;
