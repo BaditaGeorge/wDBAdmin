@@ -1,0 +1,84 @@
+body
+{
+    height:100%;
+    margin:0;
+    
+    
+}
+html
+{
+    height:85%;
+    margin:0;
+}
+.box 
+{   
+    font-family:'Comic Sans MS';
+    color:white;
+    background-color:rgb(99, 98, 98, 0.2);
+    min-height:100%;
+    height:auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius:2%;
+    margin:5%;
+    text-align:center;
+    padding-bottom:5px;
+}
+header{
+    padding-top:5%;
+}
+.op{
+    margin-left:30%;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:20px;
+    display:block;
+}
+.box a
+{
+    margin-left:25%;
+    display:block;
+    background-image:url("background.jpg");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    color:white;
+    text-decoration:none;
+    width:50%;
+    margin-bottom:10%;
+    border-radius:20%;
+    height:30px;
+    font-family:"Arial";
+    padding-top:7px;
+    
+}
+.clb{
+    background-image:url("background.jpg");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    color:white;
+    font-family:"Arial";
+    border:none;
+    border-radius:20%;
+    font-size:15px;
+    text-align:center;
+    width:30px;
+    height:30px;
+}
+.tlt{
+    height:20px;
+    border-radius:6%;
+}
+.tlt2{
+    height:20px;
+    width:40px;
+    border-radius:6%;
+}
+.msgScc.is--open{
+    display:block;
+}
+.clb.is--open{
+    border:2px solid green;
+    color:green;
+    background-image:none;
+    background-color:transparent;
+    opacity:0.5;
+}
