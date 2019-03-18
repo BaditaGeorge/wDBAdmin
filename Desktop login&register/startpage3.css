@@ -76,7 +76,8 @@ h4{
     font-style: italic;
     font-weight: bold;
 }
-.btn{
+.signIn #username,
+.signIN #buttonLogin{
     border-radius: 10px 0 10px 0;
    
     width: 80%;
@@ -114,15 +115,11 @@ input:focus, textarea:focus{
     opacity: 0;
 }
 
-#username{
+#email{
     display: block;
     margin-bottom: 20px;
 }
 
-#loginPass{
-    display: block;
-    margin-bottom: 20px;
-}
 
 #buttonLogin{
     display: inline-block;
@@ -142,27 +139,15 @@ input:focus, textarea:focus{
 }
 
 .register a{
-    position: absolute;
+    position: relative;
     bottom: 0;
-    font-size: 80%;
+    transform: translateX(-50%);
     color: rgb(0, 0, 0);
     text-decoration: none;
-    left: 25%;
 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style: normal; 
+    font-style: normal;
 }
-
-.register #fpas{
-   left: 10%;
-   bottom: -6%;
-}
-.register #reg{
-left: 60%;
-bottom: -6%;
-}
-
-
 
 
 

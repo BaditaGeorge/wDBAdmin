@@ -1,0 +1,120 @@
+body{
+    text-align: center;
+    height: 90%;
+}
+html{
+    text-align: center;
+    height: 90%;
+}
+header{
+    position: relative;
+    height: 10%;
+    width: 100%;
+    top: 0;
+
+    background-image: url(webpage.jpg);
+    background-size: 50% 100%;
+
+    overflow: hidden;
+}
+.toate {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: rgb(253, 253, 253);
+    position: relative;
+    
+  }
+.table {
+    background-color: #f1f1f1;
+    width: 200px;
+    margin: 30px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    border:2px solid #ccc;
+
+  }
+
+.culoare{
+    background-image:url(webpage.jpg);
+    color: rgb(54, 32, 6);
+    
+}
+.toate .table a{
+    display: block;
+    text-decoration: none;
+    color:  rgb(54, 32, 6);
+}
+#buton{
+    position: relative;
+}
+.toate #generate{
+
+    border:1.5px solid black;
+    border-radius: 15%;
+    position: absolute;
+    font-size: 90%;
+    text-decoration: none;
+    color:  rgb(54, 32, 6);
+    right: 10%;
+    bottom: -40%;
+    padding: 0.5%;
+    background: rgb(221, 109, 4);
+}
+input {
+    -webkit-appearance:none;
+    width:20px;
+    height:20px;
+    background:white;
+    border-radius:5px;
+    border:2px solid #555;
+}
+input:checked {
+    background: rgb(0, 0, 0);
+    border-color: #555;
+}
+footer{
+    position: absolute;
+    left: 0;
+    bottom: -20%;
+}
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .toate .div {
+        width: 49%;
+        margin-right: 2%;
+    }
+    .toate .div:nth-of-type(2n) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .toate .div {
+        width: 32%;
+        margin-right: 2%;
+    }
+
+    .toate .div:nth-of-type(3n) {
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .toate .div {
+        width: 49%;
+        margin-right: 2%;
+    }
+    .toate .div:nth-of-type(2n) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .toate .div {
+        width: 32%;
+        margin-right: 2%;
+    }
+
+    .toate .div:nth-of-type(3n) {
+        margin-right: 0;
+    }
+}
