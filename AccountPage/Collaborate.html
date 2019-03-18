@@ -12,8 +12,8 @@
 <body>
     <div class="box">
 
-        <p> Select elements </p>
-        <form action="generateCode" , method="POST">
+        <p id="ShareTitle"> Select elements that you want to share </p>
+        <form action="share" , method="GET">
             <div class="container">
                 <input type="checkbox" /> Table1 <br />
                 <input type="checkbox" /> Table2 <br />
@@ -28,15 +28,17 @@
 
             <div class="flexbox">
                 <div>
-                    <input type="radio" name="lang" id="php"/> php <br />
+                    <input type="radio" name="access" /> View Only <br />
                 </div>
                 <div>
-                    <input type="radio" name="lang" id="Java"/> Java <br />
+                    <input type="radio" name="access" /> Modify access <br />
                 </div>
             </div>
 
+            <input id="collaborator" type="text" placeholder="Email of collaborator" >
+
             <button class="btn" type="submit">
-                Generate code
+                Share
             </button>
 
         </form>
