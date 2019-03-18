@@ -57,7 +57,9 @@ html
     min-height:55%;
     padding-bottom:45%;
 }
-
+.divBx{
+    position:relative;
+}
 .box img
 {
     width:150px;
