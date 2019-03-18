@@ -1,0 +1,275 @@
+body,
+html{
+    
+}
+
+/* Arrange in page */
+.allPage{
+    
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    background-image: url(webpage.jpg);
+    background-size: 50% 100%;
+}
+
+/* That is a flex */
+.allPage .upSideForm{
+    display: flex;
+    border: 1px solid white;
+    height: 50%;
+}
+
+.allPage .upSideForm .tableStructure{
+    border: 1px solid white;
+    width: 49.9%;
+
+}
+
+/* .allPage .upSideForm .tableStructure.is--open{
+    display: block;
+} */
+
+/* That is a flex */
+.allPage .upSideForm .rightForm{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid white;
+    width: 100%;
+}
+
+.allPage .upSideForm .rightForm .columnUpRight{
+    border: 1px solid white;
+    width: 49.75%;
+}
+
+/* That is a flex */
+.allPage .downSideForm{
+    display: flex;
+    /* border: 1px solid black; */
+    height: 100%;
+
+    justify-content: space-between;
+
+}
+
+.allPage .downSideForm .columnDownSide{
+    border: 1px solid white;
+    width: 33.6%;
+}
+
+
+/* Design for buttons*/
+#buttonTS{
+    /* position in page */
+    position: absolute;
+    top: 19.5%;
+    left: 7%;
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+    display: none;
+
+}
+
+#buttonIndexes{
+    /* position in page */
+    position: absolute;
+    top: 5.5%;
+    left: 46%;
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+}
+
+#buttonTriggers{
+    /* position in page */
+    position: absolute;
+    top: 5.5%;
+    left: 80%;
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+}
+
+#buttonForeign{
+    /* position in page */
+    position: absolute;
+    top: 31.5%;
+    left: 46%;
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+}
+
+#buttonViews{
+    /* position in page */
+    position: absolute;
+    top: 31.5%;
+    left: 81%;
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+}
+
+#buttonSD{
+    /* position in page */
+    position: absolute;
+    top: 69.5%;
+    left: 9%;
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+}
+
+#buttonID{
+    /* position in page */
+    position: absolute;
+    top: 69.5%;
+    left: 43.5%;
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+}
+
+#buttonNew{
+    /* position in page */
+    position: absolute;
+    top: 69.5%;
+    left: 80%;
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+}
+
+#cancelTS,
+#cancelIndex, #cancelTriggers, #cancelForeign, #cancelView,
+#cancelSD, #cancelID, #cancelNew{
+    
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: none;
+    /* border: 1px solid white; */
+    padding: 1%;
+    color:white;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 70%;
+
+    display: none;
+}
+
+/* Action for every buttons, hide & show */
+#buttonsTS{
+
+}
