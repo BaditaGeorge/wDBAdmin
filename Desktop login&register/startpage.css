@@ -76,9 +76,7 @@ h4{
     font-style: italic;
     font-weight: bold;
 }
-.signIn #username,
-.signIn #loginPass,
-.signIN #buttonLogin{
+.btn{
     border-radius: 10px 0 10px 0;
    
     width: 80%;
