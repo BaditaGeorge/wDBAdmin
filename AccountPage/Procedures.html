@@ -11,20 +11,23 @@
     
     <div class="box">
         <p> Procedures</p>
-        <a class="btn" href="Procedure1.html"> Procedure 1 </a>
-        <a class="btn" href="Procedure1.html"> Procedure 2 </a>
-
+        <div class="divBx">
+            <a class="btn" href="Procedure1.html"> Procedure 1 </a>
+        </div>
+        <div class="divBx">
+            <a class="btn" href="Procedure1.html"> Procedure 2 </a>
+        </div>
         <div class="buttons">
             <a href="CreateProcedure.html" class="small-btn" id="Add"> Add</a>
 
-            <button class="small-btn" id="Edit">
+            <button onclick="removeF();return false;" class="small-btn" id="Edit">
                 Edit
             </button>
 
         </div>
 
     </div>
-
-    
+    <script src="functions.js">
+    </script>
 </body>
 </html>

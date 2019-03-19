@@ -29,23 +29,28 @@ function AddCol(){
     document.getElementById("nmn").value='';
 }
 function removeF(){
-    var ell=document.createElement('button');
-    ell.innerText="X";
-    ell.style.fontSize="15px";
-    ell.style.backgroundColor="#ff6666";
-    ell.style.color="white";
-    ell.style.border="none";
-    ell.style.position="absolute";
-    ell.style.top="26%";
-    ell.style.left="-15%";
-    ell.style.borderRadius="50%";
-    ell.addEventListener('click',()=>alert('Alerta'));
+        var inel=document.getElementById("butonash");
+        if(inel!=null)
+        {
+            location.reload();
+        }
+        var ell=document.createElement('button');
+        ell.innerText="X";
+        ell.style.fontSize="15px";
+        ell.style.backgroundColor="#ff6666";
+        ell.style.color="white";
+        ell.style.border="none";
+        ell.style.position="absolute";
+        ell.style.top="26%";
+        ell.id="butonash";
+        ell.style.left="-15%";
+        ell.style.borderRadius="50%";
                 /*ell.onclick=function(){
                     alert('MESAJ!');
                     document.getElementById("idBox").removeChild(this.parentNode);
                 };*/
-    for(var i=0;i<document.getElementsByClassName("divBx").length;i++)
-    {
-        document.getElementsByClassName("divBx")[i].appendChild(ell.cloneNode(true));
-    }        
+        for(var i=0;i<document.getElementsByClassName("divBx").length;i++)
+        {
+            document.getElementsByClassName("divBx")[i].appendChild(ell.cloneNode(true));
+        }        
 }
