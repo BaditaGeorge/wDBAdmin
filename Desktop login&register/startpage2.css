@@ -21,17 +21,6 @@ body,html{
     border-radius: 3%;
     position:relative;
 }
-h3{  
-    margin-top: 40%;
-    color: white;
-    margin-bottom:25%;
-
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style: italic;
-    font-weight: bold;
-}
-
-
 .stanga{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-size:cover;

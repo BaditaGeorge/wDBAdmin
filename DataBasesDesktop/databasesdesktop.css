@@ -39,7 +39,6 @@ header{
 .culoare{
     background-image:url(webpage.jpg);
     color: rgb(54, 32, 6);
-    position: relative;
     
 }
 .toate .table a{
@@ -53,27 +52,39 @@ header{
 }
 .toate #generate{
 
-    border:1.5px solid black;
+    border:2px solid black;
     border-radius: 15%;
     position: absolute;
-    font-size: 90%;
+    font-size: 110%;
     text-decoration: none;
     color:  rgb(54, 32, 6);
-    right: 10%;
-    bottom: -40%;
+    right: 0%;
+    bottom: -30%;
     padding: 0.5%;
     background: rgb(221, 109, 4);
 }
-#save{
-
+.table #code{
+   display: inline-block; 
     border:1.5px solid black;
     border-radius: 15%;
-    position: relative;
-    font-size: 80%;
+    
+    font-size: 60%;
     text-decoration: none;
     color:  rgb(54, 32, 6);
-    left: -54%;
-    bottom: -10%;
+    top: 0%;
+    padding: 0.5%;
+    background: rgb(221, 109, 4);
+    cursor: pointer;
+}
+.table #save{
+    
+    border:1.5px solid black;
+    border-radius: 15%;
+
+    font-size: 50%;
+    text-decoration: none;
+    color:  rgb(54, 32, 6);
+   
     padding: 0.5%;
     background: rgb(221, 109, 4);
     cursor: pointer;
