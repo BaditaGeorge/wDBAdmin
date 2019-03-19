@@ -11,21 +11,34 @@
 
 <body>
 
-    <div class="box">
+    <div class="box" id="idBox">
         <p> Queries</p>
-        <a class="btn" href="Query1.html"> Query 1 </a>
-        <a class="btn" href="Query1.html"> Query 2 </a>
+        <div class="divBx">
+            <a class="btn" href="Query1.html"> Query 1 </a>
+        </div>
+        <div class="divBx">
+            <a class="btn" href="Query1.html"> Query 2 </a>
+        </div>
+
+        <form class="hidden" >
+            <input type="text" placeholder="Name of new database" id="nmn" required>
+            <button onclick="AddCol(); return false;" class="small-btn"> Create</button>
+        </form>
 
         <div class="buttons">
-            <a href="../createTable/createTable.html" class="small-btn" id="Add"> Add</a>
+            <button class="small-btn" id="Add">
+                Add
+             </button>
 
-            <button class="small-btn" id="Edit">
+            <button onclick="removeF();return false;" class="small-btn" id="Edit">
                 Edit
             </button>
 
         </div>
 
     </div>
+    <script src="functions.js">
+    </script>
 </body>
 
 </html>
