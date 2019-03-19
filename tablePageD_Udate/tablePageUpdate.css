@@ -1,0 +1,73 @@
+body,
+html{
+    height: 100%;
+    overflow: hidden;
+}
+
+.allPhotos {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    height: 100%;
+
+    opacity: 0.5;
+  }
+
+.photo {
+    border: 1px solid white;
+    padding: 20px;
+    text-align: center;
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/* put backGround for every dreptunghi */
+.tableStructure {
+    background-image: url(tableStructure.jpg);
+}
+
+.Indexes{
+    background-image: url(Indexes.png);
+}
+
+.Triggers{
+    background-image: url(Triggers.jpg);
+}
+
+.Foreign{
+    background-image: url(Foreign.jpg);
+}
+
+.Views{
+    background-image: url(Views.jpg);
+}
+
+.selectData{
+    background-image: url(selectData.jpg);
+}
+
+.insertData{
+    background-image: url(insertData.jpg);
+}
+
+.addNew{
+    background-image: url(addNew.jpg);
+}
+
+/* hide Div's for every dreptunghi */
+.Structure{
+    position: absolute;
+    top:13%;
+    left: 37%;
+    width: 25%;
+    height: 75%;
+
+    border: 1px solid white;;
+    border-radius: 10%;
+    background-image: url(webpage.jpg);
+    background-size: cover;
+    
+
+}
+
