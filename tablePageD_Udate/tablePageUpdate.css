@@ -71,3 +71,14 @@ html{
 
 }
 
+/* modfiy button Close */
+.buttonClose{
+    position: absolute;
+    top: 2%;
+    right: 3%;
+
+    height: 8%;
+    width: auto;
+
+    outline: 0;
+}
