@@ -25,8 +25,12 @@ html{
     border: 1px solid white;
     width: 49.9%;
 
+    display: block;
 }
 
+.hideTS{
+    display: block;
+}
 /* .allPage .upSideForm .tableStructure.is--open{
     display: block;
 } */
@@ -82,7 +86,7 @@ html{
     font-weight: bold;
     font-size: 200%;
 
-    display: none;
+    display: block;
 
 }
 
@@ -247,6 +251,26 @@ html{
 
 }
 
+#addTS,
+#addIndexes, #addTriggers, #addForeign, #addViews,
+#addSD, #addID, #buttonAddNew{
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 70%;
+
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: none;
+    /* border: 1px solid white; */
+    padding: 1%;
+    color:white;
+
+    position: relative;
+    /* left: 1%; */
+}
+
 #cancelTS,
 #cancelIndex, #cancelTriggers, #cancelForeign, #cancelView,
 #cancelSD, #cancelID, #cancelNew{
@@ -266,10 +290,27 @@ html{
     font-family: 'Times New Roman', Times, serif;
     font-size: 70%;
 
-    display: none;
+    display: inline-block;
 }
 
 /* Action for every buttons, hide & show */
 #buttonsTS{
 
+}
+
+/* Design for interor of boxes */
+.elementTable{
+    display: flex;
+    color: white;
+
+}
+.Elements{
+}
+
+#labelSize{
+    width: 100%;
+}
+
+#checkboxNULL{
+    width: 85%;
 }

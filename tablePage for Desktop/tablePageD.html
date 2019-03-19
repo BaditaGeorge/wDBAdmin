@@ -13,40 +13,101 @@
     <div class="allPage">
         <div class=upSideForm>
             <div class="tableStructure">
-                <button type="button" id="cancelTS">Exit</button>
                 <button type="button" id="buttonTS">Table Structure</button>
+                <div class="hideTS">
+                    <button type="button" id="cancelTS">Exit</button>
+                    <button type="button" id="addTS">Add</button>
+                    <div class="elementTable">
+                        <div class="">
+                            <label class="Elements">
+                                Field
+                                <input type="text" id="labelField">
+                            </label>
+                        </div>
+                        <div class="Elements">
+                            <label class="Type">
+                                Type
+                                <input type="text" id="labelType">
+                            </label>
+                        </div>
+                        <div class="Elements">
+                            <label class="Size">
+                                Size
+                                <input type="text" id="labelSize">
+                            </label>
+                        </div>
+                        <div class="Elements">
+                            <label class="Null">
+                                null
+                                <input type="checkbox" id="checkboxNULL">
+                            </label></div>
+                    </div>
+                </div>
             </div>
             <div class="rightForm">
                 <div class="columnUpRight" id="Indexes">
-                        <button type="button" id="cancelIndex">Exit</button>
-                        <button type="button" id="buttonIndexes">Indexes</button>
+                    <button type="button" id="buttonIndexes">Indexes</button>
+                    <div class="hideIndexes">
+                        <button type="button" id="cancelTS">Exit</button>
+                        <button type="button" id="addIndexes">Add</button>
+
+                        <div class="typeAttribute">
+                            <label class="typeIndexes">
+                                Type
+                                <input type="text" id="labelTypeIndexes">
+                            </label>
+
+                            <label class="fieldIndexes">
+                                Type
+                                <input type="text" id="labelTypeIndexes">
+                            </label>
+                        </div>
+                    </div>
                 </div>
                 <div class="columnUpRight" id="Triggers">
-                        <button type="button" id="cancelTriggers">Exit</button>
-                        <button type="button" id="buttonTriggers">Triggers</button>
+                    <button type="button" id="buttonTriggers">Triggers</button>
+                    <div class="hideTriggers">
+                        <button type="button" id="cancelTS">Exit</button>
+                        <button type="button" id="addTriggers">Add</button>
+                    </div>
                 </div>
                 <div class="columnUpRight" id="Foreign">
-                        <button type="button" id="cancelForeign">Exit</button>
-                        <button type="button" id="buttonForeign">Foreign</button>
+                    <button type="button" id="buttonForeign">Foreign</button>
+                    <div class="hideForeign">
+                        <button type="button" id="cancelTS">Exit</button>
+                        <button type="button" id="addForeign">Add</button>
+                    </div>
                 </div>
                 <div class="columnUpRight" id="Views">
-                        <button type="button" id="cancelView">Exit</button>
-                        <button type="button" id="buttonViews">Views</button>
+                    <button type="button" id="buttonViews">Views</button>
+                    <div class="hideViews">
+                        <button type="button" id="cancelTS">Exit</button>
+                        <button type="button" id="addViews">Add</button>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="downSideForm">
             <div class="columnDownSide" id="selectData">
-                    <button type="button" id="cancelSD">Exit</button>
-                    <button type="button" id="buttonSD">Select Data</button>
+                <button type="button" id="buttonSD">Select Data</button>
+                <div class="hideSD">
+                    <button type="button" id="cancelTS">Exit</button>
+                    <button type="button" id="addSD">Add</button>
+                </div>
             </div>
             <div class="columnDownSide" id="insertData">
-                    <button type="button" id="cancelID">Exit</button>
-                    <button type="button" id="buttonID">Insert Data</button>
+                <button type="button" id="buttonID">Insert Data</button>
+                <div class="hideID">
+                    <button type="button" id="cancelTS">Exit</button>
+                    <button type="button" id="addID">Add</button>
+                </div>
             </div>
             <div class="columnDownSide" id="addNew">
-                    <button type="button" id="cancelNew">Exit</button>
-                    <button type="button" id="buttonNew">addNew</button>
+                <button type="button" id="buttonNew">addNew</button>
+                <div class="hideNew">
+                    <button type="button" id="cancelTS">Exit</button>
+                    <button type="button" id="buttonAddNew">Add</button>
+                </div>
             </div>
         </div>
     </div>
