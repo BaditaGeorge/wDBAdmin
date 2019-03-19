@@ -25,6 +25,16 @@ header{
     
     
   }
+.pls{
+    position:absolute;
+    top:12%;
+    right:2%;
+    border:none;
+    font-size:40px;
+    font-family:"Comic Sans MS";
+    background-color:transparent;
+    color:white;
+}
 .table {
     background-color: #f1f1f1;
     width: 200px;
@@ -94,10 +104,11 @@ header{
     border-radius: 15%;
     position: absolute;
     font-size: 90%;
+    margin-top:10px;
     text-decoration: none;
     color:  rgb(54, 32, 6);
     right: 10%;
-    bottom: -40%;
+    top:100%;
     padding: 0.5%;
     background: rgb(221, 109, 4);
 }
