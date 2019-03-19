@@ -29,18 +29,87 @@ html{
 }
 
 .hideTS{
-    display: block;
+    display: none;
 }
-/* .allPage .upSideForm .tableStructure.is--open{
-    display: block;
-} */
+
+.hideIndexes{
+    display: none;
+}
+
+.hideTriggers{
+    display: none;
+}
+
+.hideViews{
+    display: none;
+}
+
+.hideForeign{
+    display: none;
+}
+
+.hideNew{
+    display: none;
+}
+
+.hideSD{
+    display: none;
+}
+
+.hideID{
+    display: none;
+}
+#tableStructures{
+    background-image: url(tableStructure.jpg);
+    background-size: cover;
+}
+
+#Triggers{
+    background-image: url(Triggers.jpg);
+    background-size: cover;
+}
+#Indexes{
+    background-image: url(Indexes.png);
+    background-size: cover;
+}
+#Views{
+    background-image: url(Views.jpg);
+    background-size: cover;
+}
+#Foreign{
+    /* width: 100%;
+    height: 100%; */
+    
+    background-image: url(Foreign.jpg);
+    background-size: cover;
+}
+
+#selectData{
+    background-image: url(selectData.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#insertData{
+    background-image: url(insertData.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#addNew{
+    background-image: url(addNew.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 
 /* That is a flex */
 .allPage .upSideForm .rightForm{
     display: flex;
     flex-wrap: wrap;
+    /* flex-direction: row-reverse; */
     border: 1px solid white;
     width: 100%;
+
 }
 
 .allPage .upSideForm .rightForm .columnUpRight{
@@ -53,203 +122,39 @@ html{
     display: flex;
     /* border: 1px solid black; */
     height: 100%;
+    width: auto;
 
-    justify-content: space-between;
-
+    flex-wrap: wrap;
 }
 
 .allPage .downSideForm .columnDownSide{
     border: 1px solid white;
-    width: 33.6%;
+    width: 33%;
+}
+
+/* Resize */
+@media screen and (max-width: 1200px){
+    .allPage .upSideForm .rightForm{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        border: 1px solid white;
+        width: 100%;
+    }
+
+    .allPage .upSideForm .tableStructure{
+        border: 1px solid white;
+        width: 50%;
+    
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+
 }
 
 
-/* Design for buttons*/
-#buttonTS{
-    /* position in page */
-    position: absolute;
-    top: 19.5%;
-    left: 7%;
-
-    /* design margin*/
-    outline: 0;
-    cursor: pointer;
-    text-decoration: transparent;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 50%;
-    padding: 1%;
-
-    /* design text */
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 200%;
-
-    display: block;
-
-}
-
-#buttonIndexes{
-    /* position in page */
-    position: absolute;
-    top: 5.5%;
-    left: 46%;
-
-    /* design margin*/
-    outline: 0;
-    cursor: pointer;
-    text-decoration: transparent;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 50%;
-    padding: 1%;
-
-    /* design text */
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 200%;
-
-}
-
-#buttonTriggers{
-    /* position in page */
-    position: absolute;
-    top: 5.5%;
-    left: 80%;
-
-    /* design margin*/
-    outline: 0;
-    cursor: pointer;
-    text-decoration: transparent;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 50%;
-    padding: 1%;
-
-    /* design text */
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 200%;
-
-}
-
-#buttonForeign{
-    /* position in page */
-    position: absolute;
-    top: 31.5%;
-    left: 46%;
-
-    /* design margin*/
-    outline: 0;
-    cursor: pointer;
-    text-decoration: transparent;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 50%;
-    padding: 1%;
-
-    /* design text */
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 200%;
-
-}
-
-#buttonViews{
-    /* position in page */
-    position: absolute;
-    top: 31.5%;
-    left: 81%;
-
-    /* design margin*/
-    outline: 0;
-    cursor: pointer;
-    text-decoration: transparent;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 50%;
-    padding: 1%;
-
-    /* design text */
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 200%;
-
-}
-
-#buttonSD{
-    /* position in page */
-    position: absolute;
-    top: 69.5%;
-    left: 9%;
-
-    /* design margin*/
-    outline: 0;
-    cursor: pointer;
-    text-decoration: transparent;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 50%;
-    padding: 1%;
-
-    /* design text */
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 200%;
-
-}
-
-#buttonID{
-    /* position in page */
-    position: absolute;
-    top: 69.5%;
-    left: 43.5%;
-
-    /* design margin*/
-    outline: 0;
-    cursor: pointer;
-    text-decoration: transparent;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 50%;
-    padding: 1%;
-
-    /* design text */
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 200%;
-
-}
-
-#buttonNew{
-    /* position in page */
-    position: absolute;
-    top: 69.5%;
-    left: 80%;
-
-    /* design margin*/
-    outline: 0;
-    cursor: pointer;
-    text-decoration: transparent;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 50%;
-    padding: 1%;
-
-    /* design text */
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 200%;
-
-}
 
 #addTS,
 #addIndexes, #addTriggers, #addForeign, #addViews,
@@ -304,6 +209,20 @@ html{
     color: white;
 
 }
+
+.typeAttribute{
+    display: inline-flex;
+    color: white;
+}
+
+#labelTypeIndexes{
+    width: 100%;
+}
+
+#labelAttributesIndexes{
+    width: 98.5%;
+}
+
 .Elements{
 }
 
@@ -314,3 +233,5 @@ html{
 #checkboxNULL{
     width: 85%;
 }
+
+

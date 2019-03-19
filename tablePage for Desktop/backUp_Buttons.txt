@@ -1,0 +1,186 @@
+#buttonTS{
+    /* position in page */
+    position: absolute;
+    top: 19.5%;
+    left: 7%;
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+    display: block;
+
+}
+
+#buttonIndexes{
+    /* position in page */
+    position: absolute;
+    top: 5.5%;
+    left: 46%;
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+}
+
+#buttonTriggers{
+    /* position in page */
+    position: absolute;
+    top: 5.5%;
+    left: 80%; 
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+    display: none;
+}
+
+#buttonForeign{
+    /* position in page */
+    position: absolute;
+    top: 31.5%;
+    left: 46%;
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+}
+
+#buttonViews{
+    /* position in page */
+    position: absolute;
+    top: 31.5%;
+    left: 81%;
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+}
+
+#buttonSD{
+    /* position in page */
+    position: absolute;
+    top: 69.5%;
+    left: 9%;
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+}
+
+#buttonID{
+    /* position in page */
+    position: absolute;
+    top: 69.5%;
+    left: 43.5%;
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+}
+
+#buttonNew{
+    /* position in page */
+    position: absolute;
+    top: 69.5%;
+    left: 80%;
+
+    /* design margin*/
+    outline: 0;
+    cursor: pointer;
+    text-decoration: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1%;
+
+    /* design text */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 200%;
+
+}
