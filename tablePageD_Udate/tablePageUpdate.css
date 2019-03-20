@@ -105,6 +105,27 @@ html{
 
 }
 
+.nameInsert{
+    background: transparent;
+    border: 1px solid white;
+    height: 30px;
+    margin-bottom: 10%;
+
+    width: 100%;
+
+}
+
+.interiorInsert{
+    position: absolute;
+    top: 20%;
+    width: 50%;
+    left: 25%;
+}
+
+h2{
+    color:white;
+}
+
 ::placeholder{
     color:white;
     padding-left: 2%;
@@ -191,8 +212,6 @@ p {
     font-family:"Comic Sans MS";
 }
 
-
-
 #idAddN .btn
 {
     display:block;
@@ -225,4 +244,6 @@ p {
     text-align:center;
 }
 
-
+#idInsData{
+    display: block;
+}
