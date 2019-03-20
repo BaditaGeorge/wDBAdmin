@@ -69,7 +69,22 @@ html{
     
 
 }
+<<<<<<< HEAD
 /* none */
 .hideTableStructure{
     display:none;
 }
+=======
+
+/* modfiy button Close */
+.buttonClose{
+    position: absolute;
+    top: 2%;
+    right: 3%;
+
+    height: 8%;
+    width: auto;
+
+    outline: 0;
+}
+>>>>>>> 3c39f453bb4a6d7014738eaa7f5b42e04e7619d0
