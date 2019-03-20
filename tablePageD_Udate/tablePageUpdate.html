@@ -14,7 +14,7 @@
         <div onclick="mkV1();return false;" class="photo tableStructure">
 
         </div>
-        <div onclick="mkV2();return false;"class="photo Indexes">
+        <div onclick="mkV2();return false;" class="photo Indexes">
 
         </div>
         <div onclick="mkV3();return false;" class="photo Triggers">
@@ -106,16 +106,37 @@
 
     <div class="Structure hideTableStructure" id="idSelDat">
         <input type="image" src="close.png" class="buttonClose">
-        
-
-
+        <header>
+            <p>Here you select data!</p>
+        </header>
+        <table>
+            <tr>
+                <th>Columns</th>
+                <th><input type="text" placeholder="column_name"></th>
+            </tr>
+            <tr>
+                <th>Condition</th>
+                <th><input type="text" placeholder="Condition"></th>
+            </tr>
+            <tr>
+                <th>Group By</th>
+                <th><input type="text" placeholder="column_name"></th>
+            </tr>
+            <tr>
+                <th>Condition</th>
+                <th><input type="text" placeholder="Condition"></th>
+            </tr>
+        </table>
+        <div class="wheresBtn">
+            <button type="submit" class="clb" id="cvBut">Select</button>
+        </div>
 
     </div>
 
     <div class="Structure hideTableStructure" id="idAddN">
         <input type="image" src="close.png" class="buttonClose">
         <p> Add new item </p>
-        
+
         <textarea class="textArea"> </textarea>
         <button class="btn"> Add view </button>
 
