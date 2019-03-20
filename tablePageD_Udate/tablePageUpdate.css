@@ -10,7 +10,7 @@ html{
 
     height: 100%;
 
-    opacity: 0.5;
+    opacity: 1;
   }
 
 .photo {
@@ -54,8 +54,7 @@ html{
 .addNew{
     background-image: url(addNew.jpg);
 }
-
-/* hide Div's for every dreptunghi */
+/*  Div's for every dreptunghi */
 .Structure{
     position: absolute;
     top:13%;
@@ -70,4 +69,7 @@ html{
     
 
 }
-
+/* none */
+.hideTableStructure{
+    display:none;
+}
