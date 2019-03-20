@@ -84,6 +84,7 @@ html{
     outline: 0;
 }
 
+<<<<<<< HEAD
 /* hide all forms */
 .hideTableStructure{
     display: none;
@@ -177,6 +178,7 @@ p {
     top: 20%;
     left: 20%;
 }
+=======
 #idAddN textarea
 {
     width:78%;
@@ -201,7 +203,7 @@ p {
     color:white;
     text-decoration:none;
     width:80%;
-    margin-bottom:5%;
+    margin-bottom:10%;
     border-radius:10px 0 10px 0;
     height:30px;
     font-family:"Arial";
@@ -221,8 +223,8 @@ p {
 
 #idAddN
 {
-    /* display: block; */
     text-align:center;
 }
 
 
+>>>>>>> 7e2ea22feabfe1662bb376ff74b2854be72eb86a
