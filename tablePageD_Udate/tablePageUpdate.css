@@ -82,3 +82,97 @@ html{
 
     outline: 0;
 }
+
+/* hide all forms */
+.hideTableStructure{
+    display: none;
+}
+
+#idStr{
+    display: none;
+    text-align: center;
+
+}
+
+.name{
+    background: transparent;
+    border: 1px solid white;
+    height: 30px;
+    margin-bottom: 10%;
+
+    width: 100%;
+
+}
+
+::placeholder{
+    color:white;
+    padding-left: 2%;
+}
+
+name
+{
+    color:white;
+}
+
+.labelType{
+    display: block;
+    color: white;
+
+    position: relative;
+    left:-6%;
+    margin-bottom: 5%;
+}
+
+.labelType #options{
+    width: 65.5%;
+
+}
+
+.size{
+   display: block;
+   color: white;
+   left:2%;
+   position: relative;
+   text-align: left;
+   
+   margin-bottom: 5%;
+}
+
+.size #size{
+    width: 17.5%;
+
+    position: relative;
+    left: 2%;
+}
+.null{
+    display: block;
+    color: white;
+    left:2%;
+    position:relative;
+    margin-bottom: 25%;
+    text-align: left;
+}
+
+a,
+button{
+    height: 15%;
+
+    text-decoration: none;
+    border: 1px solid white;
+    background: transparent;
+
+    color: white;
+    padding:5%;
+}
+
+p {
+    position:relative;
+    text-align: center;
+    color:white;
+}
+
+.interiorTableStructure{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}

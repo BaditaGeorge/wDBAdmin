@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" type="text/css" href="tablePageUpdate.css">
     <meta charset="UTF-8">
@@ -7,10 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body scroll="no">
     <div class="allPhotos">
         <div class="photo tableStructure">
-            
+
         </div>
         <div class="photo Indexes">
 
@@ -31,12 +33,44 @@
 
         </div>
         <div class="photo addNew">
-            
+
         </div>
     </div>
 
     <div class="Structure hideTableStructure" id="idStr">
         <input type="image" src="close.png" class="buttonClose">
+        <div class="interiorTableStructure">
+            <form action="newTable">
+                <input type="text" class="name" placeholder="Name of field" required>
+
+                <label class="labelType">
+                    Type
+                    <Select id="options">
+                        <option value="">VARCHAR2</option>
+                        <option value="">NUMBER</option>
+                        <option value="">DATE</option>
+                    </Select>
+                </label>
+
+                <label class="size">
+                    Size
+                    <input type="text" id="size">
+                </label>
+
+                <label class="null">
+                    Null
+                    <input type="checkbox" id="null">
+                </label>
+
+                <button type="submit">Add</button>
+
+            </form>
+
+            <p>
+                <span>OR</span>
+            </p>
+            <a href="../AccountPage/Tables.html" class="button">Finish</a>
+        </div>
     </div>
 
     <div class="Structure hideTableStructure" id="idTriggers">
@@ -68,4 +102,5 @@
     </div>
 
 </body>
+
 </html>
