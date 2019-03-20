@@ -14,7 +14,7 @@
         <div onclick="mkV1();return false;" class="photo tableStructure">
 
         </div>
-        <div onclick="mkV2();return false;"class="photo Indexes">
+        <div onclick="mkV2();return false;" class="photo Indexes">
 
         </div>
         <div onclick="mkV3();return false;" class="photo Triggers">
@@ -38,7 +38,7 @@
     </div>
 
     <div class="Structure hideTableStructure" id="idStr">
-        <input type="image" src="close.png" class="buttonClose">
+        <input type="image" src="close.png" class="buttonClose" alt="a">
         <div class="interiorTableStructure">
             <form action="newTable">
                 <input type="text" class="name" placeholder="Name of field" required>
@@ -56,7 +56,6 @@
                     Size
                     <input type="text" id="size">
                 </label>
-
                 <label class="null">
                     Null
                     <input type="checkbox" id="null">
@@ -74,27 +73,47 @@
     </div>
 
     <div class="Structure hideTableStructure" id="idTriggers">
-        <input type="image" src="close.png" class="buttonClose">
+        <input type="image" src="close.png" class="buttonClose" alt="a">
+        <form action="createTrigger">
+                <p>Your Trigger Query</p>
+                <textarea placeholder="Your SQL comes here.." class="textArea"></textarea>
+                <button class="btn" type="submit">Save</button>
+            </form>
     </div>
 
     <div class="Structure hideTableStructure" id="idViews">
-        <input type="image" src="close.png" class="buttonClose">
+        <input type="image" src="close.png" class="buttonClose" alt="a">
+            <form action="createView">
+                <p>Your View Query</p>
+                <textarea placeholder="Your SQL comes here.." class="textArea"></textarea>
+                <button class="btn" type="submit">Save</button>
+            </form>
     </div>
 
     <div class="Structure hideTableStructure" id="idInsData">
-        <input type="image" src="close.png" class="buttonClose">
+        <input type="image" src="close.png" class="buttonClose" alt="a">
     </div>
 
     <div class="Structure hideTableStructure" id="idFrgK">
-        <input type="image" src="close.png" class="buttonClose">
+        <input type="image" src="close.png" class="buttonClose" alt="a">
+        <form action="createTrigger">
+                <p>Your Foreign key Query</p>
+                <textarea placeholder="Your SQL comes here.." class="textArea"></textarea>
+                <button class="btn" type="submit">Save</button>
+            </form>
     </div>
 
     <div class="Structure hideTableStructure" id="idIndx">
-        <input type="image" src="close.png" class="buttonClose">
+        <input type="image" src="close.png" class="buttonClose" alt="a">
+        <form action="createTrigger">
+                <p>Your Index Query</p>
+                <textarea placeholder="Your SQL comes here.." class="textArea"></textarea>
+                <button class="btn" type="submit">Save</button>
+            </form>
     </div>
 
     <div class="Structure hideTableStructure" id="idSelDat">
-        <input type="image" src="close.png" class="buttonClose">
+        <input type="image" src="close.png" class="buttonClose" alt="a">
         
 
 
@@ -102,7 +121,7 @@
     </div>
 
     <div class="Structure hideTableStructure" id="idAddN">
-        <input type="image" src="close.png" class="buttonClose">
+        <input type="image" src="close.png" class="buttonClose" alt="a">
         <p> Add new item </p>
         
         <textarea class="textArea"> </textarea>

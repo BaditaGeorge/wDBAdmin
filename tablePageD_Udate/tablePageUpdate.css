@@ -226,3 +226,209 @@ p {
 }
 
 
+/* view */
+
+#idViews textarea
+{
+    width:78%;
+    margin-bottom:2%;
+}
+
+
+#idViews p
+{
+    font-size:180%;
+    color:white;
+    font-family:"Comic Sans MS";
+    margin-top:15%;
+}
+
+
+
+#idViews .btn
+{
+    display:block;
+    background-color:transparent;
+    border:1px solid white;
+    color:white;
+    text-decoration:none;
+    width:80%;
+    margin-bottom:5%;
+    border-radius:10px 0 10px 0;
+    height:30px;
+    font-family:"Arial";
+    padding-top:7px;
+    outline:none;
+  
+    margin-left:10%;
+
+
+}
+
+#idViews .btn:focus
+{
+    transform: scale(1.2);
+
+}
+
+#idViews
+{
+    /* display: block; */
+    text-align:center;
+}
+
+
+/* triggers */
+
+
+#idTriggers textarea
+{
+    width:78%;
+    margin-bottom:2%;
+}
+
+
+#idTriggers p
+{
+    font-size:180%;
+    color:white;
+    font-family:"Comic Sans MS";
+    margin-top:15%;
+}
+
+
+
+#idTriggers .btn
+{
+    display:block;
+    background-color:transparent;
+    border:1px solid white;
+    color:white;
+    text-decoration:none;
+    width:80%;
+    margin-bottom:5%;
+    border-radius:10px 0 10px 0;
+    height:30px;
+    font-family:"Arial";
+    padding-top:7px;
+    outline:none;
+  
+    margin-left:10%;
+
+
+}
+
+#idTriggers .btn:focus
+{
+    transform: scale(1.2);
+
+}
+
+#idTriggers
+{
+    /* display: block; */
+    text-align:center;
+}
+
+/*  */
+
+#idFrgK textarea
+{
+    width:78%;
+    margin-bottom:2%;
+}
+
+
+#idFrgK p
+{
+    font-size:180%;
+    color:white;
+    font-family:"Comic Sans MS";
+    margin-top:15%;
+}
+
+
+
+#idFrgK .btn
+{
+    display:block;
+    background-color:transparent;
+    border:1px solid white;
+    color:white;
+    text-decoration:none;
+    width:80%;
+    margin-bottom:5%;
+    border-radius:10px 0 10px 0;
+    height:30px;
+    font-family:"Arial";
+    padding-top:7px;
+    outline:none;
+  
+    margin-left:10%;
+
+
+}
+
+#idFrgK .btn:focus
+{
+    transform: scale(1.2);
+
+}
+
+#idFrgK
+{
+    /* display: block; */
+    text-align:center;
+}
+
+
+
+/*  */
+
+#idIndx textarea
+{
+    width:78%;
+    margin-bottom:2%;
+}
+
+
+#idIndx p
+{
+    font-size:180%;
+    color:white;
+    font-family:"Comic Sans MS";
+    margin-top:15%;
+}
+
+
+
+#idIndx .btn
+{
+    display:block;
+    background-color:transparent;
+    border:1px solid white;
+    color:white;
+    text-decoration:none;
+    width:80%;
+    margin-bottom:5%;
+    border-radius:10px 0 10px 0;
+    height:30px;
+    font-family:"Arial";
+    padding-top:7px;
+    outline:none;
+  
+    margin-left:10%;
+
+
+}
+#idIndx .btn:focus
+{
+    transform: scale(1.2);
+
+}
+
+#idIndx
+{
+    /* display: block; */
+    text-align:center;
+}
