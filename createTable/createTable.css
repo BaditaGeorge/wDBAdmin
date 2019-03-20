@@ -25,27 +25,7 @@ html
 
 }
 
-.box
-{
-
-    background-size:100% 100%;
-    background-image: url(../loginBeta_v2/1.jpg);
-    background-repeat:no-repeat;
-    min-height:75%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align:center;
-    padding:15%;
-    margin:10%;
-    position: relative;
-}
-
-.box p
-{
-    font-size:180%;
-    color:white;
-    font-family:"Comic Sans MS";
-}
-
+]
 
 .name{
     background: transparent;
