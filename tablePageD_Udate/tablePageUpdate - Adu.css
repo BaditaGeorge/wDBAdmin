@@ -129,6 +129,65 @@ html{
 #idAddN
 {
     text-align:center;
+    display:none;
 }
 
 
+/*  insert data     */
+
+#idSelDat header{
+    padding-top:15px;
+    margin-left:5%;
+    margin-top:10%;
+}
+
+#idSelDat table,tr,th{
+    margin-left:6%;
+    margin-right:6%;
+    font-size:100%;
+    padding-right:15px;
+    color:white;
+}
+#idSelDat th input{
+    height:28px;
+}
+#idSelDat .clb{
+    color:white;
+    font-family:"Arial";
+
+    background-color:transparent;
+    border:1px white solid;
+    border-radius:10px 0 10px 0;
+    padding:10px;
+    outline:0;
+    margin-top:10%;
+   
+
+    
+}
+
+#idSelDat .wheresTbl{
+    width:90%;
+    margin-top:5%;
+    padding-top:5%;
+    padding-bottom:5%;
+    margin-bottom:25%;
+    text-align:center;
+    display:none;
+    border:1px solid white;
+}
+
+
+#idSelDat p
+{
+    font-size:180%;
+    color:white;
+    font-family:"Comic Sans MS";
+    
+}
+
+#idSelDat
+{
+    text-align:center;
+   
+}
