@@ -105,6 +105,27 @@ html{
 
 }
 
+.nameInsert{
+    background: transparent;
+    border: 1px solid white;
+    height: 30px;
+    margin-bottom: 10%;
+
+    width: 100%;
+
+}
+
+.interiorInsert{
+    position: absolute;
+    top: 20%;
+    width: 50%;
+    left: 25%;
+}
+
+h2{
+    color:white;
+}
+
 ::placeholder{
     color:white;
     padding-left: 2%;
@@ -191,8 +212,6 @@ p {
     font-family:"Comic Sans MS";
 }
 
-
-
 #idAddN .btn
 {
     display:block;
@@ -225,6 +244,58 @@ p {
     text-align:center;
 }
 
+
+
+#idSelDat header{
+    padding-top:15px;
+    margin-left:5%;
+    margin-top:10%;
+}
+
+#idSelDat table,tr,th{
+    margin-left:6%;
+    margin-right:6%;
+    font-size:100%;
+    padding-right:15px;
+    color:white;
+}
+#idSelDat th input{
+    height:28px;
+}
+#idSelDat .clb{
+    color:white;
+    font-family:"Arial";
+
+    background-color:transparent;
+    border:1px white solid;
+    border-radius:10px 0 10px 0;
+    padding:10px;
+    outline:0;
+    margin-top:10%;
+   
+
+    
+}
+
+#idSelDat .wheresTbl{
+    width:90%;
+    margin-top:5%;
+    padding-top:5%;
+    padding-bottom:5%;
+    margin-bottom:25%;
+    text-align:center;
+    display:none;
+    border:1px solid white;
+}
+
+
+#idSelDat p
+{
+    font-size:180%;
+    color:white;
+    font-family:"Comic Sans MS";
+    
+}
 
 /* view */
 
@@ -431,4 +502,9 @@ p {
 {
     /* display: block; */
     text-align:center;
+}
+#idSelDat
+{
+    text-align:center;
+   
 }
