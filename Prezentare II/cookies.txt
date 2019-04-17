@@ -1,0 +1,31 @@
+Pentru a autentifica utilizatorii in cadrul aplicatiei noastre web, vom utiliza cookie-uri. Vom utiliza cookie-uri deoarece sunt o metoda facila de a distribui datele legate de autentificare intre microserviciile ce compun aplicatia noastra.
+Cookie-urile pastreaza datele de logare in client(browser), nu in cadrul serverului, cum fac sesiunile de exemplu.
+Vom seta cookie-urile in urma oricarei logari reusite, si apoi vom verifica daca cookie-ul este setat in cadrul aplicatiei, cand utilizatorul acceseaza o pagina log-in only.
+Vom seta o durata de viata pentru cookie-uri, pentru a oferi un anumit nivel de siguranta datelor utilizatorilor ( fiind in browser, sunt expuse) , asadar vom seta timpul de expirare pentru coockie, la 2 ore.
+---Cod demonstrativ legat de crearea si setarea proprietatilor unui coockie---
+--Creare Cookie!---
+<?php
+
+setcookie(cookie_name, cookie_value, [expiry_time], [cookie_path], [domain], [secure], [httponly]);
+
+?>
+
+<?php
+     setcookie("user_name", "Guru99", time()+ 60,'/'); // expires after 60 seconds
+     echo 'the cookie has been set for 60 seconds';
+?>
+
+--Obtinerea unui cookie--
+<?php
+     print_r($_COOKIE);    //output the contents of the cookie array variable 
+?>
+
+Array ( [PHPSESSID] => h5onbf7pctbr0t68adugdp2611 [user_name] => Guru99 )
+
+--Stergerea unui cookie--
+<?php
+
+ setcookie("user_name", "Guru99", time() - 360,'/');
+
+?>
+
