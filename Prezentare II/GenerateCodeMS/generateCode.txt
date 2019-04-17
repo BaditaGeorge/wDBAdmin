@@ -1,0 +1,2 @@
+Generate Code View
+	Controller-ul Generate Code e legat de butonul Generate din main.html

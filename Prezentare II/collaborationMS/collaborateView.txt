@@ -1,0 +1,2 @@
+Collaborate View
+	Controller-ul Collaborate e legat de butonul Collaborate din main.html

@@ -1,0 +1,4 @@
+Login View
+	Controller-ul Login e legat de login.html
+	Controller-ul Register e legat register.html
+	Controller-ul Change Password e legat de butonul change password din AccountPage.html si pagina changePass.html

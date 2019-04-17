@@ -1,0 +1,4 @@
+DataBase View
+	Controller-ul CreateDatabaseController este legat de pagina databaseCreat.html
+	Controller-ul ExecuteQueryController este legat de paginile in care putem aplica indecsi, proceduri si adauga diverse elemente in baza de date, inclusive tabele: CreateTable.html, query.html, function.html, procedure.html
+	Controller-ul ExportController este legat de paginile exportDatabase.html si este accesat si prin actionarea butonului de export din cadrul paginii principale.
