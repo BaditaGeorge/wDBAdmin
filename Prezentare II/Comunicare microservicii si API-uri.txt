@@ -1,0 +1,12 @@
+Comunicare intre microservicii
+
+- Microserviciul Collaborate trimite cereri de update catre microserviciul Database functions, la care acesta raspunde prin copierea codului din pagina Write your SQL a userului curent pe pagina colaboratorilor sai.
+
+- Microserviciul Generate code trimite o cerere catre microserviciul Databases functions pentru a primi codul ce trebuie tradus, cerere la care acesta raspunde printr-un array de stringuri.
+
+
+API-uri
+
+- Microserviciile trimit si primesc cereri printr-un API-REST propriu.
+
+- La intrarea in aplicatie un API-Gateway redirecteaza clientul catre pagina de login daca nu este logat sau catre pagina accesata altfel.
