@@ -1,0 +1,1 @@
+Acest controller va raspunde la request-urile GET,POST,DELETE,PUT,PATCH.

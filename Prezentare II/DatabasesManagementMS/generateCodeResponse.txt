@@ -1,0 +1,1 @@
+Raspunde la request-uri de forma GET si POST.

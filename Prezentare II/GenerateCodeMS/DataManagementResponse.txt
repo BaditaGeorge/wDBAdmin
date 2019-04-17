@@ -1,0 +1,1 @@
+Raspunde la cereri de forma GET,POST.
