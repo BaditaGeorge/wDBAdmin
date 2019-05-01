@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/desktopTable.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body scroll="no">
+    <div class="allPhotos">
+        <div onclick="mkV1();return false;" class="photo tableStructure">
+
+        </div>
+        <div onclick="mkV2();return false;" class="photo Indexes">
+
+        </div>
+        <div onclick="mkV3();return false;" class="photo Triggers">
+
+        </div>
+        <div onclick="mkV4();return false;" class="photo Foreign">
+
+        </div>
+        <div onclick="mkV5();return false;" class="photo Views">
+
+        </div>
+        <div onclick="mkV6();return false;" class="photo selectData">
+
+        </div>
+        <div onclick="mkV7();return false;" class="photo insertData">
+
+        </div>
+        <div onclick="mkV8();return false;" class="photo addNew">
+
+        </div>
+    </div>
+
+    <div class="Structure hideTableStructure" id="idStr">
+        <input type="image" src="../css/close.png" class="buttonClose" alt="a">
+        <div class="interiorTableStructure">
+            <form action="newTable">
+                <input type="text" class="name" placeholder="Name of field" required>
+
+                <label class="labelType">
+                    Type
+                    <Select id="options">
+                        <option value="">VARCHAR2</option>
+                        <option value="">NUMBER</option>
+                        <option value="">DATE</option>
+                    </Select>
+                </label>
+
+                <label class="size">
+                    Size
+                    <input type="text" id="size">
+                </label>
+                <label class="null">
+                    Null
+                    <input type="checkbox" id="null">
+                </label>
+
+                <button type="submit">Add</button>
+
+            </form>
+
+            <p>
+                <span>OR</span>
+            </p>
+            <a href="desktopTables.html" class="button">Finish</a>
+        </div>
+    </div>
+
+    <div class="Structure hideTableStructure" id="idTriggers">
+        <input type="image" src="../css/close.png" class="buttonClose" alt="a">
+        <form action="createTrigger">
+                <p>Your Trigger Query</p>
+                <textarea placeholder="Your SQL comes here.." class="textArea"></textarea>
+                <button class="btn" type="submit">Save</button>
+            </form>
+    </div>
+
+    <div class="Structure hideTableStructure" id="idViews">
+        <input type="image" src="../css/close.png" class="buttonClose" alt="a">
+            <form action="createView">
+                <p>Your View Query</p>
+                <textarea placeholder="Your SQL comes here.." class="textArea"></textarea>
+                <button class="btn" type="submit">Save</button>
+            </form>
+    </div>
+
+    <div class="Structure hideTableStructure" id="idInsData">
+        <input type="image" src="../css/close.png" class="buttonClose">
+        <div class="interiorInsert">
+            <h2>Insert!</h2>
+            <form action="Insert">
+                <input type="text" class="nameInsert" placeholder="Name of Column" required>
+                <input type="text" class="nameInsert" placeholder="Name of Value" required>
+
+                <button type="submit" id="insertButton">INSERT</button>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="Structure hideTableStructure" id="idFrgK">
+        <input type="image" src="../css/close.png" class="buttonClose" alt="a">
+        <form action="createTrigger">
+                <p>Your Foreign key Query</p>
+                <textarea placeholder="Your SQL comes here.." class="textArea"></textarea>
+                <button class="btn" type="submit">Save</button>
+            </form>
+    </div>
+
+    <div class="Structure hideTableStructure" id="idIndx">
+        <input type="image" src="../css/close.png" class="buttonClose" alt="a">
+        <form action="createTrigger">
+                <p>Your Index Query</p>
+                <textarea placeholder="Your SQL comes here.." class="textArea"></textarea>
+                <button class="btn" type="submit">Save</button>
+            </form>
+    </div>
+
+
+
+    <div class="Structure hideTableStructure" id="idSelDat">
+        <input type="image" src="../css/close.png" class="buttonClose">
+        <header>
+            <p>Here you select data!</p>
+        </header>
+        <table>
+            <tr>
+                <th>Columns</th>
+                <th><input type="text" placeholder="column_name"></th>
+            </tr>
+            <tr>
+                <th>Condition</th>
+                <th><input type="text" placeholder="Condition"></th>
+            </tr>
+            <tr>
+                <th>Group By</th>
+                <th><input type="text" placeholder="column_name"></th>
+            </tr>
+            <tr>
+                <th>Condition</th>
+                <th><input type="text" placeholder="Condition"></th>
+            </tr>
+        </table>
+        <div class="wheresBtn">
+            <button type="submit" class="clb" id="cvBut">Select</button>
+        </div>
+
+    </div>
+
+    <div class="Structure hideTableStructure" id="idAddN">
+        <input type="image" src="../css/close.png" class="buttonClose" alt="a">
+        <p> Add new item </p>
+
+        <textarea class="textArea"> </textarea>
+        <button class="btn"> Add view </button>
+
+        <textarea class="textArea"> </textarea>
+        <button class="btn"> Add trigger </button>
+
+        <textarea class="textArea"> </textarea>
+        <button class="btn"> Add foreign key </button>
+
+        <textarea class="textArea"> </textarea>
+        <button class="btn"> Add indexes </button>
+
+
+
+
+    </div>
+    <script src="../js/mainTablePage.js">
+    </script>
+</body>
+
+</html>

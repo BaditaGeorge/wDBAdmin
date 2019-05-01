@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/mobileInsertData.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <header>
+            <p>Insert Into Database</p>
+        </header>
+        <form action="check" method="GET">
+            <div class="insT">
+                <label>Columns</label>
+                <input type="text" placeholder="Column_Names">
+            </div>
+            <div class="insT">
+                <label id="lb1">Values</label>
+                <input type="text" placeholder="Values for columns">
+            </div>
+        </form>
+        <div class="wheresBtn">
+            <button type="submit" class="clb" id="cvBut">Insert</button>
+        </div>
+        <div class="msgScc">
+            <p>Done!</p>
+        </div>
+    </div>
+    <script>
+            let menuBtn = document.getElementById('cvBut');
+            let menu = document.querySelector('.msgScc');
+            let menu2 = document.querySelector('.clb');
+            menuBtn.addEventListener('click', () => {
+                menu.classList.add('is--open');
+            });
+            menuBtn.addEventListener('click',()=>{
+                menu2.classList.add('is--open');
+            });
+            document.addEventListener('keyup', (e) => {
+                if(e.key === 'Escape' || e.keyCode ===27) {
+                    menu.classList.remove('is--open');
+                    menu2.classList.remove('is--open');
+                }
+            })
+    </script>
+</body>
+</html>

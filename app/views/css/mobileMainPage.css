@@ -1,0 +1,148 @@
+body{
+
+    height:80%;
+    width:100%;
+    background-image:url("iPadBackground.jpg");
+    background-color:#44174E;
+    background-repeat:no-repeat;
+  
+    margin:0;
+    position:fixed;
+    
+  
+}
+
+html{
+    height:80%;
+    width:100%;
+    margin:0;
+    padding-right:5%;
+    background-image:url("iPadBackground.jpg");
+    background-color:#44174E;
+    background-repeat:no-repeat;
+    position:fixed;
+}
+
+.menu{
+    margin-left:1.5%;
+    margin-top:1%;
+}
+.menu button{
+    height:100%;
+    padding-left:5%;
+    padding-right:5%;
+}
+header{
+    height:10%;
+}
+header div{
+    height:100%;
+}
+.mainForm{
+    
+    /* background-image:url("2.jpg"); */
+    background-size:cover;
+    background-repeat:no-repeat;
+    text-align:center;
+    display:block;
+    padding-top:5px;
+    padding-bottom:5px;
+    height:90%; 
+}
+.mnuCnt{
+    border-radius:5%;
+    background-color:gray;
+    height:auto;
+    position:absolute;
+    top:11%;
+    left:0;
+    background-image:url("iPadFrame.jpg");
+    /*transform:translateX(-100%);*/
+    opacity:0;
+    transition: opacity .2s ease-in-out;
+    width:20%;
+    text-align:center;
+    align-items:center;
+    left:3.5%;
+}
+.menu button{
+    border-radius:12%;
+    background-color:transparent;
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    border:2px solid white;
+    margin-right:1%;
+    color:white;
+    padding-left:5%;
+    padding-right:5%;
+}
+.cl{
+    width:100%;
+    height:100%;
+}
+.mnuCnt button{
+    margin-top:5px;
+    display:block;
+    margin-left:10%;
+    border-radius:50%;
+}
+.lluno2{
+    width:60%;
+    height:60%;
+}
+.logoMic{
+    position:absolute;
+    top:2%;
+    left:80%;
+}
+.mnuCnt .sv{
+    width:80%;
+    height:20%;
+    margin-top:30%;
+    background-color:transparent;
+    border:none;
+    margin-top:10%;
+}
+#lluno{
+    width:30;
+    height:30px;
+}
+.mnuCnt .upd{
+    width:80%;
+    height:20%;
+    margin-top:10%;
+    background-color:transparent;
+    border:none;
+}
+.mnuCnt .gen{
+    width:80%;
+    height:20%;
+    margin-bottom:30%;
+    background-color:transparent;
+    border:none;
+}
+.mnuCnt.is--open{
+    /*transform:translateX(0%);*/
+    opacity:0.8;
+}
+
+a{
+    margin-left:6%;
+}
+.conti{
+    height:65%;
+    margin-top:5%;
+}
+textarea{
+    height:80%;
+    width:80%;
+    border:none;
+    
+
+}
+
+#conti1
+{
+    margin-top:-10%;
+    
+}

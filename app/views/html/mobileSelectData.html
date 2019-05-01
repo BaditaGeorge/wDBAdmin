@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/mobileSelectData.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <header>
+            <p>Here you select data!</p>
+        </header>
+        <table>
+            <tr>
+                <th>Columns</th>
+                <th><input type="text" placeholder="column_name"></th>
+            </tr>
+            <tr>
+                <th>Condition</th>
+                <th><input type="text" placeholder="Condition"></th>
+            </tr>
+            <tr>
+                <th>Group By</th>
+                <th><input type="text" placeholder="column_name"></th>
+            </tr>
+            <tr>
+                <th>Condition</th>
+                <th><input type="text" placeholder="Condition"></th>
+            </tr>
+        </table>
+        <div class="wheresBtn">
+            <button type="submit" class="clb" id="cvBut">Select</button>
+        </div>
+        <div class="wheresTbl">
+            <table class="letbl">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                </tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                </tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Surname</th>       
+                </tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Surname</th>       
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+            let menuBtn = document.getElementById('cvBut');
+            let menu = document.querySelector('.wheresTbl');
+    
+            menuBtn.addEventListener('click', () => {
+                menu.classList.add('is--open');
+            });
+    
+            document.addEventListener('keyup', (e) => {
+                if(e.key === 'Escape' || e.keyCode ===27) {
+                    menu.classList.remove('is--open');
+                }
+            })
+    </script>
+</body>
+</html>

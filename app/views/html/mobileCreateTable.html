@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/mobileCreateTable.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+    <div class="box">
+        <p>Create newTable</p>
+        <form action="newTable">
+            <input type="text" class="name"  placeholder="Name of table" required>
+            <input type="text" class="name"  placeholder="Name of Column" required>
+
+            <label class="labelType">
+                Type
+                <Select id="options">
+                    <option value="">VARCHAR2</option>
+                    <option value="">NUMBER</option>
+                    <option value="">DATE</option>
+                </Select>
+            </label>
+
+            <label class="size">
+                Size
+                <input type="text" id="size">
+            </label>
+
+            <label class="null">
+                Null
+                <input type="checkbox" id="null">
+            </label>
+
+            <button type="submit">Add</button>
+
+        </form>
+
+        <p>
+            <span>OR</span>
+        </p>
+        <a href="mobileTables.html" class="button">Finish</a>
+
+        
+    </div>
+
+</body>
+
+</html>

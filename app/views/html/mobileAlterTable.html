@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/mobileAlterTable.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box" id="forCr">
+        <header>
+            <p>Alter Table</p>
+        </header>
+        <form>
+            <div class="line">
+                <button onclick="AddCol(); return false;" class="clb">+</button>
+                <input type="text" placeholder="Column_name" class="tlt" id="nmn">
+                <button onclick="RmCol(); return false;" class="clb">-</button>
+            </div>
+            <select class="op" id="sl1">
+                <option value="integer">Integer</option>
+                <option value="float">Float</option>
+                <option value="varchar">VARCHAR</option>
+                <option value="varchar2">VARCHAR2</option>
+            </select>
+
+            <div class="bottom">
+            <input type="text" placeholder="Size" class="tlt2" id="sz1">
+            <input type="checkbox" name="chk" value="Allow null?"> <span>Allow null?</span>
+        </div>
+        </form>
+        <br>
+        <a class="btn" href=""> IdStudent</a>
+        <a class="btn" href=""> StudentName</a>
+        <a class="btn" href=""> StudentSurname </a>
+        <a class="btn" href=""> Faculty </a>
+    </div>
+    <script>
+        function AddCol() {
+            var tag = document.createElement("a");
+            var t = document.createTextNode(document.getElementById("nmn").value);
+            if (document.getElementById("sz1").value == "") {
+                alert("Size must be completed!");
+                return false;
+            }
+            tag.appendChild(t);
+            document.getElementById("forCr").appendChild(tag);
+            document.getElementById("nmn").value = '';
+            document.getElementById("sz1").value = '';
+        }
+        function RmCol() {
+            var tags = document.getElementsByTagName("a");
+            var textS = document.getElementById("nmn").value;
+            for (var i = 0; i < tags.length; i++) {
+                if (tags[i].textContent == textS) {
+                    document.getElementById("forCr").removeChild(tags[i]);
+                    break;
+                }
+            }
+            document.getElementById("nmn").value = '';
+        }
+    </script>
+</body>
+
+</html>

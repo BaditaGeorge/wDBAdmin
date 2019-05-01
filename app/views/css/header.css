@@ -1,0 +1,136 @@
+header{
+    position: relative;
+    height: 10%;
+    width: 100%;
+
+    background-image: url(background.jpg);
+    background-size: 50% 100%;
+
+    overflow: hidden;
+}
+
+header #buttonImg{
+    /* setUp for position in header */
+    position: absolute;
+    right: -5.5%;
+    height: 250%;
+    top: -70%;
+    width: 15%;
+
+
+    /* setUp for image in button
+    background-image: url(avatarIcon.png);
+    background-size: cover;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    */
+    outline: 0;
+}
+
+.dropMenu{
+    background-image: url(dropMenu.png);
+    background-size: cover;
+    /* background-repet: no-repeat; */
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    display: none;
+    top: 8%;
+    right: 0;
+
+}
+
+.dropMenu a{
+    display:block;
+    /* background-image:url("background.jpg");
+    background-size:100% 100%;
+    background-repeat: no-repeat; */
+    color: black;
+    text-decoration:none;
+    width:100%;
+    margin-bottom:10%;
+    border-radius:20%;
+    height:30px;
+    font-family:"Arial";
+
+    position: relative;
+    top: 20%;
+    
+}
+
+.dropMenu.is--open{
+    display:block;
+    opacity: 1;
+}
+
+
+.interior{
+
+    display: inline-block;
+    background-color:white;
+    width: 95%;
+    height: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 3%;
+    position:relative;
+    top: 22%;
+    left: 2.5%;
+}
+
+.stanga{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-size: cover;
+    background-color: white;
+    background-repeat:no-repeat;
+    width: 30%;
+    height: 90%;
+    position:absolute;
+    left:5%;
+    top:5%;
+    border-radius: 3%;
+}
+
+.elements img{
+    position: absolute;
+    top: 10%;
+    left: 13%;
+    height: auto;
+    width: 70%;
+    margin-bottom: 10%;
+}
+h2{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color:white;
+    border: 10px 0 10px 0;
+    background-image: url(background.jpg);
+    background-size: 50% 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 130%;
+}
+.dreapta{   
+    width: 30%;
+    height: 90%;
+    position:absolute;
+    left:50%;
+    top:1%;
+    border-radius: 3%;
+    background: transparent !important;
+}
+
+.dreapta .btn{
+    border-radius: 10px 0 10px 0;
+    border: 1px solid white;
+    background-image: url(background.jpg);
+    background-size: 50% 100%;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: relative;
+    top: 13%;
+    padding-top: 3%;
+}
