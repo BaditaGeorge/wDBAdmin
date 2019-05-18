@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^accountApi/.+$ ./app/accountService/api/accountApi.php [NC,L]
+RewriteRule ^databaseFunctionsApi/.+$ ./app/databaseFunctionsService/api/databaseFunctionsApi.php [NC,L]
+
