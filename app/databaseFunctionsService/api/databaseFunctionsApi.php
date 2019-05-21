@@ -4,14 +4,15 @@ include_once('../models/databaseFunctionsModel.php');
 $endpoint=$_SERVER['REQUEST_URI'];
 $method=$_SERVER['REQUEST_METHOD'];
 
-if($method=='PUT'){
+if($method=='POST'){
 
     preg_match('/^\/databaseFunctionsApi\/newId\/(.+)$/', $endpoint, $matches);
     
    
     if($matches)
-    {
-        createNewStorage($matches[1]);
+    {   
+        //createNewStorage($matches[1]);
+     
     }
     else
     {
@@ -21,6 +22,8 @@ if($method=='PUT'){
     }
     
 }
+
+
 
 
 
