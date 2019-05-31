@@ -16,11 +16,11 @@
                 </a>
             </div>
             <div class="dreapta">
-                <form class="signIn" action="login" method="POST">
+                <form class="signIn" action="../../account_service/controllers/home.php" method="POST">
                         <h4>TYPE YOUR EMAIL</h4>
-                        <input type="email" id="username" placeholder="Email*" required>
+                        <input type="email" id="username" name="email" placeholder="Email*" required>
     
-                        <button type="submit" id="buttonLogin"></button>
+                        <button type="submit" id="buttonLogin" name="submit" value="RECOVER"></button>
                         <footer class="register">
                                 <a href="desktopLogin.html">Return to homepage.</a>
                                 
