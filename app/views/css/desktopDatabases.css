@@ -63,7 +63,7 @@ header{
     padding: 0.5%;
     background: rgb(221, 109, 4);
 }
-.table #code{
+.table .code{
    display: inline-block; 
     border:1.5px solid black;
     border-radius: 15%;
@@ -76,7 +76,7 @@ header{
     background: rgb(221, 109, 4);
     cursor: pointer;
 }
-.table #save{
+.table .save{
     
     border:1.5px solid black;
     border-radius: 15%;

@@ -1,0 +1,27 @@
+Account Service
+
+Login
+Register
+Change Password
+Forgot Password
+
+Database Functions Service
+
+createNewStorage(id) for a user
+createNewDatabase 
+createNewQuery
+
+baza de date cu id si nume baze de date
+...
+
+Collaboration Service
+
+createNewSharedDatabase
+addAnotherUser(send email)
+...
+
+GenerateCode
+
+generateCodeForPhp
+GenerateCodeForJava
+Export?

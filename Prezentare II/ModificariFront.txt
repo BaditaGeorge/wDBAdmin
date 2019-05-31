@@ -1,0 +1,28 @@
+Prioritare
+
+Validare pagini https://validator.w3.org/?fbclid=IwAR09VJehSPP2DCTsJ82gJMKnjpbVO2cmGGchn83eDNzuhsIaO4uRZP3wozk
+desktopRegister -> fara username
+desktopMainPage -> collaborate - php redirectare catre un nou mainpage(cu un alt id generat) 
+                -> click run - pop up in josul paginii cu rezultatul query-ului (sa aiba scroll bar)
+                -> generate - la fel pop up 
+		-> si aici era o problema cu validarea
+toate celelalte pagini din desktop -> header (este o problema cu pop-ul, apare in spatele continutului)
+desktopTable -> nu e total responsive
+desktopDatabases, desktopDatabase, desktopFunctios etc - titlurile si datele trebuie preluate din model
+
+
+
+Pe final
+
+desktopMainPage 
+- click pe user, nu dispare fereastra cu click in afara (la fel pentru toate pop-up-urile)
+- collaborate (se pot adauga mai multi utilizatori)
+- save - pop-up successfully saved or not
+
+desktopTable 
+- insert date - value, nu name of value
+
+mobileLogin
+- Forgot password
+
+
