@@ -1,24 +1,36 @@
 Account Service
 
-Login
-Register
-Change Password
-Forgot Password
+G Configurare service de mail 
+G Forgot password mail
+L Change Password
+G Adaugare criptare pe parola
 
-Database Functions Service
+Database Functions
 
-createNewStorage(id) for a user
-createNewDatabase 
-createNewQuery
+A createNewStorage(id) for a user 
+A createNewDatabase 
+A createNewQuery
+Run
+Save
+Generate
+Collaborate
+L Collaborate button pop up mai mare si sa poti adauga mai multi odata
+L desktopDatabases - nu se vede butonul user
+L desktopDatabases - refa butoanele (optional)
 
-baza de date cu id si nume baze de date
+createFunction
+createProcedure
+createTrigger
+createIndex
 ...
 
-Collaboration Service
+Collaborate
 
 createNewSharedDatabase
 addAnotherUser(send email)
-...
+G live update 
+consimtamant save
+run cu select
 
 GenerateCode
 

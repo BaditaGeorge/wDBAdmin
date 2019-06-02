@@ -23,6 +23,26 @@ if($method=='POST'){
     
 }
 
+else if($method=='GET'){
+
+    preg_match('/^\/databaseFunctionsApi\/databases\/(.+)$/', $endpoint, $matches);
+
+    //check if user exists if needed
+
+    if($matches)
+    {   
+        $databases=[];
+        $dbs=getAllDatabases($matches[1]);
+        foreach($dbs as $db){
+            $new_obj=["database_name"=>$db[0]];
+            array_push($databases,$new_obj);
+        }
+        header('Content-type: application/json');
+           echo json_encode($databases);
+    }
+
+}
+
 
 
 

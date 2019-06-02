@@ -89,6 +89,27 @@ header{
     background: rgb(221, 109, 4);
     cursor: pointer;
 }
+
+header #buttonImg{
+    /* setUp for position in header */
+    position: absolute;
+    right: -5.5%;
+    height: 250%;
+    top: -70%;
+    width: 15%;
+
+
+    /* setUp for image in button
+    background-image: url(avatarIcon.png);
+    background-size: cover;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    */
+    outline: 0;
+}
+
+
 @media screen and (min-width: 500px) and (max-width: 800px) {
     .toate .div {
         width: 49%;
