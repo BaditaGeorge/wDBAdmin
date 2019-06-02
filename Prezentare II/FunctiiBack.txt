@@ -15,8 +15,8 @@ Save
 Generate
 Collaborate
 L Collaborate button pop up mai mare si sa poti adauga mai multi odata
-L desktopDatabases - nu se vede butonul user
-L desktopDatabases - refa butoanele (optional)
+L desktopDatabases - butoanele (optional)
+responsive butoane
 
 createFunction
 createProcedure

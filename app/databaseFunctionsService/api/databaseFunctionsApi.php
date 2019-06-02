@@ -16,10 +16,21 @@ if($method=='POST'){
     }
     else
     {
-        header('Content-type: application/json');
-        echo json_encode(['reason'=>'Bad request']);
-        http_response_code(400);
+        preg_match('/^\/databaseFunctionsApi\/databases\/(.+)\/(.+)$/', $endpoint, $matches);
+        if($matches){
+            $response=["response" =>  createNewDatabase($matches[1],$matches[2])];
+            header('Content-type: application/json');
+            echo json_encode($response);
+
+        }
+        else
+        {
+            header('Content-type: application/json');
+            echo json_encode(['reason'=>'Bad request']);
+            http_response_code(400);
+        }
     }
+
     
 }
 
@@ -42,6 +53,18 @@ else if($method=='GET'){
     }
 
 }
+
+else if($method=='DELETE'){
+
+    preg_match('/^\/databaseFunctionsApi\/databases\/(.+)\/(.+)$/', $endpoint, $matches);
+    if($matches)
+    {
+        $response=["response" => deleteDatabase($matches[1],$matches[2])];
+        header('Content-type: application/json');
+        echo json_encode($response);
+    }
+}
+
 
 
 

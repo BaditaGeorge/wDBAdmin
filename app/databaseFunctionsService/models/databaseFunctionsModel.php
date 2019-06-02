@@ -45,9 +45,36 @@
 
         return $databases;
         //each object in the array is another array; acces with db[0]
+        //TO DO: change query to be non-injective if possible; use mysqli
 
     }
 
+    function deleteDatabase($userId, $databaseName)
+    {   
+       	
+        $CONFIG = [
+            'servername' => "localhost",
+            'username' => "root",
+            'password' => '',
+            'db' => ''
+        ];
+
+        $conn = new mysqli($CONFIG["servername"], $CONFIG["username"], $CONFIG["password"], $CONFIG["db"]);
+ 
+        if ($conn->connect_error) {
+          return "conn failed";
+        } 
+        
+        $sql="DROP DATABASE " . $userId .'_'. $databaseName;
+        if(!mysqli_query($conn, $sql))
+            return mysqli_error($conn);
+
+
+        return "succes";
+
+
+
+    }
 
 
 
