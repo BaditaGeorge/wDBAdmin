@@ -8,7 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-  
+        <script src="../js/redirect.js">
+        </script>
         <div class="interior">
             <div class="stanga">
                 <a href="https://www.facebook.com/">
@@ -16,15 +17,15 @@
                 </a>
             </div>
             <div class="dreapta">
-                <form class="signIn" action="login" method="POST">
+                <form class="signIn" action="../../accountService/controllers/home.php" method="POST">
                         <h4>CHANGE PASSWORD</h4>
                     <input type="password" id="oldPass" placeholder="Old password*" required>
 
-                    <input type="password" id="newPass" placeholder="New password*" required>
+                    <input type="password" id="newPass" name="newPass" placeholder="New password*" required>
 
-                    <input type="password" id="confirmNewPass" placeholder="Confirm new password*" required>
+                    <input type="password" id="confirmNewPass" name="confirmNewPass" placeholder="Confirm new password*" required>
 
-                    <button type="submit" id="buttonLogin"></button>
+                    <button type="submit" id="buttonLogin" name="buttonCP"></button>
                 
                         <footer class="register">
                                 <a href="desktopLogin.html">Return to homepage.</a>

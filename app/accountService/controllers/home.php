@@ -29,6 +29,12 @@ if(isset($_GET['submit'])){
     logout($_COOKIE['logat']);
     header('Location: ../../views/html/desktopLogin.php');
 }
+if(isset($_POST['buttonCP'])){
+    if($_POST['newPass'] === $_POST['confirmNewPass']){
+        changePassword($_POST['newPass']);
+        header('Location: ../../views/html/desktopMainPage.html');
+    }
+}
 /*class Home extends Controller
 {
     public function index($name = '')

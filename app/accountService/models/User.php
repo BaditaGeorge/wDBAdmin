@@ -19,14 +19,25 @@ function login($username,$password){
     $loginStmt -> execute();
     $result = $loginStmt -> get_result();
     $loginStmt -> close();
-    $upStmt = $conn->prepare("UPDATE users SET secret = ? WHERE email = ? AND parola = ?");
     $str = '1234567890abcdefghijklmnoprstqwxyzABCDEFGHIJKLMNOPRSTQWXYZ$';
+    //$str = 'abcdefghijklmnoprqstwzyz';
     $randStr = '';
     $length = strlen($str);
     $length = $length - 1;
     for($i =0 ; $i < 9; $i ++){
         $randStr .= $str[rand(0,$length)];
     }
+    $usid = 0;
+    $selStmt = $conn -> prepare("SELECT id FROM users WHERE email = ? AND parola = ?");
+    $selStmt -> bind_param('ss',$username,$password);
+    $selStmt -> execute();
+    $selStmt -> store_result();
+    $selStmt -> bind_result($usid);
+    $selStmt -> fetch();
+    $selStmt -> close();
+    $randStr .= '=';
+    $randStr .= strval($usid);
+    $upStmt = $conn->prepare("UPDATE users SET secret = ? WHERE email = ? AND parola = ?");
     $upStmt -> bind_param('sss',$randStr,$username,$password);
     $upStmt -> execute();
     $upStmt -> close();
@@ -55,7 +66,13 @@ function getData($msg){
 function insertData($email,$password){
     GLOBAL $conn;
     $loginStmt = $conn->prepare("INSERT INTO users(id,email,parola) VALUES(?,?,?)");
-    $random_v=rand(1,1560);
+    $stid = $conn->prepare("SELECT MAX(id) FROM users");
+    $random_v = 0;
+    $stid->execute();
+    $stid->store_result();
+    $stid->bind_result($random_v);
+    $stid->fetch();
+    $stid->close();
     $loginStmt -> bind_param("sss",$random_v,$email,$password);
     $loginStmt -> execute();
     $loginStmt -> close();
@@ -120,6 +137,13 @@ function recoverPass($email){
         $message="You wanted to recover you pass!Your pass is:".$value;
         mail($email,"DBAdmin",$message);
     }
+}
+function changePassword($newPassword){
+    GLOBAL $conn;
+    $stmt = $conn->prepare("UPDATE users SET parola = ? WHERE secret = ?");
+    $stmt -> bind_param("ss",$newPassword,$_COOKIE['logat']);
+    $stmt -> execute();
+    $stmt -> close();
 }
 class User{
     public $id;

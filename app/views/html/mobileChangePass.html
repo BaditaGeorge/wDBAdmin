@@ -12,19 +12,21 @@
 
 
 <body>
+    <script src="../js/redirect2.js">
+    </script>
     <div class="mobileSize">
         <div class="allForm">
-            <form action="login">
+            <form action="../../accountService/controllers/home.php" method="POST">
                 <div class="signIn">
                     <!-- <img src="finish.png" alt="logo" id="logo"> -->
                     <h3>Change Pass BACHsql.</h3>
                     <input type="text" id="mail" placeholder="Old Password" required>
 
-                    <input type="text" id="username" placeholder="New Password" required>
+                    <input type="text" id="username" name="newPass" placeholder="New Password" required>
 
-                    <input type="password" id="loginPass" placeholder="Confirm New Password" required>
+                    <input type="password" id="loginPass" name="confirmNewPass" placeholder="Confirm New Password" required>
 
-                    <button type="submit" id="buttonRegister">Change</button>
+                    <button type="submit" id="buttonCP">Change</button>
                 </div>
             </form>
         </div>
