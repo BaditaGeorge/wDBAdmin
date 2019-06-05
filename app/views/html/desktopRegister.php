@@ -22,11 +22,11 @@
             <div class="dreapta">
                 <form class="signIn" action="../../accountService/controllers/home.php" method="POST">
                         <h4>REGISTER HERE</h4>
-                    <input type="email" id="username" name="email" placeholder="E-mail*" required>
+                    <input type="email" id="email" name="email" placeholder="E-mail*" required>
 
-                    <input type="text" id="username" placeholder="Username*" required>
+                    <input type="text" id="usernameID" placeholder="Username*" required>
 
-                    <input type="password" id="loginPass" name="loginPass" placeholder="Password*" required>
+                    <input type="password" id="loginPassword" name="loginPass" placeholder="Password*" required>
 
                     <button type="submit" id="buttonLogin" name="submit" value="REGISTER"></button>
                 

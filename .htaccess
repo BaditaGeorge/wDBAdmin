@@ -3,5 +3,5 @@ RewriteBase /
 
 RewriteRule ^accountApi/.+$ ./app/accountService/api/accountApi.php [NC,L]
 RewriteRule ^databaseFunctionsApi/.+$ ./app/databaseFunctionsService/api/databaseFunctionsApi.php [NC,L]
-RewriteRule ^bachsql/databases/.+$ ./app/views/html/desktopDatabases.php [NC,L]
+RewriteRule ^bachsql/databases/.+$ ./app/views/html/desktopDatabases.html [NC,L]
 

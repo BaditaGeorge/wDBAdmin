@@ -76,8 +76,9 @@ h4{
     font-style: italic;
     font-weight: bold;
 }
-.signIn #username,
-.signIn #loginPass,
+.signIn #oldPass,
+.signIn #newPass,
+.signIn #confirmNewPass,
 .signIn #mail{
     border-radius: 10px 0 10px 0;
    

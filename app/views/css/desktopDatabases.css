@@ -16,7 +16,7 @@ header{
     background-image: url(webpage.jpg);
     background-size: 50% 100%;
 
-    overflow: hidden;
+   
 }
 .toate {
     display: flex;
@@ -27,18 +27,23 @@ header{
   }
 .table {
     background-color: #f1f1f1;
+    height:208.8px;
     width: 200px;
     margin: 30px;
     text-align: center;
     line-height: 75px;
     font-size: 30px;
     border:2px solid #ccc;
+    margin-top: 70px;
 
   }
 
 .culoare{
     background-image:url(webpage.jpg);
     color: rgb(54, 32, 6);
+    position:relative;
+    margin-top:30px;
+    margin-bottom:30px;
     
 }
 .toate .table a{
@@ -49,6 +54,7 @@ header{
 }
 #buton{
     position: relative;
+    margin-top: 70px;
 }
 .toate #generate{
 
@@ -58,11 +64,26 @@ header{
     font-size: 110%;
     text-decoration: none;
     color:  rgb(54, 32, 6);
-    right: 0%;
-    bottom: -30%;
+    left: 0%;
+    top: -30%;
     padding: 0.5%;
     background: rgb(221, 109, 4);
 }
+
+#noDBS{
+    border:2px solid black;
+    border-radius: 15%;
+    position: absolute;
+    font-size: 110%;
+    text-decoration: none;
+    color:  rgb(54, 32, 6);
+    left: 0%;
+    bottom: -100%;
+    padding: 0.5%;
+    background: rgb(221, 109, 4);
+}
+
+
 .table .code{
    display: inline-block; 
     border:1.5px solid black;
@@ -89,6 +110,27 @@ header{
     background: rgb(221, 109, 4);
     cursor: pointer;
 }
+
+header #buttonImg{
+    /* setUp for position in header */
+    position: absolute;
+    right: -5.5%;
+    height: 250%;
+    top: -70%;
+    width: 15%;
+
+
+    /* setUp for image in button
+    background-image: url(avatarIcon.png);
+    background-size: cover;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    */
+    outline: 0;
+}
+
+
 @media screen and (min-width: 500px) and (max-width: 800px) {
     .toate .div {
         width: 49%;
