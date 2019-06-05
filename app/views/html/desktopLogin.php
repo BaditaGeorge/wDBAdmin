@@ -8,6 +8,11 @@
     <title>Document</title>
 </head>
 <body>
+        <?php
+            if(isset($_COOKIE['logat'])){
+                header('Location: desktopMainPage.html');
+            }
+        ?>
         <div class="interior">
             <div class="stanga">
                 <a href="https://www.facebook.com/">
@@ -15,7 +20,7 @@
                 </a>
             </div>
             <div class="dreapta">
-                <form class="signIn" action="../../account_service/controllers/home.php" method="POST">
+                <form class="signIn" action="../../accountService/controllers/home.php" method="POST">
                         <h4>LOGIN</h4>
                         <input type="text" id="username" name="email" placeholder="Username*" required>
 
