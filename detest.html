@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Some content</h1>
+    <button id="jokeBtn">Give me joke</button>
+    <button id="ybtn">Press</button>
+    <input type="text" id="pls" name="pls">
+    <script>
+        let body = document.querySelector('body');
+        let jokeBtn = document.getElementById('jokeBtn');
+        jokeBtn.addEventListener('click',onClick);
+        //document.getElementById('ybtn').addEventListener('click',onClick2);
+        function onClick(){
+            fetch('detest.php',{method:'GET'})
+                .then((resp)=>{return resp.json();})
+                .then(jsonResp=>{
+                    alert('uh');
+                    let p = document.createElement('p');
+                    p.innerText = jsonResp.key;
+                    body.appendChild(p);
+                    alert(jsonResp.key);
+                    console.log(jsonResp.key);
+                })
+                .catch(onError);
+            
+            function onError(err){
+                console.log(err);
+                jokeBtn.disabled = false;
+            }
+        }
+        window.onkeypress = function onClick2(event){
+            data = {'cici':String(event.key)};
+            //alert('sending');
+            fetch('detest.php',{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(data)})
+                .then((resp)=>{return resp.json();})
+                .then(jsonResp=>{
+                    //alert(jsonResp.key);
+                    document.getElementsByName('pls')[0].value += jsonResp.key;
+                })
+                .catch(onErrr);
+            function onError(err){
+                console.log(err);
+            }
+        }
+    </script>
+</body>
+</html>
