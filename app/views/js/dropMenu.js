@@ -1,12 +1,12 @@
-let menuBtn = document.getElementById('generateButton');
-let menu = document.querySelector('.dropMenuGenerate');
+let menuBtn2 = document.getElementById('generateButton');
+let menu2 = document.querySelector('.dropMenuGenerate');
 
-menuBtn.addEventListener('click', () => {
-    menu.classList.add('isOpen');
+menuBtn2.addEventListener('click', () => {
+    menu2.classList.add('isOpen');
 });
 
 document.addEventListener('keyup', (e) => {
     if (e.key === 'Escape' || e.keyCode === 27) {
-        menu.classList.remove('isOpen');
+        menu2.classList.remove('isOpen');
     }
 })

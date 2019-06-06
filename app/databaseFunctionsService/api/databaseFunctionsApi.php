@@ -11,8 +11,9 @@ if($method=='POST'){
    
     if($matches)
     {   
-        //createNewStorage($matches[1]);
-     
+        $response=["response" => createNewStorage($matches[1])];
+        header('Content-type: application/json');
+        echo json_encode($response);
     }
     else
     {
@@ -23,12 +24,28 @@ if($method=='POST'){
             echo json_encode($response);
 
         }
-        else
-        {
-            header('Content-type: application/json');
-            echo json_encode(['reason'=>'Bad request']);
-            http_response_code(400);
+        else{
+
+            preg_match('/^\/databaseFunctionsApi\/mainpage\/(.+)\/run$/', $endpoint, $matches);
+            if($matches){
+              
+                $response=run($matches[1],file_get_contents('php://input'));
+                header('Content-type: application/json');
+                echo json_encode($response);
+            }
+            else
+            {
+                header('Content-type: application/json');
+                echo json_encode(['reason'=>'Bad request']);
+                http_response_code(400);
+            }
+
+
         }
+
+    
+
+        
     }
 
     
@@ -50,6 +67,26 @@ else if($method=='GET'){
         }
         header('Content-type: application/json');
            echo json_encode($databases);
+    }
+    else{
+
+        preg_match('/^\/databaseFunctionsApi\/mainpage\/(.+)$/', $endpoint, $matches);
+
+        if($matches){
+            $result=getMainPageContent($matches[1]);
+    
+                header('Content-type: application/json');
+                echo json_encode($result);
+
+        }
+        else
+        {
+            header('Content-type: application/json');
+            echo json_encode(['reason'=>'Bad request']);
+            http_response_code(400);
+        }
+
+
     }
 
 }

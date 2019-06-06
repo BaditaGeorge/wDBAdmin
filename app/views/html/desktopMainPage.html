@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/desktopMainPage.css">
+    <base href="/" />
+    <link rel="stylesheet" type="text/css" href="app/views/css/desktopMainPage.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,32 +12,32 @@
 
 <body style="overflow: hidden">
     <header>
-        <input type="image" src="../css/avatarIcon.png" id="buttonImg" alt="buttonImg">
+        <input type="image" src="app/views/css/avatarIcon.png" id="buttonImg" alt="buttonImg">
         <div class="buttonHead">
-            <button class="run">
-                <img src="../css/arrowRun.png" alt="runImage" id="run">
+            <button class="run" id="runBtn">
+                <img src="app/views/css/arrowRun.png" alt="runImage" id="run">
                 <span id="runSpan">Run</span>
             </button>
 
             <button class="run">
-                <img src="../css/saveDisk.png" alt="runImage" id="save">
+                <img src="app/views/css/saveDisk.png" alt="runImage" id="save">
                 <span id="saveSpan">Save</span>
             </button>
 
             <button class="run" id="generateButton">
-                <img src="../css/generatePhoto.png" alt="runImage" id="generate">
+                <img src="app/views/css/generatePhoto.png" alt="runImage" id="generate">
                 <span id="generateSpan">Generate</span>
             </button>
         </div>
     </header>
 
     <aside class="leftMenu">
-        <img src="../css/collaborateText.png" alt="collImg" id="collaborateImg">
+        <img src="app/views/css/collaborateText.png" alt="collImg" id="collaborateImg">
 
-        <img src="../css/logo.png" alt="logo" id="logoAside">
+        <img src="app/views/css/logo.png" alt="logo" id="logoAside">
 
         <button class="collaborate">
-            <img src="../css/collaborate.png" alt="collaborateImage" id="collaborate">
+            <img src="app/views/css/collaborate.png" alt="collaborateImage" id="collaborate">
             <span id="collaborateSpan">Collaborate</span>
         </button>
 
@@ -48,28 +49,31 @@
 
         <textarea id="rightArea" 
         placeholder="Query SQL"></textarea>
+
+        <div class="result" id="schemaResult"> <button class="closeButton">✖</button> <p id="stextResult"></p></div>
+        <div class="result" id="queryResult"> <button class="closeButton">✖</button> <p id="qtextResult"></p></div>
     </aside>
 
     <div class="dropMenuGenerate">
         <a href="">
-            <img src="../css/java.png" alt="javaPhoto" id="java">
+            <img src="app/views/css/java.png" alt="javaPhoto" id="java">
         </a>
         <a href="">
-            <img src="../css/php.png" alt="javaPhoto" id="php">
+            <img src="app/views/css/php.png" alt="javaPhoto" id="php">
         </a>
     </div>
     <div class="dropMenu">
         <div class="interior">
             <div class="stanga">
                 <div class="elements">
-                    <img class="profile" src="../css/captain.png" alt="profileIcon" width="50" height="50">
+                    <img class="profile" src="app/views/css/captain.png" alt="profileIcon" width="50" height="50">
                     <h2>Steve Roger</h2>
                 </div>
             </div>
             <div class="dreapta">
-                <a class="btn" href="../../account_service/controllers/home.php?submit=true"> Logout </a>
-                <a class="btn" href="desktopChangePass.html"> Change password </a>
-                <a class="btn" href="desktopDatabases.html"> Databases</a>
+                <a class="btn" href="app/account_service/controllers/home.php?submit=true"> Logout </a>
+                <a class="btn" href="app/views/html/desktopChangePass.html"> Change password </a>
+                <a class="btn" id="dbLink" href="app/views/html/desktopDatabases.html"> Databases</a>
             </div>
         </div>
     </div>
@@ -80,8 +84,13 @@
     </div>
 
     <footer></footer>
-    <script src="../js/main.js"></script>
-    <script src="../js/dropMenu.js"></script>
+
+    
+
+    
+     <script src="app/views/js/main.js"></script> 
+     <script src="app/views/js/dropMenu.js"></script> 
+    <script src="app/views/js/desktopMainPage.js"></script>
 
 
 </body>
