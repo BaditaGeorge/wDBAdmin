@@ -19,7 +19,7 @@
                 <span id="runSpan">Run</span>
             </button>
 
-            <button class="run">
+            <button class="run" id="saveBtn">
                 <img src="app/views/css/saveDisk.png" alt="runImage" id="save">
                 <span id="saveSpan">Save</span>
             </button>
@@ -28,6 +28,7 @@
                 <img src="app/views/css/generatePhoto.png" alt="runImage" id="generate">
                 <span id="generateSpan">Generate</span>
             </button>
+            <select id="selectDatabase"> </select>
         </div>
     </header>
 
@@ -44,14 +45,20 @@
     </aside>
 
     <aside class="rightSide">
-        <textarea id="leftArea" 
+        <textarea id="leftArea"
         placeholder="SCHEMA SQL: CREATE/ INSERT/ UPDATE/.."></textarea>
 
-        <textarea id="rightArea" 
+        <textarea id="rightArea"
         placeholder="Query SQL"></textarea>
 
-        <div class="result" id="schemaResult"> <button class="closeButton">✖</button> <p id="stextResult"></p></div>
-        <div class="result" id="queryResult"> <button class="closeButton">✖</button> <p id="qtextResult"></p></div>
+        <div class="result" id="schemaResult"> 
+            <button class="closeButton">✖</button> 
+            <p id="stextResult"></p>
+        </div>
+        <div class="result" id="queryResult"> 
+            <button class="closeButton">✖</button> 
+            <p id="qtextResult"></p>
+        </div>
     </aside>
 
     <div class="dropMenuGenerate">
@@ -85,12 +92,12 @@
 
     <footer></footer>
 
-    
 
-    
-     <script src="app/views/js/main.js"></script> 
-     <script src="app/views/js/dropMenu.js"></script> 
-    <script src="app/views/js/desktopMainPage.js"></script>
+
+
+     <script src="app/views/js/main.js"></script>
+     <script src="app/views/js/dropMenu.js"></script>
+     <script src="app/views/js/desktopMainPage.js"></script> 
 
 
 </body>

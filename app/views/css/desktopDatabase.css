@@ -98,7 +98,7 @@ header{
 #buton{
     position: relative;
 }
-.toate #generate{
+.toate #generateButton{
 
     border:1.5px solid black;
     border-radius: 15%;

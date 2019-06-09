@@ -13,7 +13,6 @@ fetch("/databaseFunctionsApi/databases/" + $user_id)
 .then(function(myJson) {
 
     if(!myJson.length){
-        console.log("gol");
         var addBtn=document.createElement("button");
         addBtn.id="noDBS";
         addBtn.innerHTML="Add database";
@@ -37,10 +36,13 @@ fetch("/databaseFunctionsApi/databases/" + $user_id)
         }
         canvas.appendChild(div);
 
-        var p = document.createElement("p");
-        p.classList.add("culoare");
-        p.innerHTML=myJson[index]["database_name"];
-        div.appendChild(p);
+        var a= document.createElement("a");
+        a.classList.add("culoare");
+        a.innerHTML=myJson[index]["database_name"];
+        a.href="/bachsql/database/" + $user_id +"/"+myJson[index]["database_name"];
+        
+
+        div.appendChild(a);
 
         var deleteBtn = document.createElement("button");
         deleteBtn.classList.add("save");
@@ -134,3 +136,4 @@ function createOnClick(e){
     location.reload();
 
 }
+

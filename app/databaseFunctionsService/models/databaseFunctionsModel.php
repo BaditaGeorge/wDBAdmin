@@ -15,7 +15,7 @@
           return "conn failed";
         } 
         
-        $sql="INSERT INTO `users`(id,main_page,schema_text_area,query_text_area) VALUES(".$newUserId.",0,null,null)";
+        $sql="INSERT INTO `users`(id,database_name,schema_text_area,query_text_area) VALUES(".$newUserId.",".$newUserId.",null,null)";
         if(!mysqli_query($conn, $sql))
             return mysqli_error($conn);
 
@@ -26,18 +26,54 @@
     function createNewDatabase($userId, $databaseName){
         //name of database formed from userId and database name
         
+        $CONFIG = [
+            'servername' => "localhost",
+            'username' => "root",
+            'password' => '',
+            'db' => ''
+        ];
+
+        $conn = new mysqli($CONFIG["servername"], $CONFIG["username"], $CONFIG["password"], $CONFIG["db"]);
+ 
+        if ($conn->connect_error) {
+          return "conn failed";
+        } 
+        
+        $sql="SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA  WHERE SCHEMA_NAME = '" .$userId."_" . $databaseName. "'";
+
+        $result = mysqli_query($conn, $sql);
+        if(!$result)
+            return mysqli_error($conn);
+        
+        if (mysqli_num_rows($result) > 0)
+           return 'error: already exists';
+        
     
-        $dsn = "mysql:host=localhost";
-        $pdo = new PDO($dsn,"root","");
+        $result=mysqli_query($conn,"CREATE DATABASE `".$userId."_" . $databaseName."`;");
 
-        $stm=$pdo->query("SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA  WHERE SCHEMA_NAME = '" .$userId."_" . $databaseName. "';" );
-        $db=$stm->fetch();
-        if($db)
-            return 'error: already exists';
+        if(!$result)
+            return mysqli_error($conn);
 
-        else
-        $pdo->query("CREATE DATABASE `".$userId."_" . $databaseName."`;");
-        $pdo->query("GRANT ALL PRIVILEGES on `".$userId."_" . $databaseName."`.* TO 'usr_name'@'localhost';");
+        mysqli_close($link);
+
+         
+        $CONFI = [
+            'servername' => "localhost",
+            'username' => "root",
+            'password' => '',
+            'db' => 'databasefunctions'
+        ];
+
+        $conn = new mysqli($CONFI["servername"], $CONFI["username"], $CONFI["password"], $CONFI["db"]);
+ 
+        if ($conn->connect_error) {
+          return "conn failed";
+        } 
+
+        $result=mysqli_query($conn,"INSERT INTO users(id,database_name,schema_text_area,query_text_area) VALUES('".$userId."','".$userId . "_" . $databaseName."',null,null)");
+
+        if(!$result)
+            return mysqli_error($conn);
         
         return 'created';
 
@@ -78,7 +114,8 @@
         
         $sql="DROP DATABASE " . $userId .'_'. $databaseName;
         if(!mysqli_query($conn, $sql))
-            return mysqli_error($conn);
+             return mysqli_error($conn);
+        
 
 
         return "succes";
@@ -87,7 +124,7 @@
 
     }
 
-    function getMainPageContent($userId){
+    function getMainPageContent($databaseName){
         $CONFIG = [
             'servername' => "localhost",
             'username' => "root",
@@ -102,15 +139,12 @@
           return $newError;
         } 
      
-        $stm = $conn -> prepare("SELECT * FROM users WHERE id= ?");
-        $stm -> bind_param("s", $userId);
-        $stm -> execute();
+        $sql="SELECT * FROM `users` WHERE `database_name`='".$databaseName."'";
+        $result=mysqli_query($conn, $sql);
+        if(!$result)
+            return mysqli_error($conn);
         
-        $result = $stm-> get_result();
-    
-        foreach($result as $row) {
-            return $row;
-        }
+        return mysqli_fetch_assoc($result);
 
     }
 
@@ -156,5 +190,140 @@
 
         return $newObj;
     }
+
+    function getFunction($userId, $nameDB){
+        $CONFIG=[
+            'servername' => "localhost",
+            'username' => "root",
+            'password' => '',
+            'db'=>$userId .'_'. $nameDB
+        ];
+
+        //conn to DB
+        $conn = new mysqli($CONFIG["servername"], $CONFIG["username"], $CONFIG["password"], $CONFIG["db"]);
+        
+
+        //checkConection
+        if ($conn->connect_error) {
+          return "conn failed";
+        }
+
+        $dsn = "mysql:host=localhost";
+        $pdo = new PDO($dsn,"root","");
+        // $stm=$pdo->query("SELECT SUBSTR(SCHEMA_NAME,LENGTH($userId)+2) FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME LIKE '" .$userId."_%';" );
+        //mai ia query de pe net + schimba nr variabile, nu fi cici.(motivation)
+        $stm=$pdo->query("
+        SELECT routine_definition, routine_name FROM information_schema.routines
+            WHERE routine_type LIKE 'function'
+        ");
+
+        $functions=[];
+          
+        while($functionsArray=$stm->fetch())
+        {  
+            
+            $new_obj=["function_name"=>$functionsArray[1],"function_body"=>$functionsArray[0]];
+            array_push($functions,$new_obj);
+        }
+  
+        return json_encode($functions);
+    }
+
+    function saveSchemasAndQueries($userId, $nameDB, $schema, $query){
+
+        $CONFIG = [
+            'servername' => "localhost",
+            'username' => "root",
+            'password' => '',
+            'db' => 'databasefunctions'
+        ];
+
+        $conn = new mysqli($CONFIG["servername"], $CONFIG["username"], $CONFIG["password"], $CONFIG["db"]);
+ 
+        if ($conn->connect_error) {
+          return "conn failed";
+        } 
+        if($userId===$nameDB)
+        $databaseName=$userId;
+        else
+        $databaseName=$userId . '_' . $nameDB;
+
+        $sql="UPDATE `users` SET `schema_text_area`='".$schema."', query_text_area='".$query."' WHERE database_name='".$databaseName."'";
+        if(!mysqli_query($conn, $sql))
+            return mysqli_error($conn);
+
+        return "Saved";
+        
+
+
+
+    }
+
+    function getTables($userId, $databaseName)
+    {
+        $CONFIG = [
+            'servername' => "localhost",
+            'username' => "root",
+            'password' => '',
+            'db' => 'databasefunctions'
+        ];
+
+        $conn = new mysqli($CONFIG["servername"], $CONFIG["username"], $CONFIG["password"], $CONFIG["db"]);
+ 
+        if ($conn->connect_error) {
+          return "conn failed";
+        } 
+       
+        $databaseName=$userId.'_'.$databaseName;
+        $sql="SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_SCHEMA='".$databaseName."'";
+        $result=mysqli_query($conn, $sql);
+        
+        if(!$result)
+            return mysqli_error($conn);
+       
+        $tables=[];
+        while($row=mysqli_fetch_array($result)){
+            $table=["table_name" => $row[0]];
+            array_push($tables,$table);
+        }
+
+        return $tables;
+
+    }
+
+    function getProcedures($userId, $nameDB){
+        $CONFIG=[
+            'servername' => "localhost",
+            'username' => "root",
+            'password' => '',
+            'db'=>$userId .'_'. $nameDB
+        ];
+
+        //conn to DB
+        $conn = new mysqli($CONFIG["servername"], $CONFIG["username"], $CONFIG["password"], $CONFIG["db"]);
+        
+
+        //checkConection
+        if ($conn->connect_error) {
+          return "conn failed";
+        }
+
+        $sql=" SELECT routine_definition, routine_name FROM information_schema.routines  WHERE routine_type LIKE 'procedure'";
+        $result=mysqli_query($conn, $sql);
+        
+        if(!$result)
+            return mysqli_error($conn);
+       
+        $procedures=[];
+        while($row=mysqli_fetch_array($result)){
+            $procedure=["procedure_name" => $row[1],"procedure_definition" => $row[0]];
+            array_push($procedures,$procedure);
+        }
+
+        return json_encode($procedures);
+
+
+    }
+
 
 ?>

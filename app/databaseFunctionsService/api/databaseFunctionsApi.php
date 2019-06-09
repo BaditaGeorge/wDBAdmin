@@ -79,13 +79,43 @@ else if($method=='GET'){
                 echo json_encode($result);
 
         }
-        else
-        {
-            header('Content-type: application/json');
-            echo json_encode(['reason'=>'Bad request']);
-            http_response_code(400);
-        }
+        else{
+            preg_match('/^\/databaseFunctionsApi\/functions\/(.+)\/(.+)$/', $endpoint, $matches);
+    
+            if($matches){
+                $response=getFunction($matches[1],$matches[2]);
+                header('Content-type: application/json');
+                echo $response;
+            }
+            else{
 
+                preg_match('/^\/databaseFunctionsApi\/tables\/(.+)\/(.+)$/', $endpoint, $matches);
+    
+                if($matches){
+                    $response=getTables($matches[1],$matches[2]);
+                    header('Content-type: application/json');
+                    echo json_encode($response);
+                }
+
+                else{
+                    preg_match('/^\/databaseFunctionsApi\/procedures\/(.+)\/(.+)$/', $endpoint, $matches);
+                  
+                    if($matches){
+                        $response=getProcedures($matches[1],$matches[2]);
+                        header('Content-type: application/json');
+                        echo $response;
+                    }
+
+                    else{
+                        header('Content-type: application/json');
+                        echo json_encode(['reason'=>'Bad request']);
+                        http_response_code(400);
+                    }
+
+                }
+    
+            }
+        }
 
     }
 
@@ -100,6 +130,31 @@ else if($method=='DELETE'){
         header('Content-type: application/json');
         echo json_encode($response);
     }
+    else{
+        header('Content-type: application/json');
+        echo json_encode(['reason'=>'Bad request']);
+        http_response_code(400);
+    }
+}
+
+else if($method=='PUT'){
+
+     preg_match('/^\/databaseFunctionsApi\/mainpage\/save\/(.+)\/(.+)$/', $endpoint, $matches);
+     
+     if($matches){
+        $myJson=json_decode(file_get_contents('php://input'),true);
+
+        $response=["response" => saveSchemasAndQueries($matches[1],$matches[2],$myJson["schema"],$myJson["query"])];
+        header('Content-type: application/json');
+        echo json_encode($response);
+     }
+     else{
+        header('Content-type: application/json');
+        echo json_encode(['reason'=>'Bad request']);
+        http_response_code(400);
+    }
+
+
 }
 
 

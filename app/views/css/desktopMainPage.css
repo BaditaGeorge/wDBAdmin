@@ -136,6 +136,12 @@ header #buttonImg{
     left: 200px;
 } 
 
+#selectDatabase{
+    position:absolute;
+    left:320px;
+    top:30%;
+}
+
 span{
     top: 23px;
     left: 35px;
@@ -351,11 +357,12 @@ textarea{
 .result{
     position:absolute;
     bottom:0%;
-    width:43%;
+    width:42%;
     height:40%;
     background-color:rgb(255, 102, 0,0.5);
     overflow-y:auto;
     display:none;
+    padding:5px;
     
 }
 
