@@ -236,3 +236,36 @@ h2{
     top: 13%;
     padding-top: 3%;
 }
+
+.buttonBeginPress{
+    background-image: url(webpage.jpg);
+    display: none;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.buttonBeginPress input{
+    display: none;
+    margin-bottom: 2%;
+}
+
+.buttonBeginPress button{
+    display: none;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+
+.buttonBeginPress.buttonAfterPress{
+    display: inline-block;
+}
+
+.buttonBeginPress.buttonAfterPress input{
+    display: block;
+}
+.buttonBeginPress.buttonAfterPress button{
+    display: inline-block;
+}

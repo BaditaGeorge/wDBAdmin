@@ -34,7 +34,7 @@
     <div class="toate">
         <div class="table" id="tabele">
             <p class="culoare">Tables
-                <button onclick="Crt1();return false;" type="submit" class="pls">+</button>
+                <button id="buttonAddTables" type="submit" class="pls">+</button>
             </p>
                
         </div>
@@ -60,7 +60,26 @@
         
     </div>  
     
+    <!-- here aduagam clasa pentru pop-ul de pe + -->
+    <div class=buttonBeginPress>
+        <h4>insert Table into DB</h4>
+        <form action="" method="POST">
+            <input id="nameTable"
+            placeholder="Table Name"
+            required
+            >
+            <input id="numberColumns"
+            type="number"
+            placeholder="Number Of Columns"
+            >
+            <button type="submit">Insert</button>
+            <button id="closeButton" type="button">Close</button>
+        </form>
+    </div>
+
     <script src="app/views/js/desktopDatabase.js">
     </script>  
+    <script src="app/views/js/buttonAddTables.js">
+    </script>
 </body>
 </html>
