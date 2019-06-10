@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <base href="/" />
     <link rel="stylesheet" type="text/css" href="app/views/css/desktopDatabase.css">
@@ -8,10 +9,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <input type="image" src="app/views/css/avatarIcon.png" id="buttonImg" alt="buttonImg">
-        
+
     </header>
 
     <div class="dropMenu">
@@ -34,52 +36,63 @@
     <div class="toate">
         <div class="table" id="tabele">
             <p class="culoare">Tables
-                <button id="buttonAddTables" type="submit" class="pls">+</button>
+                <button id="buttonAddTables" class="pls">+</button>
             </p>
-               
+
         </div>
         <div class="table" id="queri">
             <p class="culoare">Queries
-                    <button onclick="Crt2();return false;" type="submit" class="pls">+</button>
+                <button"  class="pls">+</button>
             </p>
-              
+
         </div>
         <div class="table" id="prceds">
             <p class="culoare">Procedures
-                    <button onclick="Crt3();return false;" type="submit" class="pls">+</button>
+                <button  class="pls">+</button>
             </p>
-               
+
         </div>
         <div class="table" id="buton">
             <p class="culoare">Functions
-                    <button onclick="Crt4();return false;" type="submit" class="pls">+</button>
+                <button class="pls">+</button>
             </p>
-              
-                <a href="app/views/htmldesktopDatabaseGenerate.html" id="generateButton"> Generate code </a>
+
+            <a href="app/views/htmldesktopDatabaseGenerate.html" id="generateButton"> Generate code </a>
         </div>
-        
-    </div>  
-    
+
+    </div>
+
     <!-- here aduagam clasa pentru pop-ul de pe + -->
     <div class=buttonBeginPress>
         <h4>insert Table into DB</h4>
-        <form action="" method="POST">
-            <input id="nameTable"
-            placeholder="Table Name"
-            required
-            >
-            <input id="numberColumns"
-            type="number"
-            placeholder="Number Of Columns"
-            >
-            <button type="submit">Insert</button>
+            <input id="nameTable" placeholder="Table Name" required>
+            <input id="numberColumns" type="number" placeholder="Number Of Columns">
+            <button id="addTable">Insert</button>
             <button id="closeButton" type="button">Close</button>
-        </form>
+      
     </div>
 
+    <div  id="columnsOfTable" class="columnsOfTable-hidden" >
+        <h4 id="tableTitle"> </h4>
+        <table id="tableToCreateTable">
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Length</th>
+                <th>Null</th>
+            </tr>
+
+        </table>
+
+        <button id="createTable">Create table</button>
+
+    </div>
+
+
     <script src="app/views/js/desktopDatabase.js">
-    </script>  
+    </script>
     <script src="app/views/js/buttonAddTables.js">
     </script>
 </body>
+
 </html>

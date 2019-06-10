@@ -242,6 +242,10 @@ h2{
     display: none;
     border: 1px solid black;
     text-align: center;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+
 }
 
 .buttonBeginPress input{
@@ -268,4 +272,32 @@ h2{
 }
 .buttonBeginPress.buttonAfterPress button{
     display: inline-block;
+}
+
+#columnsOfTable{
+    background-image:url(webpage.jpg);
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+    height:30%;
+    overflow-y:auto;
+    border:2px solid #ccc;
+}
+
+.columnsOfTable-hidden{
+    display:none;
+}
+
+#columnsOfTable tr,
+#columnsOfTable td{
+    padding:10px;
+
+}
+
+#columnsOfTable button{
+    margin:10px;
+    color:white;
+    background-color:transparent;
+    border:1px white solid;
 }

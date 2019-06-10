@@ -325,5 +325,48 @@
 
     }
 
+    function createTable($userId, $nameDB, $tableDetails){
+        $CONFIG=[
+            'servername' => "localhost",
+            'username' => "root",
+            'password' => '',
+            'db'=>$userId .'_'. $nameDB
+        ];
+
+        //conn to DB
+        $conn = new mysqli($CONFIG["servername"], $CONFIG["username"], $CONFIG["password"], $CONFIG["db"]);
+        
+        //checkConection
+        if ($conn->connect_error) {
+          return "conn failed";
+        }
+
+        $sql="CREATE TABLE ". $tableDetails["tableName"]. "(";
+        for($i=0; $i<$tableDetails["numberColumns"]; $i++)
+        {
+            $sql=$sql .$tableDetails["columnDescription"][$i]["name"];
+            $sql=$sql .' '.$tableDetails["columnDescription"][$i]["type"];
+            if($tableDetails["columnDescription"][$i]["length"])
+            $sql=$sql .'('.$tableDetails["columnDescription"][$i]["length"].')';
+            if(!$tableDetails["columnDescription"][$i]["null"])
+            $sql=$sql .' NOT NULL';
+            
+            if($i<$tableDetails["numberColumns"]-1)
+            $sql=$sql .',';
+            else
+            $sql=$sql .')';
+
+        }
+
+        $result=mysqli_query($conn, $sql);
+        
+        if(!$result)
+            return mysqli_error($conn);
+        else 
+            return "Succes";
+
+
+    }
+
 
 ?>
