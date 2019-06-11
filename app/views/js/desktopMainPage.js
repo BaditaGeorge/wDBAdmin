@@ -230,3 +230,10 @@ function createDatabaseRedirect()
     }
 }
 
+let coll=document.getElementById("collaborateSpan");
+coll.addEventListener("click", onClickEvent);
+
+function onClickEvent(){
+    console.log("dads");
+}
+

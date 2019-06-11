@@ -13,4 +13,12 @@ RewriteRule ^m.bachsql/databases/.+$ ./app/views/html/mobileDatabases.html [NC,L
 RewriteRule ^m.bachsql/tables/.+/.+$ ./app/views/html/mobileTables.html [NC,L]
 RewriteRule ^m.bachsql/createtable/.+/.+/.+/.+$ ./app/views/html/mobileCreateTable.html [NC,L]
 RewriteRule ^m.bachsql/table/.+/.+/.+$ ./app/views/html/mobileTable.html [NC,L]
+RewriteRule ^m.bachsql/structure/.+/.+/.+$ ./app/views/html/mobileStructure.html [NC,L]
+RewriteRule ^m.bachsql/selectdata/.+/.+/.+$ ./app/views/html/mobileSelectData.html [NC,L]
+RewriteRule ^m.bachsql/insertdata/.+/.+/.+$ ./app/views/html/mobileInsertData.html [NC,L]
+RewriteRule ^m.bachsql/altertable/.+/.+/.+$ ./app/views/html/mmobileAlterTable.html [NC,L]
+RewriteRule ^m.bachsql/newitem/.+/.+/.+$ ./app/views/html/mobileNewItem.html [NC,L]
+
+
+
 

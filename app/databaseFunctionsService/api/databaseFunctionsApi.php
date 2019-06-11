@@ -142,9 +142,20 @@ else if($method=='GET'){
                     }
 
                     else{
-                        header('Content-type: application/json');
-                        echo json_encode(['reason'=>'Bad request']);
-                        http_response_code(400);
+                        preg_match('/^\/databaseFunctionsApi\/structure\/(.+)\/(.+)\/(.+)$/', $endpoint, $matches);
+                      
+                        if($matches){
+                            $response=getStructure($matches[1],$matches[2],$matches[3]);
+                            header('Content-type: application/json');
+                            echo $response;
+                        }
+    
+                        else{
+                            header('Content-type: application/json');
+                            echo json_encode(['reason'=>'Bad request']);
+                            http_response_code(400);
+                        }
+    
                     }
 
                 }

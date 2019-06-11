@@ -47,7 +47,7 @@ fetch("/databaseFunctionsApi/tables/" + $user_id +"/"+$database_name)
         var a= document.createElement("a");
         a.classList.add("btn");
         a.onmousedown="mouseDown()";
-        a.href="/m.bachsql/database/" + $user_id +"/"+ $database_name + "/table/" + myJson[index]["table_name"];
+        a.href="/m.bachsql/table/" + $user_id +"/"+ $database_name + "/"+myJson[index]["table_name"];
         a.innerHTML=myJson[index]["table_name"];
     
         div.appendChild(a);

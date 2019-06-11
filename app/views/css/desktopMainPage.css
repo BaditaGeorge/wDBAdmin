@@ -45,6 +45,7 @@ header #buttonImg{
     /* transform: scaleY(-1); */
 
     overflow: hidden;
+    z-index:100;
 }
 
 
@@ -377,6 +378,7 @@ textarea{
 .rightSide{
    height:100%;
    position:relative;
+   z-index:10;
 }
 
 .closeButton{
