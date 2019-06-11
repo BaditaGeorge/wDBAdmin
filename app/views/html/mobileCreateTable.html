@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/mobileCreateTable.css">
+     <base href="/" />
+    <link rel="stylesheet" type="text/css" href="app/views/css/mobileCreateTable.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,45 +11,23 @@
 </head>
 
 <body>
-    <script src="../js/redirect2.js">
-    </script>
+    <!-- <script src="app/views/js/redirect2.js"> -->
+    <!-- </script> -->
 
-    <div class="box">
+    <div class="box" id="idBox">
         <p>Create newTable</p>
-        <form action="newTable">
-            <input type="text" class="name"  placeholder="Name of table" required>
-            <input type="text" class="name"  placeholder="Name of Column" required>
+        
 
-            <label class="labelType">
-                Type
-                <Select id="options">
-                    <option value="">VARCHAR2</option>
-                    <option value="">NUMBER</option>
-                    <option value="">DATE</option>
-                </Select>
-            </label>
-
-            <label class="size">
-                Size
-                <input type="text" id="size">
-            </label>
-
-            <label class="null">
-                Null
-                <input type="checkbox" id="null">
-            </label>
-
-            <button type="submit">Add</button>
-
-        </form>
-
-        <p>
-            <span>OR</span>
-        </p>
-        <a href="mobileTables.html" class="button">Finish</a>
+        
+        <div class="buttons">
+        <button  class="button" id="createTable">Finish</button>
+       </div>
 
         
     </div>
+
+    <script src="app/views/js/mobileCreateTable.js"> 
+    </script>
 
 </body>
 

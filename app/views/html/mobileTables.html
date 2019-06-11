@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <base href="/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../css/mobileAccountPage.css">
+    <link rel="stylesheet" type="text/css" href="app/views/css/mobileAccountPage.css">
 </head>
 <body>
-    <script src="../js/redirect2.js">
-    </script>
-    <div class="box">
+    <!-- <script src="../js/redirect2.js"> -->
+    <!-- </script> -->
+    <div class="box" id="idBox">
 
         <p> Tables</p>
-        <div class="divBx">
-            <a class="btn" href="mobileTable.html"> Table 1 </a>
+
+        <div class="hidden" method="POST">
+            
+                <input type="text" placeholder="Name of new table" id="nmn" required>
+                <input type="number" placeholder="Number of columns" id="numberOfColumns" required>
+                <button class="small-btn" id="create"> Create</button>
         </div>
-        <div class="divBx">
-            <a class="btn" href="mobileTable.html"> Table 2 </a>
-        </div>
+        
         <div class="buttons">
-            <a href="mobileCreateTable.html" class="small-btn" id="Add"> Add</a>
+            <button class="small-btn" id="Add"> Add</button>
               
             <button onclick="removeF();return false;" class="small-btn" id="Edit">
                Edit
@@ -29,29 +32,8 @@
         </div>
 
     </div>
-    <script>
-        function removeF()
-        {
-            var ell=document.createElement('button');
-            ell.innerText="X";
-            ell.style.fontSize="15px";
-            ell.style.backgroundColor="#ff6666";
-            ell.style.color="white";
-            ell.style.border="none";
-            ell.style.position="absolute";
-            ell.style.top="26%";
-            ell.style.left="-15%";
-            ell.style.borderRadius="50%";
-            ell.addEventListener('click',()=>alert('Alerta'));
-                /*ell.onclick=function(){
-                    alert('MESAJ!');
-                    document.getElementById("idBox").removeChild(this.parentNode);
-                };*/
-            for(var i=0;i<document.getElementsByClassName("divBx").length;i++)
-            {
-                document.getElementsByClassName("divBx")[i].appendChild(ell.cloneNode(true));
-            }        
-        }
+    <script src="app/views/js/mobileTables.js">
+       
     </script>
 </body>
 </html>

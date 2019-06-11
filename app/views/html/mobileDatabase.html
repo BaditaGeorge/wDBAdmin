@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../css/mobileAccountPage.css">
+    <link rel="stylesheet" type="text/css" href="app/views/css/mobileAccountPage.css">
 </head>
 <body>
-    <script src="../js/redirect2.js">
-    </script>
+    <!-- <script src="app/views/js/redirect2.js"> -->
+    <!-- </script> -->
+   
     <div class="box">
 
-        <p> Database1</p>
-        <a class="btn" href="mobileMainPage.html"> Write your SQL </a>
-        <a class="btn" href="mobileTables.html"> Tables </a>
+        <p id="databaseTitle"> Database1</p>
+        <a class="btn" href="m.bachsql/mainpage" id="mainPageLink"> Write your SQL </a>
+        <a class="btn" href="mobileTables.html" id="tablesLink"> Tables </a>
         <a class="btn" href="mobileQueries.html"> Queries </a>
         <a class="btn" href="mobileProcedures.html"> Procedures</a>
         <a class="btn" href="mobileFunctions.html"> Functions </a>
@@ -24,6 +26,10 @@
        
 
     </div>
+
+    <script src="app/views/js/mobileDatabase.js">
+    </script>
+
 
 
 </body>

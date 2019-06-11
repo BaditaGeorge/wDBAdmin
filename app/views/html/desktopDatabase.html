@@ -54,7 +54,7 @@
         </div>
         <div class="table" id="buton">
             <p class="culoare">Functions
-                <button class="pls">+</button>
+                <button id="buttonAddFunctions" class="pls">+</button>
             </p>
 
             <a href="app/views/htmldesktopDatabaseGenerate.html" id="generateButton"> Generate code </a>
@@ -72,7 +72,7 @@
       
     </div>
 
-    <div  id="columnsOfTable" class="columnsOfTable-hidden" >
+    <div  id="columnsOfTable" class="hidden" >
         <h4 id="tableTitle"> </h4>
         <table id="tableToCreateTable">
             <tr>
@@ -85,6 +85,46 @@
         </table>
 
         <button id="createTable">Create table</button>
+
+    </div>
+
+    <div id="addFunctionDiv" class="hidden">
+        <h4> Choose details for your function</h4>
+        <div>
+            <label for="functionName"> Function name </label>
+            <input type="text" id="functionName">
+        </div>
+        <div>
+            <label for="numberOfParameters"> Number of parameters</label>
+            <input type="number" id="numberOfParameters">
+        </div>
+        <div>
+                <label for="returnType"> Return type</label>
+                <select id="returnType">
+                    <option value="INT">INT</option>
+                    <option value="VARCHAR">VARCHAR</option>
+                    <option value="TEXT"> TEXT</option>
+                    <option value="DATE"> DATE</option>
+                </select>
+        </div>
+        <button id="showMoreOptionsFunction"> Insert </button>
+
+    </div>
+
+    <div id="createFunctionDiv" class="hidden">
+            <label for="tableToCreateFunction">Parameters of function</label>
+            <table id="tableToCreateFunction">
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                    </tr>
+        
+            </table>
+            <div>
+                <label for="bodyText"> Body of function </label>
+                <textarea id="bodyText"></textarea>
+            </div>
+            <button id="btnCreateFunction"> Create function</button>
 
     </div>
 

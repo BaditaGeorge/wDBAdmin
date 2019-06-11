@@ -368,5 +368,82 @@
 
     }
 
+    
+    function createFunction($userId, $nameDB, $functionDetails){
+
+        $CONFIG=[
+            'servername' => "localhost",
+            'username' => "root",
+            'password' => '',
+            'db'=>$userId .'_'. $nameDB
+        ];
+
+        
+        //conn to DB
+        $conn = new mysqli($CONFIG["servername"], $CONFIG["username"], $CONFIG["password"], $CONFIG["db"]);
+        
+        //checkConection
+        if ($conn->connect_error) {
+          return "conn failed";
+        }
+        
+       
+
+        $sql="CREATE OR REPLACE FUNCTION ". $functionDetails["functionName"]. "(";
+        
+        for($i=0; $i<$functionDetails["numberOfParameters"]; $i++)
+        {   
+           
+            $sql=$sql .$functionDetails["parametersDescription"][$i]["name"];
+            $sql=$sql .' '.$functionDetails["parametersDescription"][$i]["type"];
+            
+            if($i<$functionDetails["numberOfParameters"]-1)
+            $sql=$sql .',';
+            else
+            $sql=$sql .') ';
+
+        }
+      
+
+        $sql=$sql . 'RETURNS ' . $functionDetails["returnType"] . ' '. str_replace("\r\n"," ",$functionDetails["bodyText"]);
+        $sql=$sql . ";";
+
+      
+
+        $result=mysqli_query($conn, $sql);
+        
+        if(!$result)
+            return mysqli_error($conn);
+        else 
+            return "Succes";
+
+
+    }
+
+    function deleteTable($userId, $nameDB,$obj)
+    {
+        $CONFIG = [
+            'servername' => "localhost",
+            'username' => "root",
+            'password' => '',
+            'db' => $userId . '_' . $nameDB
+        ];
+
+        $conn = new mysqli($CONFIG["servername"], $CONFIG["username"], $CONFIG["password"], $CONFIG["db"]);
+ 
+        if ($conn->connect_error) {
+          return "conn failed";
+        } 
+        
+
+        $sql="DROP TABLE ".$obj['table_name'];
+        if(!mysqli_query($conn, $sql))
+            return mysqli_error($conn);
+
+        return "Succes";
+        
+
+    }
+
 
 ?>

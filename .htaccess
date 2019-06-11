@@ -7,5 +7,10 @@ RewriteRule ^bachsql/databases/.+$ ./app/views/html/desktopDatabases.html [NC,L]
 RewriteRule ^bachsql/mainpage/.+$ ./app/views/html/desktopMainPage.html [NC,L]
 RewriteRule ^bachsql/database/.+/.+/table/.+$ ./app/views/html/desktopTable.html [NC,L]
 RewriteRule ^bachsql/database/.+/.+$ ./app/views/html/desktopDatabase.html [NC,L]
-
+RewriteRule ^m.bachsql/mainpage/.+$ ./app/views/html/mobileMainPage.html [NC,L]
+RewriteRule ^m.bachsql/database/.+/.+$ ./app/views/html/mobileDatabase.html [NC,L]
+RewriteRule ^m.bachsql/databases/.+$ ./app/views/html/mobileDatabases.html [NC,L]
+RewriteRule ^m.bachsql/tables/.+/.+$ ./app/views/html/mobileTables.html [NC,L]
+RewriteRule ^m.bachsql/createtable/.+/.+/.+/.+$ ./app/views/html/mobileCreateTable.html [NC,L]
+RewriteRule ^m.bachsql/table/.+/.+/.+$ ./app/views/html/mobileTable.html [NC,L]
 

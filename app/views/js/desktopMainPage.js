@@ -43,7 +43,7 @@ function runOnClick(){
 
     let databaseName=selectDatabase.value;
     let url="/databaseFunctionsApi/mainpage/" + $user_id +"_"+databaseName+ "/run";
-   
+    if(selectDatabase.value==="Default database")
     url="/databaseFunctionsApi/mainpage/" + $user_id +"/run";
     
     if(current_focus===schemaTextArea)
@@ -133,7 +133,7 @@ function saveOnClick(){
 
     let sendJson={schema:schemaTextArea.value, query:queryTextArea.value};
  
-    let databaseName;
+    
     if(selectDatabase.value==="Default database")
        databaseName=$user_id;
     else

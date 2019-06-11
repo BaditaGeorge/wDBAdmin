@@ -75,7 +75,7 @@ addTableBtn.addEventListener("click", addTableOnClick);
 function addTableOnClick()
 {   
     let divCreateTable=document.getElementById("columnsOfTable");
-    divCreateTable.classList.remove("columnsOfTable-hidden");
+    divCreateTable.classList.remove("hidden");
    
     let tableName = document.getElementById("nameTable").value;
     let numberOfColumns=document.getElementById("numberColumns").value;
@@ -183,3 +183,118 @@ fetch("/databaseFunctionsApi/createTable/" + $user_id +"/"+$database_name, {
 })
 
 }
+
+let addFunctionBtn=document.getElementById("buttonAddFunctions");
+addFunctionBtn.addEventListener("click", popUpAddFunction);
+let createFunctionDiv=document.getElementById("createFunctionDiv");
+
+let functionDiv=document.getElementById("addFunctionDiv");
+
+function popUpAddFunction()
+{
+    functionDiv.classList.remove("hidden");
+    let moreOptions=document.getElementById("showMoreOptionsFunction");
+    moreOptions.addEventListener("click", moreOptionsFunction);
+
+}
+function moreOptionsFunction()
+{
+    functionDiv.classList.add("hidden");
+   
+    createFunctionDiv.classList.remove("hidden");
+
+    let functionName=document.getElementById("functionName").value;
+    let numberOfParameters=document.getElementById("numberOfParameters").value;
+    let returnType=document.getElementById("returnType").value;
+
+    for(var i=0; i<numberOfParameters; i++){
+        var newRow = document.createElement("tr");
+        var column1= document.createElement("td");
+        var column2= document.createElement("td");
+
+        var parameterName=document.createElement("input");
+        parameterName.type="text";
+        parameterName.id="parameterName"+i;
+        column1.appendChild(parameterName);
+
+        var parameterType=document.createElement("select");
+        parameterType.value="INT";
+        var option1=document.createElement("option");
+        option1.innerHTML="INT";
+        option1.value="INT";
+        var option2=document.createElement("option");
+        option2.innerHTML="VARCHAR";
+        option2.value="VARCHAR";
+        var option3=document.createElement("option");
+        option3.innerHTML="TEXT";
+        option3.value="TEXT";
+        var option4=document.createElement("option");
+        option4.innerHTML="DATE";
+        option4.value="DATE";
+
+        parameterType.appendChild(option1);
+        parameterType.appendChild(option2);
+        parameterType.appendChild(option3);
+        parameterType.appendChild(option4);
+        parameterType.id="parameterType"+i;
+        column2.appendChild(parameterType);
+        
+        newRow.appendChild(column1);
+        newRow.appendChild(column2);
+
+        let tabl=document.getElementById("tableToCreateFunction");
+        tabl.appendChild(newRow);
+        
+    }
+
+    let bodyText=document.getElementById("bodyText");
+    bodyText.value="BEGIN\r\nEND";
+    let btnCreateFunction=document.getElementById("btnCreateFunction");
+    btnCreateFunction.dataset.functionName=functionName;
+    btnCreateFunction.dataset.numberOfParameters=numberOfParameters;
+    btnCreateFunction.dataset.returnType=returnType;
+    btnCreateFunction.addEventListener("click", createFunctionOnClick);
+
+}
+
+function createFunctionOnClick(e)
+{
+    let parameters=[];
+
+for(var i=0; i<e.target.dataset.numberOfParameters; i++){
+   
+    let parameterName=document.getElementById("parameterName"+i).value;
+    let parameterType=document.getElementById("parameterType"+i).value;
+   
+    let parameter={name:parameterName,type:parameterType};
+    parameters.push(parameter);
+}
+
+let functionBody=document.getElementById("bodyText").value;
+
+let functionDetails={functionName:e.target.dataset.functionName,numberOfParameters:e.target.dataset.numberOfParameters,returnType:e.target.dataset.returnType, bodyText:functionBody, parametersDescription:parameters};
+
+console.log(functionDetails);
+
+fetch("/databaseFunctionsApi/createFunction/" + $user_id +"/"+$database_name, {
+    method:"POST",
+    headers:{"Content-type": "application/json"},
+    body:JSON.stringify(functionDetails)
+})
+.then(function(response) {
+    return response.json();
+})
+.then(function(myJson) {
+    console.log(":(");
+    if(myJson["response"]==="Succes")
+    {
+        location.reload();
+    }
+    else 
+    console.log(myJson["response"]);
+    
+})
+
+
+}
+

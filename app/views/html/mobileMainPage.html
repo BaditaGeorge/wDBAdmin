@@ -1,95 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/mobileMainPage.css">
-    <link rel="stylesheet" media="screen and (min-width: 758px)" href="../css/iPadMainPage.css">
+    <base href="/" />
+    <link rel="stylesheet" type="text/css" href="app/views/css/mobileMainPage.css">
+    <link rel="stylesheet" media="screen and (min-width: 758px)" href="app/views/css/iPadMainPage.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
-    <script src="../js/redirect2.js">
+    <!-- <script src="../js/redirect2.js"> -->
     </script>
     <header class="menu">
         <div>
             <button type="button" id="menuBtn">Menu</button>
             <button onclick="AddElement()">Collaborate</button>
-            <a href="mobileAccountPage.html" class="logoMic"><img id="lluno" src="../css/whiteUser.png" alt="none"></a>
+            <a href="app/views/html/mobileAccountPage.html" class="logoMic"><img id="lluno" src="app/views/css/whiteUser.png" alt="none"></a>
         </div>
     </header>
     <div class="mnuCnt" id="idMnuCnt">
-        <button type="button" class="sv"><img class="lluno2" src="../css/save-button.png" alt="none"></button>
-        <button type="button" class="upd"><img class="lluno2" src="../css/upload-button.png" alt="none"></button>
-        <button type="button" class="gen"><img class="lluno2" src="../css/generatePhoto.png" alt="none"></button>
+        <button type="button" class="sv" id="saveBtn"><img class="lluno2" src="app/views/css/save-button.png" alt="none"></button>
+        <button type="button" class="upd" id="runBtn"><img class="lluno2" src="app/views/css/upload-button.png" alt="none"></button>
+        <button type="button" class="gen"><img class="lluno2" src="app/views/css/generatePhoto.png" alt="none"></button>
     </div>
-    <form class="mainForm" id="mnFrm" onmousedown="whichEl()">
+    <div class="mainForm" id="mnFrm" onmousedown="whichEl()">
         <div class="conti">
-            <textarea>SQL Schema</textarea>
+            <textarea id="schemaArea">SQL Schema</textarea>
+            <div class="result hidden" id="schemaResult"> 
+                    <button class="closeButton">✖</button> 
+                    <p id="stextResult"></p>
+            </div>
         </div>
         <div class="conti" id="conti1">
-            <textarea>Queries</textarea>
+            <textarea id="queryArea">Queries</textarea>
+            <div class="result hidden" id="queryResult"> 
+                    <button class="closeButton">✖</button> 
+                    <p id="qtextResult"></p>
+            </div>
+            <select id="selectDatabase"> </select>
         </div>
-    </form> 
-    <script>
-            let menuBtn = document.getElementById('menuBtn');
-            let menu = document.querySelector('.mnuCnt');
+    </div> 
+
     
-            menuBtn.addEventListener('click', () => {
-                menu.classList.add('is--open');
-            });
-    
-            document.addEventListener('keyup', (e) => {
-                if(e.key === 'Escape' || e.keyCode ===27) {
-                    menu.classList.remove('is--open');
-                }
-            })
-            function AddElement()
-            {
-                var tag=document.createElement("div");
-                tag.style.width="70%";
-                tag.style.height="40%";
-                tag.style.backgroundImage="url(2.jpg)";
-                tag.style.position="absolute";
-                tag.style.borderRadius="5%";
-                tag.style.opacity="0.8";
-                tag.style.top="15%";
-                tag.style.left="15%";
-                var pEl=document.createElement("input");
-                var pLab=document.createElement("label");
-                pLab.innerText="E-Mail Adress!";
-                pLab.style.marginTop="20%";
-                pLab.style.display="block";
-                pLab.style.fontFamily="Comic Sans MS";
-                pLab.style.fontSize="28px";
-                pEl.type="text";
-                pEl.style.marginTop="8%";
-                pEl.style.width="60%";
-                pEl.style.height="10%";
-                var pBt=document.createElement("button");
-                pBt.innerText="Submit";
-                pBt.style.display="block";
-                pBt.style.borderRadius="12%";
-                pBt.style.backgroundSize="100% 100%";
-                pBt.style.backgroundColor="transparent";
-                pBt.style.border="2px solid white";
-                pBt.style.color="white";
-                pBt.style.paddingLeft="5%";
-                pBt.style.paddingRight="5%";
-                pBt.style.marginLeft="35%";
-                pBt.style.marginTop="10%";
-                pBt.style.height="60px";
-                pBt.style.width="80px";
-                tag.appendChild(pLab);
-                tag.appendChild(pEl);
-                tag.appendChild(pBt);
-                tag.style.color="white";
-                document.getElementById("mnFrm").appendChild(tag);
-            }
-            function whichEl()
-            {
-                menu.classList.remove("is--open");
-            }
+       
+    <script src="app/views/js/mobileMainPage.js">
+          
     </script>
 </body>
 </html>
