@@ -10,6 +10,8 @@
 </head>
 
 <body style="overflow: hidden">
+    <script src="../js/collab.js">
+    </script>
     <header>
         <input type="image" src="../css/avatarIcon.png" id="buttonImg" alt="buttonImg">
         <div class="buttonHead">
@@ -35,7 +37,7 @@
 
         <img src="../css/logo.png" alt="logo" id="logoAside">
 
-        <button class="collaborate">
+        <button class="collaborate" onclick="eveniment()">
             <img src="../css/collaborate.png" alt="collaborateImage" id="collaborate">
             <span id="collaborateSpan">Collaborate</span>
         </button>
@@ -76,7 +78,7 @@
 
     <div class="Invitation">
         <input type="email" placeholder="E-mail Of Collaborater" id="inviteMail" required>
-        <button type="submit" id="buttonInvite">Send Invitation</button>
+        <button type="submit" id="buttonInvite" onclick="invita()">Send Invitation</button>
     </div>
 
     <footer></footer>
