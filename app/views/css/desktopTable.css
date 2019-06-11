@@ -508,3 +508,10 @@ p {
     text-align:center;
    
 }
+
+/* resize select data */
+@media screen and (max-width: 1300px){
+    .hideTableStructure input[type=text]{
+        width: 100%;
+    }
+}

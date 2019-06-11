@@ -98,7 +98,7 @@ header{
 #buton{
     position: relative;
 }
-.toate #generate{
+.toate #generateButton{
 
     border:1.5px solid black;
     border-radius: 15%;
@@ -235,4 +235,69 @@ h2{
     position: relative;
     top: 13%;
     padding-top: 3%;
+}
+
+.buttonBeginPress{
+    background-image: url(webpage.jpg);
+    display: none;
+    border: 1px solid black;
+    text-align: center;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+
+}
+
+.buttonBeginPress input{
+    display: none;
+    margin-bottom: 2%;
+}
+
+.buttonBeginPress button{
+    display: none;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+
+.buttonBeginPress.buttonAfterPress{
+    display: inline-block;
+}
+
+.buttonBeginPress.buttonAfterPress input{
+    display: block;
+}
+.buttonBeginPress.buttonAfterPress button{
+    display: inline-block;
+}
+
+#columnsOfTable{
+    background-image:url(webpage.jpg);
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+    height:30%;
+    overflow-y:auto;
+    border:2px solid #ccc;
+}
+
+.columnsOfTable-hidden{
+    display:none;
+}
+
+#columnsOfTable tr,
+#columnsOfTable td{
+    padding:10px;
+
+}
+
+#columnsOfTable button{
+    margin:10px;
+    color:white;
+    background-color:transparent;
+    border:1px white solid;
 }

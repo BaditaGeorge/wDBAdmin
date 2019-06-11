@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/desktopDatabase.css">
+    <base href="/" />
+    <link rel="stylesheet" type="text/css" href="app/views/css/desktopDatabase.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <header>
-        <input type="image" src="../css/avatarIcon.png" id="buttonImg" alt="buttonImg">
-        
+        <input type="image" src="app/views/css/avatarIcon.png" id="buttonImg" alt="buttonImg">
+
     </header>
 
     <div class="dropMenu">
         <div class="interior">
             <div class="stanga">
                 <div class="elements">
-                    <img class="profile" src="../css/captain.png" alt="profileIcon" width="50" height="50">
+                    <img class="profile" src="app/views/css/captain.png" alt="profileIcon" width="50" height="50">
                     <h2>Steve Roger</h2>
                 </div>
             </div>
             <div class="dreapta">
-                <a class="btn" href="desktopLogin.html"> Logout </a>
-                <a class="btn" href="desktopChangePass.html"> Change password </a>
-                <a class="btn" href="desktopDatabases.html"> Databases</a>
+                <a class="btn" href="app/views/html/desktopLogin.html"> Logout </a>
+                <a class="btn" href="app/views/html/desktopChangePass.html"> Change password </a>
+                <a class="btn" href="app/views/html/desktopDatabases.html" id="databasesLink"> Databases</a>
             </div>
         </div>
     </div>
@@ -33,36 +36,63 @@
     <div class="toate">
         <div class="table" id="tabele">
             <p class="culoare">Tables
-                <button onclick="Crt1();return false;" type="submit" class="pls">+</button>
+                <button id="buttonAddTables" class="pls">+</button>
             </p>
-                <a href="desktopTable.html">Table1</a>
-                <a href="desktopTable.html">Table2</a>
+
         </div>
         <div class="table" id="queri">
             <p class="culoare">Queries
-                    <button onclick="Crt2();return false;" type="submit" class="pls">+</button>
+                <button"  class="pls">+</button>
             </p>
-                <a href="desktopQuery.html">Querie1</a>
-                <a href="desktopQuery.html">Querie2</a>
+
         </div>
         <div class="table" id="prceds">
             <p class="culoare">Procedures
-                    <button onclick="Crt3();return false;" type="submit" class="pls">+</button>
+                <button  class="pls">+</button>
             </p>
-                <a href="desktopProcedures.html">Procedure1</a>
-                <a href="desktopProcedures.html">Procedure2</a>
+
         </div>
         <div class="table" id="buton">
             <p class="culoare">Functions
-                    <button onclick="Crt4();return false;" type="submit" class="pls">+</button>
+                <button class="pls">+</button>
             </p>
-                <a href="desktopFunctions.html">Function1</a>
-                <a href="desktopFunctions.html">Function2</a>
-                <a href="desktopDatabaseGenerate.html" id="generate"> Generate code </a>
+
+            <a href="app/views/htmldesktopDatabaseGenerate.html" id="generateButton"> Generate code </a>
         </div>
-        
-    </div>  
-    <script src="../js/dbFuncts.js">
-    </script>  
+
+    </div>
+
+    <!-- here aduagam clasa pentru pop-ul de pe + -->
+    <div class=buttonBeginPress>
+        <h4>insert Table into DB</h4>
+            <input id="nameTable" placeholder="Table Name" required>
+            <input id="numberColumns" type="number" placeholder="Number Of Columns">
+            <button id="addTable">Insert</button>
+            <button id="closeButton" type="button">Close</button>
+      
+    </div>
+
+    <div  id="columnsOfTable" class="columnsOfTable-hidden" >
+        <h4 id="tableTitle"> </h4>
+        <table id="tableToCreateTable">
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Length</th>
+                <th>Null</th>
+            </tr>
+
+        </table>
+
+        <button id="createTable">Create table</button>
+
+    </div>
+
+
+    <script src="app/views/js/desktopDatabase.js">
+    </script>
+    <script src="app/views/js/buttonAddTables.js">
+    </script>
 </body>
+
 </html>
