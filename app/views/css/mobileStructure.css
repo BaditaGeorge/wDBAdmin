@@ -95,5 +95,19 @@ table,th,tr{
     margin:2%;
     color:white;
 }
-th, tr{
+
+
+.small-btn
+{
+
+    color:white;
+    font-family:"Arial";
+
+    background-color:transparent;
+    border:1px white solid;
+    border-radius:10px 0 10px 0;
+    padding:10px;
+    outline:0;
+
+
 }

@@ -172,11 +172,13 @@ span{
     display: none;
     top: 7%;
     left: 3.5%;
+    z-index:2000;
 
 }
 
 .dropMenuGenerate.isOpen{
     display: block;
+
 }
 
 .dropMenuGenerate img{
