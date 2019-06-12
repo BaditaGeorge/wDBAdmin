@@ -14,8 +14,6 @@ let insertDataLink=document.getElementById("insertDataLink");
 insertDataLink.href="m.bachsql/insertdata/" + $user_id + "/" + $database_name + "/" + table_name;
 let alterTableLink=document.getElementById("alterTableLink");
 alterTableLink.href="m.bachsql/altertable/" + $user_id + "/" + $database_name + "/" + table_name;
-let newItemLink=document.getElementById("newItemLink");
-newItemLink.href="m.bachsql/newitem/" + $user_id + "/" + $database_name + "/" + table_name;
 
 let title=document.getElementById("title");
 title.innerHTML=table_name;

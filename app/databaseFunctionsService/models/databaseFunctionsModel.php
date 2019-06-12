@@ -445,5 +445,145 @@
 
     }
 
+    function getStructure($userId,$database_name,$table_name)
+    {
+        $CONFIG = [
+            'servername' => "localhost",
+            'username' => "root",
+            'password' => '',
+            'db' => $userId . '_' . $database_name
+        ];
+
+        $conn = new mysqli($CONFIG["servername"], $CONFIG["username"], $CONFIG["password"], $CONFIG["db"]);
+ 
+        if ($conn->connect_error) {
+          return json_encode(["response" =>"conn failed"]);
+        } 
+        
+
+        $sql="select column_name, data_type, character_maximum_length, is_nullable from INFORMATION_SCHEMA.COLUMNS where TABLE_NAME='" .$table_name. "' AND TABLE_SCHEMA='" . $userId . "_" . $database_name ."'";
+        $result=mysqli_query($conn, $sql);
+        if(!$result)
+            return json_encode(["response" =>mysqli_error($conn)]);
+
+        $columns=[]; 
+        while($row=mysqli_fetch_array($result)){
+            $structure=["name" => $row[0],"type" => $row[1], "length" => $row[2], "null" =>$row[3]];
+            array_push($columns,$structure);
+        }
+    
+        return json_encode($columns);
+    
+
+        
+        
+
+    }
+
+    function selectData($userId,$database_name,$table_name,$select)
+    {
+        $CONFIG = [
+            'servername' => "localhost",
+            'username' => "root",
+            'password' => '',
+            'db' => $userId . '_' . $database_name
+        ];
+
+        $conn = new mysqli($CONFIG["servername"], $CONFIG["username"], $CONFIG["password"], $CONFIG["db"]);
+ 
+        if ($conn->connect_error) {
+          return json_encode(["response" =>"conn failed"]);
+        } 
+        
+
+        $sql="select ".$select["columns"]  ." from ".$table_name;
+        if($select["where"])
+        $sql=$sql." WHERE ".$select["where"];
+        if($select["group"])
+        $sql=$sql." GROUP BY ".$select["group"];
+        if($select["having"])
+        $sql=$sql." HAVING ".$select["having"];
+
+        
+
+        $result=mysqli_query($conn, $sql);
+        if(!$result)
+            return json_encode(["response" =>mysqli_error($conn)]);
+
+        $rows=[]; 
+        while($row=mysqli_fetch_row($result)){
+            $roww=[];
+            foreach($row as $col)
+            {
+               $column=["col" => $col];
+               array_push($roww,$column);
+            }
+            array_push($rows,$roww);
+
+        }
+    
+        return json_encode($rows);
+
+    }
+
+    function insertData($userId,$database_name,$table_name,$insert){
+
+        $CONFIG = [
+            'servername' => "localhost",
+            'username' => "root",
+            'password' => '',
+            'db' => $userId . '_' . $database_name
+        ];
+
+        $conn = new mysqli($CONFIG["servername"], $CONFIG["username"], $CONFIG["password"], $CONFIG["db"]);
+ 
+        if ($conn->connect_error) {
+          return json_encode(["response" =>"conn failed"]);
+        } 
+
+    
+
+        $sql="INSERT INTO " . $table_name . "(".$insert["columns"] .") VALUES(" . $insert["values"] .")";
+        
+
+        $result=mysqli_query($conn, $sql);
+        if(!$result)
+            return json_encode(["response" =>mysqli_error($conn)]);
+
+       
+    
+        return json_encode(["response" =>"Succes"]);
+    }
+
+
+    function deleteColumn($userId,$database_name,$table_name,$column){
+        $CONFIG = [
+            'servername' => "localhost",
+            'username' => "root",
+            'password' => '',
+            'db' => $userId . '_' . $database_name
+        ];
+
+        $conn = new mysqli($CONFIG["servername"], $CONFIG["username"], $CONFIG["password"], $CONFIG["db"]);
+ 
+        if ($conn->connect_error) {
+          return json_encode(["response" =>"conn failed"]);
+        } 
+
+    
+
+        $sql="ALTER TABLE " . $table_name . " DROP COLUMN ".$column["name"];
+        
+
+        $result=mysqli_query($conn, $sql);
+        if(!$result)
+            return json_encode(["response" =>mysqli_error($conn)]);
+
+       
+    
+        return json_encode(["response" =>"Succes"]);
+
+    }
+
 
 ?>

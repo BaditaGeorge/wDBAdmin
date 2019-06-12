@@ -149,12 +149,13 @@ else if($method=='GET'){
                             header('Content-type: application/json');
                             echo $response;
                         }
-    
                         else{
                             header('Content-type: application/json');
                             echo json_encode(['reason'=>'Bad request']);
                             http_response_code(400);
                         }
+    
+                       
     
                     }
 
@@ -185,6 +186,13 @@ else if($method=='DELETE'){
             header('Content-type: application/json');
             echo json_encode($response);
         }
+        preg_match('/^\/databaseFunctionsApi\/column\/(.+)\/(.+)\/(.+)$/', $endpoint, $matches);
+        if($matches)
+        {
+            $response= deleteColumn($matches[1],$matches[2],$matches[3],json_decode(file_get_contents('php://input'),true));
+            header('Content-type: application/json');
+            echo $response;
+        }
         else{
             header('Content-type: application/json');
             echo json_encode(['reason'=>'Bad request']);
@@ -205,13 +213,36 @@ else if($method=='PUT'){
         echo json_encode($response);
      }
      else{
-        header('Content-type: application/json');
-        echo json_encode(['reason'=>'Bad request']);
-        http_response_code(400);
+        preg_match('/^\/databaseFunctionsApi\/selectData\/(.+)\/(.+)\/(.+)$/', $endpoint, $matches);
+      
+        if($matches){
+            $response=selectData($matches[1],$matches[2],$matches[3],json_decode(file_get_contents('php://input'),true));
+            header('Content-type: application/json');
+            echo $response;
+        }
+
+        else{
+            preg_match('/^\/databaseFunctionsApi\/insertData\/(.+)\/(.+)\/(.+)$/', $endpoint, $matches);
+          
+            if($matches){
+                $response=insertData($matches[1],$matches[2],$matches[3],json_decode(file_get_contents('php://input'),true));
+                header('Content-type: application/json');
+                echo $response;
+            }
+    
+            else{
+                header('Content-type: application/json');
+                echo json_encode(['reason'=>'Bad request']);
+                http_response_code(400);
+            }
+    
+        }
+
     }
-
-
 }
+
+
+
 
 
 
