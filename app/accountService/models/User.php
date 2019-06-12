@@ -145,6 +145,20 @@ function changePassword($newPassword){
     $stmt -> execute();
     $stmt -> close();
 }
+function getByMail($mail){
+    GLOBAL $conn;
+    $stmt = $conn->prepare("SELECT id FROM users WHERE email = ?");
+    $stmt -> bind_param("s",$mail);
+    $stmt -> execute();
+    $result = $stmt -> get_result();
+    $stmt -> close();
+    if($result->num_rows > 0){
+        $row = $result->fetch_assoc();
+        $value = $row['id'];
+        return $value;
+    }
+    return -1;
+}
 class User{
     public $id;
     public $email;

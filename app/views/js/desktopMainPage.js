@@ -349,3 +349,28 @@ else
  }
 
 }
+// let coll=document.getElementById("collaborateSpan");
+// coll.addEventListener("click", onClickEvent);
+// let freshEl = document.querySelector('.Invitation');
+
+// function onClickEvent(){
+//     freshEl.classList.add('is-Open');
+// }
+// document.addEventListener('keyup', (e) => {
+//     if (e.key === 'Escape' || e.keyCode === 27) {
+//         freshEl.classList.remove('is-Open');
+//     }
+// })
+
+let btnInviteo = document.getElementById('collaborateSpan');
+let menuInviteo = document.querySelector('.Invitation');
+
+btnInviteo.addEventListener('click', () => {
+    menuInviteo.classList.add('is-Open');
+});
+
+document.addEventListener('keyup', (e) => {
+    if (e.key === 'Escape' || e.keyCode === 27) {
+        menuInviteo.classList.remove('is-Open');
+    }
+})

@@ -75,6 +75,7 @@ header #buttonImg{
 
 .Invitation.is-Open{
     display:block;
+    z-index:120;
 }
 
 .collaborate #collaborate{

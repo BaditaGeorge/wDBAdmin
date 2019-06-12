@@ -1,8 +1,13 @@
 <?php
 $method = $_SERVER['REQUEST_METHOD'];
 
-if($method === 'GET'){
-    $data = file_get_contents('baza2.txt');
+if($method === 'POST'){
+    $arrp = json_decode(file_get_contents('php://input'),true);
+    $all = explode('/',$arrp['b']);
+    $nrum = count($all)-1;
+    $vil = $all[$nrum].'_'.$arrp['a'];
+    $vil .= '2.txt';
+    $data = file_get_contents($vil);
     echo $data;
 }
 ?>
