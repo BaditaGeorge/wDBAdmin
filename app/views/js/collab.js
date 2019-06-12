@@ -1,8 +1,16 @@
 function invita(){
-    var info = document.getElementById('inviteMail').value;
-    fetch('../../collaborationService/api/mailApi.php',{
+    // var info = document.getElementById('inviteMail').value;
+    // fetch('../../collaborationService/api/mailApi.php',{
+    //     method: 'POST',
+    //     body: JSON.stringify({a:info}),
+    //     headers:{'Content-type':'application/json'}
+    // })
+    var info = 'Create';
+    var info2 = 'keanu';
+    alert('Allgood');
+    fetch('app/collaborationService/api/collaborationApi.php',{
         method: 'POST',
-        body: JSON.stringify({a:info}),
+        body: JSON.stringify({a:window.location.href,b:document.getElementById('inviteMail').value,c:info,d:info2}),
         headers:{'Content-type':'application/json'}
     })
 }
@@ -17,9 +25,10 @@ function eveniment(){
 function onkPL(e){
     var pos = document.getElementById('leftArea').selectionStart;
     var loc = 'baza';
-    fetch('../../collaborationService/api/collaborationApi.php',{
+    var info2 = 'keanu';
+    fetch('app/collaborationService/api/collaborationApi.php',{
         method: 'POST',
-        body: JSON.stringify({a:String.fromCharCode(e.keyCode),b:pos,c:loc}),
+        body: JSON.stringify({a:String.fromCharCode(e.keyCode),b:pos,c:loc,d:info2,e:window.location.href}),
         headers: {'Content-type':'application/json'}
     })
 }
@@ -28,9 +37,10 @@ function onkDL(e){
         var pos = document.getElementById('leftArea').selectionStart;
         var loc = 'baza';
         var info = 'backspace';
-        fetch('../../collaborationService/api/collaborationApi.php',{
+        var info2 = 'keanu';
+        fetch('app/collaborationService/api/collaborationApi.php',{
             method:'POST',
-            body: JSON.stringify({a:info,b:pos,c:loc}),
+            body: JSON.stringify({a:info,b:pos,c:loc,d:info2,e:window.location.href}),
             headers: {'Content-type':'application/json'}
         })
     }
@@ -38,9 +48,10 @@ function onkDL(e){
 function onkPD(e){
     var pos = document.getElementById('rightArea').selectionStart;
     var loc = 'baza2';
-    fetch('../../collaborationService/api/collaborationApi.php',{
+    var info2 = 'keanu';
+    fetch('app/collaborationService/api/collaborationApi.php',{
         method:'POST',
-        body: JSON.stringify({a:String.fromCharCode(e.keyCode),b:pos,c:loc}),
+        body: JSON.stringify({a:String.fromCharCode(e.keyCode),b:pos,c:loc,d:info2,e:window.location.href}),
         headers: {'Content-type':'application/json'}
     })
 }
@@ -49,17 +60,21 @@ function onkDD(e){
         var pos = document.getElementById('rightArea').selectionStart;
         var loc = 'baza2';
         var info = 'backspace';
-        fetch('../../collaborationService/api/collaborationApi.php',{
+        var info2 = 'keanu';
+        fetch('app/collaborationService/api/collaborationApi.php',{
             method:'POST',
-            body: JSON.stringify({a:info,b:pos,c:loc}),
+            body: JSON.stringify({a:info,b:pos,c:loc,d:info2,e:window.location.href}),
             headers: {'Content-type':'application/json'}
         })
     }
 }
 function recCheckL(){
     var pos = document.getElementById('leftArea').selectionStart;
-    fetch('../../collaborationService/api/getApiL.php',{
-        method:'GET'
+    var info2 = 'keanu';
+    fetch('app/collaborationService/api/getApiL.php',{
+        method:'POST',
+        body: JSON.stringify({a:info2,b:window.location.href}),
+        headers: {'Content-type':'application/json'}
     })
     .then(function(response){
         return response.text();
@@ -76,8 +91,11 @@ function recCheckL(){
 }
 function recCheckD(){
     var pos = document.getElementById('rightArea').selectionStart;
-    fetch('../../collaborationService/api/getApiR.php',{
-        method:'GET'
+    var info2 = 'keanu';
+    fetch('app/collaborationService/api/getApiR.php',{
+        method:'POST',
+        body: JSON.stringify({a:info2,b:window.location.href}),
+        headers: {'Content-type':'application/json'}
     })
     .then(function(response){
         return response.text();
