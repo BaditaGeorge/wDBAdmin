@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BachSQL Scholarly HTML</title>
+</head>
+<header>
+    <h1 style="color:rgb(126, 31, 126)">BACHsql Scholarly HTML</h1>
+</header>
+
+<body>
+
+    <section typeof="sa:AuthorsList">
+        <h3>Authors</h3>
+        <ul>
+            <li typeof="sa:ContributorRole" property="schema:author">
+                <span typeof="schema:Person" resource="">
+                    <meta property="schema:givenName" content="Adina">
+                    <meta property="schema:additionalName" content="Maria">
+                    <meta property="schema:familyName" content="Ciubotaru">
+                    <span property="schema:name">Adina M. Ciubotaru</span>
+                </span>
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="adina_ciubotaru98@yahoo.com" property="schema:email">adina_ciubotaru98@yahoo.com</a>
+                    </li>
+                </ul>
+            </li>
+            <li typeof="sa:ContributorRole" property="schema:author">
+                <span typeof="schema:Person" resource="">
+                    <meta property="schema:givenName" content="George">
+                    <meta property="schema:additionalName" content="Alexandru">
+                    <meta property="schema:familyName" content="Badita">
+                    <span property="schema:name">George A. Badita</span>
+                </span>
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="baditageorge@yahoo.com" property="schema:email">baditageorge@yahoo.com</a>
+                    </li>
+                </ul>
+            </li>
+            <li typeof="sa:ContributorRole" property="schema:author">
+                <span typeof="schema:Person" resource="">
+                    <meta property="schema:givenName" content="Lucian">
+                    <meta property="schema:additionalName" content="DoubleL">
+                    <meta property="schema:familyName" content="Livint">
+                    <span property="schema:name">Lucian Livint</span>
+                </span>
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="livintlucian@gmail.com" property="schema:email">livintlucian@gmail.com</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:ContributorsList">
+        <h4>Contributors</h4>
+        <ul>
+            <li typeof="sa:ContributorRole" property="schema:contributor">
+                <span typeof="schema:Person" resource="">
+                    <meta property="schema:givenName" content="Vlad">
+                    <meta property="schema:additionalName" content="Nicolae">
+                    <meta property="schema:familyName" content="Circu">
+                    <span property="schema:name">Vlad N. Circu</span>
+                </span>
+
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="mailto:circuvlad98@gmail.com" property="schema:email">circuvlad98@gmail.com</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:Discussion Group">
+        <h5>Discussion Group</h5>
+        <ul>
+            <li property="schema:listDiscussionGroup" typeof="schema:DiscussionGroup">
+                <a href="https://github.com/BaditaGeorge/wDBAdmin" property="schema:linkDiscussionGroup">GitHub
+                    Repository</a>
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:Abstract">
+        <h2 style="color:rgb(126, 31, 126)">1. Abstract</h2>
+        BACHsql este o platforma ce permite manipularea mai multor baze de date, doar in condiitile in care utilizatorul
+        curent are un cont inregistrat pe aplicatie. Acesta, de asemenea, putand colabora si cu alti utilizatori
+        existenti.
+        Platforma este contruita in intregime pe standarde deschise. Acest document reprezentand atat, modul in care
+        aplicatia prezinta diferite functionalitati, cat si modul in care este codificata.
+    </section>
+
+    <section typeof="sa:Introduction">
+        <h2 style="color:rgb(126, 31, 126)">2. Introduction</h2>
+        Industria IT este intr-o continua dezvoltare pe piata curenta. Majoritatea aplicatiilor ce doresc o posibila
+        interactiune intre utilizatori sau retinerea acestora pentru o mai buna comunicare cu clientii, indiferent de
+        scopul dorit, aplicatia necesita o baza de date solida si bine integrata.
+        Platforma BACHsql vine in ajutorul dezvoltatorilor cu o interfata pe cat se poate de atragatoare si usor de
+        folosit.
+    </section>
+
+    <section typeof="sa:Structure">
+        <h2 style="color:rgb(126, 31, 126)">3. Structure</h2>
+        Structura platformei este bazata pe modelul bine cunoscut, MVC(Model-view-controller), ce este un model
+        arhitectural. Succesul modelului se datoreaza izolarii logicii de bussines fata de considerentele interfetei cu
+        utilizatorul,
+        rezultand o aplicatie unde aspectul vizual sau/ si nivelele inferioare ale regulilor de bussines sunt mai usor
+        de modificat, fara a afecta alte nivele. Pe langa MVC, elementul controlor(API) este accesat prin AJAX,
+        prescurtarea pentru Asynchronous. Fiind o tehnica de programare pentru crearea de aplicatii web interactive
+        rapide.
+        O structurare in profunzime a aplicatiei sunt prezentate in sectiunile urmatoare.
+    </section>
+
+    <section typeof="sa:listMicroServices">
+        <h3>Micro Services</h3>
+        <ul>
+            <li property="schema: roleAccountService">
+                <u>1. Account Service</u>
+            </li>
+            <br>
+                Microserviciul pentru conturi a 
+            <br />
+            <br>
+            <li property="schema: roleDataBaseFunctions">
+                <u>2. DataBase Functions</u>
+            </li>
+            <br>
+            Cel de-al doilea micro serviciu se preocupa de manipularea bazelor de date.Atat crearea acestora, adaugare
+            de noi tabele/ functii/ procedurii sau queries, cat si modificarea sau stergerea bazelor de date nedorite.
+            <br />
+            <br>
+            <li property="schema: roleCollaborate">
+                <u>3. Collaborate</u>
+            </li>
+            <br>
+            Acest micro serviciu reda posibilitatea utilizatorilor sa interactioneze. Invite-ul unui utilizator se va
+            face prin intermediul e-mailului. Doi sau mai multi utilizatori vor putea comunica si sa aduca posibile
+            modificari intr-o maniera LIVE.
+            <br />
+            <br>
+            <li property="schema: roleGenerateCode">
+                <u>4. Generate Code</u>
+            </li>
+            <br>
+            Ultimul micro serviciu se va preocupa de partea de generare a codului, codul MySQL se va transpune intr-unul
+            dintre limbajale de programare disponibile si anume Java/ PHP.
+
+            <br />
+            <br>
+        </ul>
+        Mai multe detalii privind modul de functionare a micro serviciilor descrise mai sus, vor fi regasite ulterior.
+    </section>
+
+
+    <h4>Micro Services- How's work?</h4>
+    <h5>Account Service</h5>
+    Here text
+    <h5>DataBase Functions</h5>
+    Here text
+    <h5>Collaborate</h5>
+    Here Text
+    <h5>Generate Code</h5>
+    Here text
+
+
+    <section typeof="sa:ReferencesList">
+        <h2 style="color:rgb(126, 31, 126)">4. References</h2>
+        <ul>
+            <li typeof="sa:listTW" property="schema:TW">
+                <span property="schema:nameReferences">Tehnologii Web</span>
+                </span>
+                <ul>
+                    <li property="schema:linkReferences" typeof="schema:References">
+                        <a href="https://profs.info.uaic.ro/~busaco/teach/courses/web/"
+                            property="schema:linkTW">Curs</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li property="schema:linkReferences" typeof="schema:References">
+                        <a href="https://devdrive.io/login?next=team&next=iampava&next=tw-2019-b1&next=php"
+                            property="schema:linkTW">DevDrive</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li property="schema:linkReferences" typeof="schema:References">
+                        <a href="https://iampava.com/" property="schema:linkTW">iampava</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul>
+            <li typeof="sa:listW3" property="schema:W3">
+                <span property="schema:nameReferencesTutorial">W3 Schools</span>
+                </span>
+                <ul>
+                    <li property="schema:linkReferencesTutorial" typeof="schema:References">
+                        <a href="https://www.w3schools.com/html/" property="schema:linkHTML">HTML</a>
+                    </li>
+                    <li property="schema:linkReferencesTutorial" typeof="schema:References">
+                        <a href="https://www.w3schools.com/css/" property="schema:linkCSS">CSS</a>
+                    </li>
+                    <li property="schema:linkReferencesTutorial" typeof="schema:References">
+                        <a href="https://www.w3schools.com/js/" property="schema:linkJS">JavaScript</a>
+                    </li>
+                    <li property="schema:linkReferencesTutorial" typeof="schema:References">
+                        <a href="https://www.w3schools.com/php/" property="schema:linkPHP">PHP</a>
+                    </li>
+                    <li property="schema:linkReferencesTutorial" typeof="schema:References">
+                        <a href="https://www.w3schools.com/sql/" property="schema:linkSQL">MySql</a>
+                    </li>
+                    <li property="schema:linkReferencesTutorial" typeof="schema:References">
+                        <a href="https://www.w3schools.com/js/js_ajax_intro.asp" property="schema:linkAJAX">AJAX</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul>
+            <li typeof="sa:listInspiration" property="schema:Inspiration">
+                <span property="schema:nameReferencesInspiration">Inspiration</span>
+                </span>
+                <ul>
+                    <li property="schema:linkReferencesStackOver" typeof="schema:References">
+                        <a href="https://stackoverflow.com/" property="schema:linkStackOver">Stack OverFlow</a>
+                    </li>
+                    <li property="schema:linkReferencesDB" typeof="schema:References">
+                        <a href="https://www.db-fiddle.com/" property="schema:linkDB">DB fiddle</a>
+                    </li>
+                </ul>
+            <li typeof='sa:listMVC' property='schema:MVC'>
+                <span property="schema:nameReferencesMVC">MVC</span>
+                </span>
+                <ul>
+                    <li property="schema:linkReferencesWiki" typeof="schema:References">
+                        <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller"
+                            property="schema:linkStackOver">Wiki</a>
+                    </li>
+                    <li property="schema:linkReferencesBlog" typeof="schema:References">
+                        <a href="https://www.tutorialspoint.com/mvc_framework/mvc_framework_introduction.htm"
+                            property="schema:linkDB">Useful Blog</a>
+                    </li>
+                </ul>
+
+            </li>
+    </section>
+</body>
+
+</html>
