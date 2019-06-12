@@ -73,9 +73,15 @@ function insertData($email,$password){
     $stid->bind_result($random_v);
     $stid->fetch();
     $stid->close();
+    $random_v = $random_v + 1;
     $loginStmt -> bind_param("sss",$random_v,$email,$password);
     $loginStmt -> execute();
     $loginStmt -> close();
+    $url = 'databaseFunctionsApi/newId/'.$random_v;
+    $ch = curl_init($url);
+    curl_setopt($ch,CURLOPT_CUSTOMREQUEST,'POST');
+    curl_exec($ch);
+    curl_close($ch);
 }
 function check($msg){
     GLOBAL $conn;

@@ -125,33 +125,42 @@
                 <u>1. Account Service</u>
             </li>
             <br>
-                Microserviciul pentru conturi a 
+                Primul microserviciu este cel ce se ocupa cu gestionarea conturilor si ofera utilizatorilor posibilitatea de a face anumite actiuni specifice(sa-si schimbe parola, sa se logheze, sa isi creeze un cont).
+                A fost primul microserviciu la care ne-am gandit deoarece este indispensabil, este evident ca avem nevoie de o modalitate de a gestiona utilizatorii si proiectele la care lucreaza. Astfel, microserviciul acesta, este foarte important pentru aplicatia noastra ca si tot unitar.
+                In momentul in care am proiectat bazele de date, am avut grija sa contina exact datele care ne sunt utile pentru a confirma identitatea unui utilizator, si pentru a putea construi un mediu de lucru in care sa fie usor oricui sa se desfasoare, sa nu existe momente in care sa nu stim cine cu cine lucreaza, si mai important, toti utilizatorii sa poata folosi la maxim bazele de date pe care noi le furnizam.
+                In ultima etapa, am lucrat la un microserviciu robust, am incercat sa surprindem fiecare aspect pe care l-am putea resimti ca si utilizator al unei aplicatii web.
             <br />
             <br>
             <li property="schema: roleDataBaseFunctions">
                 <u>2. DataBase Functions</u>
             </li>
             <br>
-            Cel de-al doilea micro serviciu se preocupa de manipularea bazelor de date.Atat crearea acestora, adaugare
-            de noi tabele/ functii/ procedurii sau queries, cat si modificarea sau stergerea bazelor de date nedorite.
+            Cel de-al doilea micro serviciu se preocupa de manipularea bazelor de date, este de asemenea o decizie foarte clara sa avem un astfel de microserviciu, reprezentand in cea mai mare parte, scopul aplicatiei noastre. Acest microserviciu este nucleul aplicatiei noastre, este elementul central, prin el oferim utilizatorilor posibilitatea de a lucra la propriile lor proiecte, de a lucra in maniera colaborativa la o baza de date. Utilizam baze de date MySQL, am luat aceasta decizie in cadrul etapei de dezvoltare a arhitecturii aplicatiei,
+            bazele de date de acest tip sunt folosite in cadrul unor proiecte unde bazele de date sunt utilizate intens, sunt rapide, si accepta un numar suficient de mare de interogari intr-o perioada de timp relativ scurta (1 secunda sa spunem). De asemenea, este in avantajul nostru sa utilizam MySQL, deoarece proiectul nostru este dezvoltat in intregime in PHP,
+            iar server-ul nostru de PHP vine impreuna cu un server destinat prelucrarii bazelor de date de tpi MySQL.
+            Faptul ca XAMPP vine cu un server MySQL, si cu serverul apache pentru PHP, a facut ca numarul programatorilor ce opteaza sa foloseasca MySQL ca si solutie de stocare a datelor pentru o aplicatie PHP, sa creasca veritginos. In final, timpii sunt buni. Am avut in vedere aceste aspecte cand am decis ce tip de baze de date ar trebui sa folosim, si sa permitem utilizatorilor sa foloseasca, prin aplicatia noastra.
+            Folosind si oferind spre folosire MySQL, garantam mereu timpi buni de raspuns.
+            De asemenea, este usor sa controlam baza de date prin interfata pusa la dispozitie chiar de limbajul PHP, pentru comunicarea cu server-ul de baze de date. Faptul ca avem la dispozitie diverse metode de a rula un bloc de expresii SQL, este un bonus, astfel, au fost cazuri in care nu am fost nevoiti sa parsam string-ul ce reprezinta de fapt, comenzile SQL introduse de utilizator, crescand astfel timpul de executie. 
             <br />
             <br>
             <li property="schema: roleCollaborate">
                 <u>3. Collaborate</u>
             </li>
             <br>
-            Acest micro serviciu reda posibilitatea utilizatorilor sa interactioneze. Invite-ul unui utilizator se va
-            face prin intermediul e-mailului. Doi sau mai multi utilizatori vor putea comunica si sa aduca posibile
-            modificari intr-o maniera LIVE.
+                Aplicatia noastra are la baza aceste 2 elemente, bazele de date si posibilitatea de a le edita si a lucra in orice mod cu el, intr-o maniera cooperativa. Noi oferim oamenilor posibilitatea de a partaja bazele lor de date cunoscutilor, pentru a putea sa ii ajute sa le populeze, sau pentru a le utliza in alte scopuri.
+                De asemenea, oferim utilizatorilor posibilitatea de a lucra prin intermediul unui editor de text colaborativ, la o anumita baza de date. Astfel, lucrand mai multi utilizatori, pot manufactura SELECT-uri mai complexe, spre exemplu, lucru care sa duca la scaderea drastica a timpului pe care il ia executa expresiei.
+                In sine, ideea este ca proiectarea unei baze de date este un aspect important al muncii unui programator, pentru ca majoritatea aplicatiilor, mai ales atunci cand vorbim de cele de mari dimensiuni si care ar trebui sa fie scalabile, au in spate o solutie pentru stocarea persistenta a datelor, asadar, posibilitatea de a lucra colaborativ la crearea unei baze de date, este un lucru care vine in ajutorul unei sarcini deja destul de complexe, modelarea unei baze de date care sa satisfaca nevoile initiale ale clientului, sa spunem, dar care sa fie si usor de modificat,
+                in cazul in care este nevoie sa se faca o modificare asupra ei.
+                In cadrul celei de a doua etape, am decis ca acest serviciu trebuie sa fie mai complex in ceea ce priveste back-end-ul, dar pentru a tine totul cat mai fluid posibil, nu avem atat de multe baze de date specifice pentru acest microserviciu, avem cateva date care ne permit sa comunicam cu succes cu celelalte microservicii, si sa ne ocupam de rularea expresiilor SQL si salvarea codului sql.Microserviciul acesta este foarte important, deoarece ofera personalitate aplicatiei noastre, o face sa fie mai mult decat doar o aplicatie care se ocupa cu gestionarea bazelor de date. Aspectul acesta colaborativ este esential.
             <br />
             <br>
             <li property="schema: roleGenerateCode">
                 <u>4. Generate Code</u>
             </li>
             <br>
-            Ultimul micro serviciu se va preocupa de partea de generare a codului, codul MySQL se va transpune intr-unul
-            dintre limbajale de programare disponibile si anume Java/ PHP.
-
+            Ultimul micro serviciu se va preocupa de partea de generare a codului, cod Java sau PHP care se execute expresii SQL. Aceasta parte este pentru oamenii care nu au atat de multe cunostinte de programare, dar au nevoie de o bucatica de cod care sa face operatii pe o baza de date pentru un program in esenta simplu, dar care face ceva important intr-un context dat,sa spunem ca este un program de gestionare a felurilor de mancare vandute la o cantina universitara.
+            Aceasta parte a aplicatiei poate nu este la fel de complexa ca restul aplicatiei, dar i-am acordat atentie, pentru ca o componenta esentiala a aplicatiei noastre, este cea de invatare. Suntem pasionati de invatat, si astfel credem ca furnizand cod Java sau PHP pentru necesitatile unui utilizator, ii furnizamde asemenea niste informatie noua, la care poate nu a avut acces pana in momentul ala. Codul nostru nu poate fi perfect pentru orice situatie, uneori trebuie prelucrat,
+            este in final un cod generic Java sau PHP, prelucrandu-l,utilizatorul poate incepe sa invete programare, noi putem furniza chiar initierea lui in acest domeniu frumos al programarii.
             <br />
             <br>
         </ul>
@@ -161,13 +170,13 @@
 
     <h4>Micro Services- How's work?</h4>
     <h5>Account Service</h5>
-    Here text
+    Micro serviciul de gestionare a conturilor utilizatorilor are cateva elemente centrale. Pentru inceput este pagina de logare, care are elementele specifice, input urile de tip text si butonul de logare, care apeleaza printr o procedura iavascript, functia de logare din back end. Aceasta pagina este prima pagina cu care ia contact utilizatorul. Tot prin cadrul microserviciului acestuia, utilizatorul isi creaza un cont, indispensabil pentru a utiliza aplicatia, si poate sa editeze date de cont. Totul este usor de utilizat, datele ce trebuie furnizate sunt minime, necesare pentru a valida faptul ca uj cont apartine unui anumit utilizator.
     <h5>DataBase Functions</h5>
-    Here text
+    Micro serviciul de gestionare al bazelor de date este cel mai important, este nucleul aplicatiei noastre, este motorul care face ca totul sa se miste. Prin cadrul acestui micro serviciu, permitem utilizatorilor sa faca operatii asupra unei baze de date, sa dezvolte propriul lui ptpirct personal folosind o baza de date creata prij aplicatua noastra. Punem la dispozitie utilizatorului si un link de conectare catre o baza de date pe care poate doreste sa o utilizeze prin intwrmediul de cod specific unui kimbaj de porgramare. Avem o multime de psgini ajutatoare, in special pe mobil, pentru a simplifica operstiuni precum crearea de tabele, inseraraea si uodatarea dsyelor, si chiar crearea de functii. Permitem crearea unor functii destinate completarii unor operatii complexe, prin completarea catorva input uri de tip text. Toate aceste elemente sunt pentru a usura intregul proces de mofelare a unei baze de date. Totusi, cele mai multe lucruri si intr o maniera cat mai familiara, se pot fsce prin intermediul paginii noastre principale, ce contine un editor de text si poate rula orice ezpresie sql, inclusiv functii si procrduri, si apoi sa furnizeze rezultatele utilizatorului prin  interfata paginii noastre web. Utilizarea paginii principale este facila si intuitiva, in urma completarii query ului, il putem rula, este usor sa alegem baza de date pe care lucram din aceasta pagina centrala de asemenea. Aceasta pagina centrala este pentru utilizatorii experimentati, care nu se tem sa se "murdareasca" pe maini, si poate chiar le place sa foloseasca un editor de text.
     <h5>Collaborate</h5>
-    Here Text
+    Micro serviciul de colaborare este un element esential al aplicatiei deoarece, impreuna cu micro-serviciul de baze de date, reprezinta in intregime scopul aplicatiei noastre, manipularea de date si colaborarea. Microserviciul de colaborare se gaseste in pagina principala dar si in alte aspecte ale aplicatiei. Ideea din spate este simpla, in momentul in care utilizatorul doreste sa partajeze o baza de date la care lucreaza, trebuie doar sa apese un buton, sa furnizeze adresele de e-mail ale utilizatorilor carora doreste sa le garanteze accesul la baza sa de date, iar apoi, acestia vor putea face diverse tranzactii, utilizand baza de date partajata. Acest microserviciu este foarte simplu de utilizat, in urma apasarii unui buton, si selectia unor parteneri, un utilizator poate lucra colaborativ cu oricati utilizaotori doreste el. Mediul de lucru este editorul de text amintit la microserviciul anterior, asadar, este un mediu cunoscut si usor de utilizat, este un mediu cu care utilizatorii se intalnesc si atunci cand nu fac munca colaborativa. Cel mai mare plus al serviciului de colaborare, este faptul ca face ca partajarea de date intre mobil si desktop sa fie facila, utilizatorii pot lucra colaborativ la o baza de date, de pe orice platforma, ceea ce inseamna ca proiectul poate merge inainte si atunci cand unul dintre membrii echipei, este in tramvai sau prins in trafic, poate sa lucreze la partea sa folosindu-si telefonul.
     <h5>Generate Code</h5>
-    Here text
+    Micro serviciul de generare cod este un plus al aplicatiei noastre. Este usor de utilizat, consta intr-un buton, care afiseaza un drop-down-menu de unde utilizatorul poate selecta limbajul dorit, apoi noi ii furnizam cod care contine expresiile SQL scrise anterior de el, si se conecteaza la baza sa de date, prin intermediul unui path furnizat de noi. Codul este parsat, in functie de tipul de expresie pe care utilizatorul doreste sa o ruleze. Codul returnat de aplicatia noastra este rulabil, si poate fi un bun punct de plecare pentru cineva care cauta un model despre cum sa faca o legatura cu o baza de date MySQL in Java sau poate PHP. De asemenea, acest micro serviciu vine in ajutorul persoanelor care nu sunt atat de initiate in ceea ce priveste programarea, cunosc SQL insa, si au nevoie de cod SQL incapsulat intr-un limbaj de programare. Acest ultim micro serviciu este cel mai simplu de utilizat. Pe mobil este disponibil in aceeasi maniera, in urma apasarii unui buton, furnizeaza cod Java sau PHP.
 
 
     <section typeof="sa:ReferencesList">

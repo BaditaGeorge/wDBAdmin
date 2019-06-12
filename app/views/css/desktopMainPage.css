@@ -227,7 +227,7 @@ span{
     border-radius:20%;
     height:30px;
     font-family:"Arial";
-
+    z-index:500;
     position: relative;
     top: 20%;
     

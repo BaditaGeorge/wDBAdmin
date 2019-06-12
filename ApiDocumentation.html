@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BachSQL Scholarly HTML</title>
+</head>
+<header>
+    <h1 style="color:rgb(126, 31, 126)">BACHsql Scholarly HTML</h1>
+</header>
+
+<body>
+
+    <section typeof="sa:AuthorsList">
+        <h3>Authors</h3>
+        <ul>
+            <li typeof="sa:ContributorRole" property="schema:author">
+                <span typeof="schema:Person" resource="">
+                    <meta property="schema:givenName" content="Adina">
+                    <meta property="schema:additionalName" content="Maria">
+                    <meta property="schema:familyName" content="Ciubotaru">
+                    <span property="schema:name">Adina M. Ciubotaru</span>
+                </span>
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="adina_ciubotaru98@yahoo.com" property="schema:email">adina_ciubotaru98@yahoo.com</a>
+                    </li>
+                </ul>
+            </li>
+            <li typeof="sa:ContributorRole" property="schema:author">
+                <span typeof="schema:Person" resource="">
+                    <meta property="schema:givenName" content="George">
+                    <meta property="schema:additionalName" content="Alexandru">
+                    <meta property="schema:familyName" content="Badita">
+                    <span property="schema:name">George A. Badita</span>
+                </span>
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="baditageorge@yahoo.com" property="schema:email">baditageorge@yahoo.com</a>
+                    </li>
+                </ul>
+            </li>
+            <li typeof="sa:ContributorRole" property="schema:author">
+                <span typeof="schema:Person" resource="">
+                    <meta property="schema:givenName" content="Lucian">
+                    <meta property="schema:additionalName" content="DoubleL">
+                    <meta property="schema:familyName" content="Livint">
+                    <span property="schema:name">Lucian Livint</span>
+                </span>
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="livintlucian@gmail.com" property="schema:email">livintlucian@gmail.com</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:ContributorsList">
+        <h4>Contributors</h4>
+        <ul>
+            <li typeof="sa:ContributorRole" property="schema:contributor">
+                <span typeof="schema:Person" resource="">
+                    <meta property="schema:givenName" content="Vlad">
+                    <meta property="schema:additionalName" content="Nicolae">
+                    <meta property="schema:familyName" content="Circu">
+                    <span property="schema:name">Vlad N. Circu</span>
+                </span>
+
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="mailto:circuvlad98@gmail.com" property="schema:email">circuvlad98@gmail.com</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:Discussion Group">
+        <h5>Discussion Group</h5>
+        <ul>
+            <li property="schema:listDiscussionGroup" typeof="schema:DiscussionGroup">
+                <a href="https://github.com/BaditaGeorge/wDBAdmin" property="schema:linkDiscussionGroup">GitHub
+                    Repository</a>
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:ApiDoc">
+        <h3>API Documentation</h3>
+        <ul>
+            <li property="schema: roleAccountService">
+                <u>POST</u>
+            </li>
+            <br>
+            <br>
+            /databaseFunctionsApi/newId/[id]
+            <br>
+[id] - o valoare numerica generata in mod unic de account service
+creeaza un nou spatiu de stocare pentru un user
+Raspuns:
+JSON:
+{
+    "response": "succes"
+}
+sau
+{
+    "response": [error]
+}
+ <br>
+/databaseFunctionsApi/databases/[id]/[database_name]
+<br>
+creeaza o noua baza de date
+Raspuns:
+{
+    "response": "created"
+}
+sau
+{
+    "response": [error]
+}
+ <br>
+/databaseFunctionsApi/createTable/[id]/[database_name]
+<br>
+Example body:
+{
+    "tableName":"pls4",
+    "numberColumns":2,
+    "columnDescription":
+    [
+        {
+            "name":"bubu",
+            "type":"varchar",
+            "length":"10",
+            "null":"0"
+        },
+        {
+            "name":"bubu2",
+            "type":"varchar",
+            "length":"10",
+            "null":"1"
+        }
+    ]
+ 
+}
+Raspuns:
+{
+    "response": "Succes"
+}
+sau
+{
+    "response": [error]
+}
+ <br>
+/databaseFunctionsApi/createFunction/[id]/[database_name]/
+<br>
+Example body:
+{
+    "functionName":"hehee",
+    "numberOfParameters":1,
+    "returnType":"INT",
+    "parameterDescription":
+    [
+        {
+            "name":"bubu",
+            "type":"CHAR(34)"
+        }
+    ],
+    "bodyText":"BEGIN\r\nRETURN 1;\r\nEND"
+}
+Raspuns:
+{
+    "response": "Succes"
+}
+sau
+{
+    "response": [error]
+}
+<br>
+app/generateCodeService/api/apiGC.php
+<br>
+{   
+	"id":"12",
+	"language":"Java",
+	"data":"SELECT * FROM hihi"
+}
+<br>
+{
+    "response": "public class jdbcConn {\r\n        public static void main(String[] args) throws Exception{\r\n           Class.forName(\"org.apache.derby.jdbc.ClientDriver\");\r\n           Connection con = DriverManager.getConnection\r\n           (\"jdbc:derby://localhost:80/12\",\"root\",\"\");\r\n           Statement stmt = con.createStatement\r\n           (ResultSet.TYPE_SCROLL_SENSITIVE,\r\n           ResultSet.CONCUR_UPDATABLE);\r\n           con.setAutoCommit(false);\r\n           ResultSet rs = null;\r\n           \r\n            rs = stmt.executeQuery(\"SELECT * FROM hihi\");\r\n            rs.last();\r\n            System.out.println(\"output is \"+ rs.getRow());\r\n            }\r\n    }"
+}
+            <br />
+            <br>
+            <li property="schema: roleDataBaseFunctions">
+                <u>GET</u>
+            </li>
+            <br>
+            <br>
+            ⦁ /databaseFunctionsApi/databases/[id]
+            <br>
+            Returneaza numele bazelor de date create de utilizatorul cu id-ul [id]
+              Raspuns:
+        [
+            {
+                "database_name": ""
+            }
+        ...
+        ]
+        <br>
+        ⦁ /databaseFunctionsApi/functions/[id]/[database_name]
+        <br>
+        Exemplu de raspuns:
+        [
+            {
+                "function_name": "dae",
+                "function_body": "BEGIN\nRETURN 1;\nEND"
+            },
+            {
+                "function_name": "ds1",
+                "function_body": "BEGIN\nRETURN 1;\nEND"
+            },
+        ]
+        <br>
+        ⦁ /databaseFunctionsApi/tables/[id]/[database_name]
+        <br>
+        Exemplu de raspuns:
+        [
+            {
+                "table_name": "gouda"
+            },
+            {
+                "table_name": "tortillas"
+            },
+        ]
+        <br>
+        ⦁ databaseFunctionsApi/procedures/[id]/[database_name]
+        <br>
+        Exemplu de raspuns:
+        [
+            {
+                "procedure_name": "country",
+                "procedure_definition": "BEGIN\r\n  SELECT Name, HeadOfState FROM Country\r\n  WHERE Continent = con;\r\nEND"
+            },
+            {
+                "procedure_name": "country2",
+                "procedure_definition": "BEGIN\r\n  SELECT Name, HeadOfState FROM Country\r\n  WHERE Continent = con;\r\nEND"
+            }
+        ]
+        <br>
+        ⦁ databaseFunctionsApi/structure/[id]/[database_name]/[table_name]
+        <br>
+        Exemplu de raspuns:
+        [
+            {
+                "name": "hghv",
+                "type": "varchar",
+                "length": "5",
+                "null": "NO"
+            }
+        ]
+            <br />
+            <br>
+            <li property="schema: roleCollaborate">
+                <u>DELETE</u>
+            </li>
+            <br>
+            ⦁ /databaseFunctionsApi/databases/[id]/[database_name]
+            <br>
+            Raspuns:
+        {
+            "response": "succes"
+        }
+        sau
+        {
+            "response": [error]
+        }
+        <br>
+        ⦁ /databaseFunctionsApi/tables/[id]/[database_name]
+        <br>
+        Exemplu body:
+        {
+            "table_name":"pls3"
+        }
+         
+            Raspuns:
+        {
+            "response": "succes"
+        }
+        sau
+        {
+            "response": [error]
+        }
+        <br>
+        ⦁ /databaseFunctionsApi/column/[id]/[database_name]/[table_name]
+        <br>
+        Exemplu de body:
+        {
+            "name":"column_name"
+        }
+        Raspuns:
+        {
+            "response": "succes"
+        }
+        sau
+        {
+            "response": [error]
+        }    
+            <br />
+            <br>
+            <li property="schema: roleGenerateCode">
+                <u>PUT</u>
+            </li>
+            <br>
+            /databaseFunctionsApi/mainpage/save/[id]/[database_name]
+            <br>
+            Salveaza text in spatiul de stocare al userului corespunzator bazei de date mentionate
+            Exemplu de body:
+            {
+                "schema":"DROP TABLE tab",
+                "query":"SELECT * FROM tabl"
+            }
+            Raspuns:
+            {
+                "response": "Saved"
+            }
+            sau
+            {
+                "response": [Error]
+            }
+            <br>
+            /databaseFunctionsApi/mainpage/[id]/run
+            <br>
+            Se ruleaza codul sql dat in body si se returneaza raspunsul la interogare sau o eroare corespunzatoare
+            Exemplu de body:
+            INSERT INTO  haha(ha) VALUES(1);
+            Exemplu de raspuns:
+            {
+                "response": [Response]
+            }
+            {
+                "response": ["Error:]
+            }
+            <br>
+            databaseFunctionsApi/selectData/[id]/[database_name]/[table]
+            <br>
+            Realizazea un select simplu pe o tabela data si returneaza raspunsul sau o eroare
+            Exemplu de body:
+            {
+                "columns":"col1,col2",
+                "where":"",
+                "group":"",
+                "having":""
+            }
+            Exemplu de raspuns:
+            {
+                "response": "Unknown column 'col1' in 'field list'"
+            }
+            <br>
+            databaseFunctionsApi/insertData/[id]/[database_name]/[table]
+            <br>
+            Insereaza valori in tabel corespunzatoare datelor din body
+            Exemplu de body:
+            {
+                "columns":"col1, col2",
+                "values":"1,2"
+            }
+            Raspuns:
+            {
+                "response": "Succes"
+            }
+            sau
+            {
+                "response": [Error]
+            }
+            <br />
+            <br>
+        </ul>
+    </section>
+</body>
+
+</html>

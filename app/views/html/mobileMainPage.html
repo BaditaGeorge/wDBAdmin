@@ -15,7 +15,7 @@
     <header class="menu">
         <div>
             <button type="button" id="menuBtn">Menu</button>
-            <button onclick="AddElement()">Collaborate</button>
+            <button onclick="eveniment()">Collaborate</button>
             <a href="app/views/html/mobileAccountPage.html" class="logoMic"><img id="lluno" src="app/views/css/whiteUser.png" alt="none"></a>
         </div>
     </header>
@@ -26,14 +26,14 @@
     </div>
     <div class="mainForm" id="mnFrm" onmousedown="whichEl()">
         <div class="conti">
-            <textarea id="schemaArea">SQL Schema</textarea>
+            <textarea id="leftArea">SQL Schema</textarea>
             <div class="result hidden" id="schemaResult"> 
                     <button class="closeButton">✖</button> 
                     <p id="stextResult"></p>
             </div>
         </div>
         <div class="conti" id="conti1">
-            <textarea id="queryArea">Queries</textarea>
+            <textarea id="rightArea">Queries</textarea>
             <div class="result hidden" id="queryResult"> 
                     <button class="closeButton">✖</button> 
                     <p id="qtextResult"></p>
@@ -46,6 +46,8 @@
        
     <script src="app/views/js/mobileMainPage.js">
           
+    </script>
+    <script src="app/views/js/collab.js">
     </script>
 </body>
 </html>

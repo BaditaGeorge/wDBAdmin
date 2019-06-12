@@ -6,7 +6,7 @@ function invita(){
     //     headers:{'Content-type':'application/json'}
     // })
     var info = 'Create';
-    var info2 = 'keanu';
+    var info2 = document.getElementById('selectDatabase').value;
     alert('Allgood');
     fetch('app/collaborationService/api/collaborationApi.php',{
         method: 'POST',
@@ -25,7 +25,7 @@ function eveniment(){
 function onkPL(e){
     var pos = document.getElementById('leftArea').selectionStart;
     var loc = 'baza';
-    var info2 = 'keanu';
+    var info2 = document.getElementById('selectDatabase').value;
     fetch('app/collaborationService/api/collaborationApi.php',{
         method: 'POST',
         body: JSON.stringify({a:String.fromCharCode(e.keyCode),b:pos,c:loc,d:info2,e:window.location.href}),
@@ -37,7 +37,7 @@ function onkDL(e){
         var pos = document.getElementById('leftArea').selectionStart;
         var loc = 'baza';
         var info = 'backspace';
-        var info2 = 'keanu';
+        var info2 = document.getElementById('selectDatabase').value;
         fetch('app/collaborationService/api/collaborationApi.php',{
             method:'POST',
             body: JSON.stringify({a:info,b:pos,c:loc,d:info2,e:window.location.href}),
@@ -48,7 +48,7 @@ function onkDL(e){
 function onkPD(e){
     var pos = document.getElementById('rightArea').selectionStart;
     var loc = 'baza2';
-    var info2 = 'keanu';
+    var info2 = document.getElementById('selectDatabase').value;
     fetch('app/collaborationService/api/collaborationApi.php',{
         method:'POST',
         body: JSON.stringify({a:String.fromCharCode(e.keyCode),b:pos,c:loc,d:info2,e:window.location.href}),
@@ -60,7 +60,7 @@ function onkDD(e){
         var pos = document.getElementById('rightArea').selectionStart;
         var loc = 'baza2';
         var info = 'backspace';
-        var info2 = 'keanu';
+        var info2 = document.getElementById('selectDatabase').value;
         fetch('app/collaborationService/api/collaborationApi.php',{
             method:'POST',
             body: JSON.stringify({a:info,b:pos,c:loc,d:info2,e:window.location.href}),
@@ -70,7 +70,7 @@ function onkDD(e){
 }
 function recCheckL(){
     var pos = document.getElementById('leftArea').selectionStart;
-    var info2 = 'keanu';
+    var info2 = document.getElementById('selectDatabase').value;
     fetch('app/collaborationService/api/getApiL.php',{
         method:'POST',
         body: JSON.stringify({a:info2,b:window.location.href}),
@@ -91,7 +91,7 @@ function recCheckL(){
 }
 function recCheckD(){
     var pos = document.getElementById('rightArea').selectionStart;
-    var info2 = 'keanu';
+    var info2 = document.getElementById('selectDatabase').value;
     fetch('app/collaborationService/api/getApiR.php',{
         method:'POST',
         body: JSON.stringify({a:info2,b:window.location.href}),
